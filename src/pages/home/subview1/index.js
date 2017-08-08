@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import Subview1 from "./subview1";
-import Subview2 from "./subview2";
 import "./style.css";
 
 // Main container for the homescreen
-class Home extends Component {
+export default class Subview1 extends Component {
   render() {
     return (
       <div >
-        <Subview1 />
-        <Subview2 />
+        <h1> View 1 </h1>
       </div>
     );
   }
 }
-
-export default Home;
