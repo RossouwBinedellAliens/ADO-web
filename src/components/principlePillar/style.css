@@ -1,0 +1,38 @@
+.pillar {
+    text-align: center;
+    width: 14.2%;
+    float: left;
+    height: 70px;
+}
+
+.pillar-image {
+    width: 35px;
+    height: 35px;
+}
+
+.pillar-text {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+}
+
+@media only screen and (max-width: 480px) {
+    .pillar {
+        width: 100%;
+        text-align: left;
+        padding-left: 20%;
+        height: 40px;
+        margin-top: 20px;
+    }
+    .pillar-image {
+        vertical-align: middle;
+    }    
+
+    .pillar-text {
+        font-size: 12px;
+        font-weight: bold;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 35px;
+    }
+}

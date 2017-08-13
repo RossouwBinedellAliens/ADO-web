@@ -2,10 +2,6 @@
     padding-left: 50px;
 }
 
-.row-1 {
-    
-}
-
 .row-1 .col-1, .row-2 .col-1 {
     width: 55%;
     float: left;
@@ -13,6 +9,12 @@
 .row-1 .col-2  {
     width: 45%;
     float: right;
+}
+.row-3 {
+    width: 100%;
+    display: inline-block;
+    padding-right: 50px;
+    margin-bottom: 70px;
 }
 
 .image-container {
@@ -32,7 +34,7 @@ h1 {
 h2 {
     font-size: 16px;
     font-weight: 600;
-    line-height: 1.13;
+    line-height: 1.15;
 }
 
 p {
@@ -40,7 +42,7 @@ p {
     line-height: 1.8;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
     .content-segment {
         padding-left: 20px;
         padding-right: 20px;
