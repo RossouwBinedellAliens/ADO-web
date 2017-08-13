@@ -5,7 +5,7 @@ import "./style.css";
 export default class Subview1 extends Component {
   render() {
     return (
-      <div >
+      <div className="content-segment">
         <h1> View 1 </h1>
       </div>
     );
