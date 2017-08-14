@@ -50,12 +50,6 @@ constructor(props){
             <p>{data.p2Content}</p>
           </div>
         </div>
-        <div className="row-2">
-          <div className="col-1">
-            <h2>{data.p2Title}</h2>
-            <p>{data.p2Content}</p>
-          </div>
-        </div>
         <div className="row-3"> 
           {
             this.state.pillarText.map((text, i) => {

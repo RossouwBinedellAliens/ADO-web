@@ -1,5 +1,6 @@
 .content-segment {
-  padding-left: 50px; }
+    padding-left: 110px;
+}
 
 .row-1 .col-1, .row-2 .col-1 {
   width: 55%;
@@ -10,30 +11,36 @@
   float: right; }
 
 .row-3 {
-  width: 100%;
-  display: inline-block;
-  padding-right: 50px;
-  margin-bottom: 70px; }
+    width: 100%;
+    display: inline-block;
+    padding-right: 110px;
+    margin-bottom: 140px;
+    margin-top: 40px;
+}
 
 .image-container {
-  padding-top: 75px; }
+    padding-top: 210px;
+}
 
 .content-image {
   width: 100%; }
 
 h1 {
-  font-size: 36px;
-  color: #2e3135;
-  font-weight: 900; }
+    font-size: 72px;
+    color: #2e3135;
+    font-weight: 900;
+}
 
 h2 {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.15; }
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.15;
+}
 
 p {
-  font-size: 10px;
-  line-height: 1.8; }
+    font-size: 20px;
+    line-height: 1.8;
+}
 
 @media only screen and (max-width: 480px) {
   .content-segment {
