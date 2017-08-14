@@ -1,5 +1,5 @@
 .content-segment {
-    padding-left: 50px;
+    padding-left: 100px;
 }
 
 .row-1 .col-1, .row-2 .col-1 {
@@ -12,13 +12,15 @@
 }
 .row-3 {
     width: 100%;
-    display: inline-block;
-    padding-right: 50px;
-    margin-bottom: 70px;
+    display: flex;
+    padding-right: 100px;
+    margin-bottom: 150px;
+    flex-wrap: wrap;
 }
 
+
 .image-container {
-    padding-top: 75px;
+    padding-top: 150px;
 }
 
 .content-image {
@@ -26,19 +28,19 @@
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 72px;
     color: #2e3135;
     font-weight: 900;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.15;
 }
 
 p {
-    font-size: 10px;
+    font-size: 20px;
     line-height: 1.8;
 }
 
