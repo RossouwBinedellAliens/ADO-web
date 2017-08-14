@@ -1,17 +1,30 @@
 .pillar {
   text-align: center;
-  width: 14.2%;
-  float: left;
-  height: 70px; }
+  height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  min-width: 130px; }
 
 .pillar-image {
-    width: 70px;
-    height: 70px;
-}
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px; }
 
 .pillar-text {
-    font-size: 24px;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 35px; } }
+  font-size: 24px;
+  font-weight: bold;
+  display: block; }
+
+@media only screen and (max-width: 480px) {
+  .pillar {
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex; }
+  .pillar-text {
+    margin-left: 30px;
+    margin-top: auto;
+    margin-bottom: auto; } }

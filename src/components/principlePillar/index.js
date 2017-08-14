@@ -4,12 +4,10 @@ import "./style.css";
 export default class Pillar extends Component {
   render() {
     return (
-        <div>  
-            <div className="pillar">
-                <img className="pillar-image" src={this.props.image}/>
-                <span className="pillar-text">{this.props.text}</span>
-            </div>
-        </div>    
+        <div className="pillar">
+            <img className="pillar-image" src={this.props.image}/>
+            <span className="pillar-text">{this.props.text}</span>
+        </div>
     );
   }
 }
