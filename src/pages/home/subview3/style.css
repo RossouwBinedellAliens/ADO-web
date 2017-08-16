@@ -1,0 +1,87 @@
+.content-segment .ribbon {
+  width: 100vw;
+  background-color: #2e3135;
+  min-height: 250px;
+  margin-left: -100px;
+  padding-left: 100px;
+  padding-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 55px; }
+
+.content-segment .ribbon-title {
+  height: 48px;
+  min-width: 420px;
+  font-size: 48px;
+  font-weight: 900;
+  text-align: left;
+  color: #ffffff; }
+
+.content-segment .ribbon-text {
+  flex-shrink: 1;
+  flex-grow: 1;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: left;
+  color: #ffffff;
+  margin-bottom: 60px; }
+
+.content-segment .ribbon-triangle {
+  width: 80px;
+  height: 80px;
+  display: block;
+  transform: rotate(-315deg);
+  border-radius: 5px;
+  margin-top: -45px;
+  background-color: #2e3135;
+  margin-left: 20px; }
+
+.content-segment .title {
+  padding-top: 40px;
+  width: 420px;
+  font-size: 42px;
+  font-weight: 900;
+  text-align: left;
+  color: #2e3135; }
+
+.content-segment .title-text {
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: left;
+  color: #2e3135;
+  margin-bottom: 40px; }
+
+.content-segment .slider-container {
+  padding-right: 100px; }
+
+.content-segment .dot-style {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 70px; }
+  .content-segment .dot-style li {
+    display: block; }
+    .content-segment .dot-style li button {
+      border-style: none;
+      margin-left: 5px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background-color: #999999;
+      width: 15px;
+      height: 15px;
+      color: transparent;
+      outline: none; }
+  .content-segment .dot-style .slick-active button {
+    background-color: #98708c; }
+
+@media only screen and (max-width: 480px) {
+  .content-segment .ribbon {
+    margin-left: -40px;
+    padding-left: 40px;
+    padding-bottom: 40px; }
+  .content-segment .ribbon-title {
+    padding-top: 10px; }
+  .content-segment .title {
+    width: 100%; }
+  .content-segment .title-text {
+    width: 100%; } }

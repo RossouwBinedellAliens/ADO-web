@@ -4,13 +4,13 @@ import "./style.css";
 
 import data from "./../../../assets/data/EN/home-subview2.json";
 import adoImage from "./../../../assets/images/ADO-Image.png"
-import pillar1 from "./../../../assets/images/Pillar-1.svg";
-import pillar2 from "./../../../assets/images/Pillar-2.svg";
-import pillar3 from "./../../../assets/images/Pillar-3.svg";
-import pillar4 from "./../../../assets/images/Pillar-4.svg";
-import pillar5 from "./../../../assets/images/Pillar-5.svg";
-import pillar6 from "./../../../assets/images/Pillar-6.svg";
-import pillar7 from "./../../../assets/images/Pillar-7.svg";
+import pillar1 from "./../../../assets/images/Pillar Images/Pillar-1.svg";
+import pillar2 from "./../../../assets/images/Pillar Images/Pillar-2.svg";
+import pillar3 from "./../../../assets/images/Pillar Images/Pillar-3.svg";
+import pillar4 from "./../../../assets/images/Pillar Images/Pillar-4.svg";
+import pillar5 from "./../../../assets/images/Pillar Images/Pillar-5.svg";
+import pillar6 from "./../../../assets/images/Pillar Images/Pillar-6.svg";
+import pillar7 from "./../../../assets/images/Pillar Images/Pillar-7.svg";
 
 const pillarImages = [ pillar1, pillar2, pillar3, pillar4, pillar5, pillar6, pillar7 ];
 
