@@ -1,10 +1,9 @@
-.content-segment {
+.content-segment-3 {
 
     .ribbon {
-        width: 100vw;
+        width: 100%;
         background-color: #2e3135;
         min-height: 250px;
-        margin-left: -100px;
         padding-left: 100px;
         padding-right: 50px;
         display: flex;
@@ -29,6 +28,11 @@
         text-align: left;
         color: #ffffff;
         margin-bottom: 60px
+    }
+
+    .wicked-content {
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
     .ribbon-triangle {
@@ -58,16 +62,13 @@
         color: #2e3135;
         margin-bottom: 40px;
     }
-    
-    .slider-container {
-        padding-right: 100px;
-    }
 
     .dot-style {
         display: flex !important;
         justify-content: center;
         margin-top: 40px;
         margin-bottom: 70px;
+        padding-left: 0px;
         li {
             display: block;
             
@@ -93,13 +94,13 @@
 
 
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     
-    .content-segment {
+    .content-segment-3 {
         .ribbon {
-            margin-left: -40px;
-            padding-left: 40px;
-            padding-bottom: 40px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         .ribbon-title {
             padding-top: 10px;
@@ -110,6 +111,10 @@
         }
         .title-text {
             width: 100%;
+        }
+        .wicked-content {
+            padding-left: 10px;
+            padding-right: 10px;
         }
     }
 

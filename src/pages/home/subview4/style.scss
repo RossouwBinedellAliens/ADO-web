@@ -1,0 +1,124 @@
+.content-container-4 {
+    width: 100%;
+    background-color: #5b1647;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 25px;
+    display: flex;
+
+    .problem-text-container {
+        padding-right: 60px;
+
+        .problem-text-title {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #ffffff;
+            white-space: pre-wrap;
+        }
+
+        .problem-text-paragraph {
+            font-size: 20px;
+            line-height: 1.8;
+            text-align: left;
+            color: #ffffff;
+        }
+        
+    }
+    
+    .problem-carousel-container {
+        margin-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 680px;
+        min-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        .dot-style {
+            display: flex !important;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 70px;
+            margin-right: 40px;
+            li {
+                display: block;
+                
+                button {
+                    border-style: none;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    border-radius: 50%;
+                    background-color: #999999;
+                    width: 15px;
+                    height: 15px;
+                    color: transparent;
+                    outline: none;
+                }
+            }
+        
+            .slick-active button {
+                background-color: #ffc30f;
+                opacity: 0.6;
+            }
+        }
+
+        .left-arrow {
+            position: absolute;
+            top: 295px;
+            left: -25px;
+        }
+
+        .right-arrow {
+            position: absolute;
+            top: 295px;            
+            right: -25px;
+        }
+    }
+    
+    @media only screen and (max-width: 1200px) {
+        
+        .problem-carousel-container {
+            width: 340px;
+            min-width: 340px;
+            .left-arrow {
+                position: absolute;
+                top: 140px;
+                left: -25px;
+            }
+    
+            .right-arrow {
+                position: absolute;
+                top: 140px;            
+                right: -25px;
+            }
+        }
+        
+        .problem-text-container {
+            min-width: 350px;
+        }
+    }
+    
+    @media only screen and (max-width: 950px) {
+        flex-direction: column;
+        
+        .problem-text-container {
+            width: 100%;
+            max-width: 900px;
+            min-width: 0px;
+            padding-right: 0px;
+            
+        }
+    }
+    
+    
+    
+}
+@media only screen and (max-width: 600px) {
+
+    .content-container-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
+}
