@@ -1,15 +1,14 @@
-.content-segment .ribbon {
-  width: 100vw;
+.content-segment-3 .ribbon {
+  width: 100%;
   background-color: #2e3135;
   min-height: 250px;
-  margin-left: -100px;
   padding-left: 100px;
   padding-right: 50px;
   display: flex;
   flex-wrap: wrap;
   padding-top: 55px; }
 
-.content-segment .ribbon-title {
+.content-segment-3 .ribbon-title {
   height: 48px;
   min-width: 420px;
   font-size: 48px;
@@ -17,7 +16,7 @@
   text-align: left;
   color: #ffffff; }
 
-.content-segment .ribbon-text {
+.content-segment-3 .ribbon-text {
   flex-shrink: 1;
   flex-grow: 1;
   font-size: 24px;
@@ -26,7 +25,11 @@
   color: #ffffff;
   margin-bottom: 60px; }
 
-.content-segment .ribbon-triangle {
+.content-segment-3 .wicked-content {
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.content-segment-3 .ribbon-triangle {
   width: 80px;
   height: 80px;
   display: block;
@@ -36,7 +39,7 @@
   background-color: #2e3135;
   margin-left: 20px; }
 
-.content-segment .title {
+.content-segment-3 .title {
   padding-top: 40px;
   width: 420px;
   font-size: 42px;
@@ -44,24 +47,22 @@
   text-align: left;
   color: #2e3135; }
 
-.content-segment .title-text {
+.content-segment-3 .title-text {
   font-size: 24px;
   line-height: 1.5;
   text-align: left;
   color: #2e3135;
   margin-bottom: 40px; }
 
-.content-segment .slider-container {
-  padding-right: 100px; }
-
-.content-segment .dot-style {
+.content-segment-3 .dot-style {
   display: flex !important;
   justify-content: center;
   margin-top: 40px;
-  margin-bottom: 70px; }
-  .content-segment .dot-style li {
+  margin-bottom: 70px;
+  padding-left: 0px; }
+  .content-segment-3 .dot-style li {
     display: block; }
-    .content-segment .dot-style li button {
+    .content-segment-3 .dot-style li button {
       border-style: none;
       margin-left: 5px;
       margin-right: 5px;
@@ -71,17 +72,20 @@
       height: 15px;
       color: transparent;
       outline: none; }
-  .content-segment .dot-style .slick-active button {
+  .content-segment-3 .dot-style .slick-active button {
     background-color: #98708c; }
 
-@media only screen and (max-width: 480px) {
-  .content-segment .ribbon {
-    margin-left: -40px;
-    padding-left: 40px;
-    padding-bottom: 40px; }
-  .content-segment .ribbon-title {
+@media only screen and (max-width: 600px) {
+  .content-segment-3 .ribbon {
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .content-segment-3 .ribbon-title {
     padding-top: 10px; }
-  .content-segment .title {
+  .content-segment-3 .title {
     width: 100%; }
-  .content-segment .title-text {
-    width: 100%; } }
+  .content-segment-3 .title-text {
+    width: 100%; }
+  .content-segment-3 .wicked-content {
+    padding-left: 10px;
+    padding-right: 10px; } }

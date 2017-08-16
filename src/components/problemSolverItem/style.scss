@@ -1,0 +1,57 @@
+.solver-item {
+    display: inline-block;
+    width: 340px;
+    position: relative;
+    margin-bottom: 20px;
+
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+    }
+
+    .solver-hover-text {
+        display: none;
+        position: absolute;
+        left: 30px;
+        top: 10px;
+        width: 280px;
+        height: 280px;
+        border-radius: 5px;
+        padding: 25px 20px 20px 25px; 
+
+        opacity: 0.88;
+        background-color: #2E3135;
+
+        h3 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 22px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        span {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 20px;
+            text-align: left;
+            color: #ffffff;
+            font-style: italic;
+            line-height: 1.3;
+        }
+    }
+
+    img:hover + .solver-hover-text {
+        display: block;
+    }
+    .solver-hover-text:hover {
+        display: block;
+    }
+}

@@ -1,4 +1,5 @@
 .content-segment {
+  width: 100%;
   padding-left: 100px; }
 
 .row-1 .col-1, .row-2 .col-1 {
@@ -36,7 +37,7 @@ h1 {
   color: #2e3135;
   font-weight: 900; }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
   .content-segment {
     padding-left: 20px;
     padding-right: 20px; }
