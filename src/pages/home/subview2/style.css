@@ -1,5 +1,4 @@
 .content-segment {
-<<<<<<< Updated upstream
   padding-left: 100px; }
 
 .row-1 .col-1, .row-2 .col-1 {
@@ -14,19 +13,11 @@
   width: 100%;
   display: flex;
   padding-right: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 120px;
   flex-wrap: wrap; }
 
 .image-container {
   padding-top: 150px; }
-
-.content-image {
-  width: 100%; }
-
-h1 {
-  font-size: 72px;
-  color: #2e3135;
-  font-weight: 900; }
 
 h2 {
   font-size: 32px;
@@ -36,35 +27,14 @@ h2 {
 p {
   font-size: 20px;
   line-height: 1.8; }
-=======
-  padding-left: 50px; }
-  .content-segment .row-1 .col-1, .content-segment .row-2 .col-1 {
-    width: 55%;
-    float: left; }
-  .content-segment .row-1 .col-2 {
-    width: 45%;
-    float: right; }
-  .content-segment .row-3 {
-    width: 100%;
-    display: inline-block;
-    padding-right: 50px;
-    margin-bottom: 70px; }
-  .content-segment .image-container {
-    padding-top: 75px; }
-  .content-segment .content-image {
-    width: 100%; }
-  .content-segment h1 {
-    font-size: 72px;
-    color: #2e3135;
-    font-weight: 900; }
-  .content-segment h2 {
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 1.15; }
-  .content-segment p {
-    font-size: 20px;
-    line-height: 1.8; }
->>>>>>> Stashed changes
+
+.content-image {
+  width: 100%; }
+
+h1 {
+  font-size: 72px;
+  color: #2e3135;
+  font-weight: 900; }
 
 @media only screen and (max-width: 480px) {
   .content-segment {

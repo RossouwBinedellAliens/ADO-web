@@ -1,5 +1,4 @@
 .content-segment {
-<<<<<<< Updated upstream
     padding-left: 100px;
 }
 
@@ -15,43 +14,13 @@
     width: 100%;
     display: flex;
     padding-right: 100px;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     flex-wrap: wrap;
 }
 
 
 .image-container {
     padding-top: 150px;
-}
-=======
-    padding-left: 50px;
-
-
-    .row-1 .col-1, .row-2 .col-1 {
-        width: 55%;
-        float: left;
-    }
-    .row-1 .col-2  {
-        width: 45%;
-        float: right;
-    }
-    .row-3 {
-        width: 100%;
-        display: inline-block;
-        padding-right: 50px;
-        margin-bottom: 70px;
-    }
->>>>>>> Stashed changes
-
-    .image-container {
-        padding-top: 75px;
-    }
-
-<<<<<<< Updated upstream
-h1 {
-    font-size: 72px;
-    color: #2e3135;
-    font-weight: 900;
 }
 
 h2 {
@@ -64,29 +33,17 @@ p {
     font-size: 20px;
     line-height: 1.8;
 }
-=======
-    .content-image {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 72px;
-        color: #2e3135;
-        font-weight: 900;
-    }
-
-    h2 {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 1.15;
-    }
->>>>>>> Stashed changes
-
-    p {
-        font-size: 20px;
-        line-height: 1.8;
-    }
+.content-image {
+    width: 100%;
 }
+
+h1 {
+    font-size: 72px;
+    color: #2e3135;
+    font-weight: 900;
+}
+
+
 @media only screen and (max-width: 480px) {
     .content-segment {
         padding-left: 20px;

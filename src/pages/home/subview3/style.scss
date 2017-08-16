@@ -3,81 +3,106 @@
     .ribbon {
         width: 100vw;
         background-color: #2e3135;
-        min-height: 125px;
-        margin-left: -50px;
-        padding-left: 50px;
-        display: inline-block;
+        min-height: 250px;
+        margin-left: -100px;
+        padding-left: 100px;
+        padding-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 55px;
     }
     
     .ribbon-title {
-        padding-top: 30px;
-        height: 24px;
-        display: block;
-        width: 200px;
-        font-size: 24px;
+        height: 48px;
+        min-width: 420px;
+        font-size: 48px;
         font-weight: 900;
         text-align: left;
         color: #ffffff;
     }
-
+    
     .ribbon-text {
-        font-size: 12px;
-        display: block;
+        flex-shrink: 1;
+        flex-grow: 1;
+        font-size: 24px;
         line-height: 1.5;
         text-align: left;
         color: #ffffff;
-        padding-left: 37.5%;
-        margin-top: -20px;
-        width: 90%;
+        margin-bottom: 60px
     }
 
     .ribbon-triangle {
-        width: 40px;
-        height: 40px;
-        transform: rotate(-315deg) + translateY(25px);
-        border-radius: 2.5px;
+        width: 80px;
+        height: 80px;
+        display: block;
+        transform: rotate(-315deg);
+        border-radius: 5px;
+        margin-top: -45px;
         background-color: #2e3135;
-        margin-left: 25px;
+        margin-left: 20px;
      }
 
     .title {
-        padding-top: 20px;
-        width: 210px;
-        font-size: 21px;
+        padding-top: 40px;
+        width: 420px;
+        font-size: 42px;
         font-weight: 900;
         text-align: left;
         color: #2e3135;
     }
 
     .title-text {
-        width: 50%;
-        font-size: 12px;
+        font-size: 24px;
         line-height: 1.5;
         text-align: left;
         color: #2e3135;
+        margin-bottom: 40px;
+    }
+    
+    .slider-container {
+        padding-right: 100px;
+    }
+
+    .dot-style {
+        display: flex !important;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 70px;
+        li {
+            display: block;
+            
+            button {
+                border-style: none;
+                margin-left: 5px;
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: #999999;
+                width: 15px;
+                height: 15px;
+                color: transparent;
+                outline: none;
+            }
+        }
+    
+        .slick-active button {
+            background-color: #98708c;
+        }
     }
 }
+
+
+
 
 @media only screen and (max-width: 480px) {
     
     .content-segment {
         .ribbon {
-            margin-left: -20px;
-            padding-left: 20px;
-            padding-bottom: 20px;
+            margin-left: -40px;
+            padding-left: 40px;
+            padding-bottom: 40px;
         }
         .ribbon-title {
-            padding-top: 20px;
-        }
-
-        .ribbon-text {
-            padding-left: 0px;
-            padding-top: 40px;
-        }
-
-        .ribbon-triangle {
-            transform: rotate(-315deg) + translateY(50px);    
-            margin-left: 50px;
+            padding-top: 10px;
         }
 
         .title {
