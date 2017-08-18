@@ -4,11 +4,32 @@
     "p2Title": "Our principles are simple.",
     "p2Content": "We have 7 words that guide us in times when we lose our way. \nThese pillars help us solve ginormous problems at a more relatable scale. \n\nHover over them to see what they mean.",
 
-    "pillar1": "Patience",
-    "pillar2": "Fundemental",
-    "pillar3": "Empathetic",
-    "pillar4": "Inclusive",
-    "pillar5": "Delightful",
-    "pillar6": "Credible",
-    "pillar7": "Personal"
+    "pillar1": {
+        "title": "Patience",
+        "content": "We spend time crafting a great human experience."  
+    } ,
+    "pillar2":{ 
+        "title": "Fundemental",
+        "content": "We create things that are simple and easy to use."
+    },
+    "pillar3": {
+        "title": "Empathetic",
+        "content": "We understand and share our user's experiences."
+    },
+    "pillar4": {
+        "title": "Inclusive",
+        "content": "We design experiences for all users."
+    },
+    "pillar5": {
+        "title": "Delightful",
+        "content": "We find pleasure in designing quality experiences."
+    },
+    "pillar6": {
+        "title": "Credible",
+        "content": "We strive to provide relieble experiences."
+    },
+    "pillar7": {
+        "title": "Personal",
+        "content": "We strive to design for everybody, not every-one."
+    }
 }

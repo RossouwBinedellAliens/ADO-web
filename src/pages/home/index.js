@@ -12,10 +12,10 @@ class Home extends Component {
     return (
       <div >
         <TopNav/>
-        <Subview1 />
-        <Subview2 />
-        <Subview3 />
-        <Subview4 />
+          <Subview1 />
+          <Subview2 />
+          <Subview3 />
+          <Subview4 />
       </div>
     );
   }

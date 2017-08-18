@@ -6,7 +6,10 @@ export default class Pillar extends Component {
     return (
         <div className="pillar">
             <img className="pillar-image" src={this.props.image}/>
-            <span className="pillar-text">{this.props.text}</span>
+            <div>
+              <span className="pillar-title">{this.props.text.title}</span>
+              <span className="pillar-text">{this.props.text.content}</span>
+            </div>
         </div>
     );
   }

@@ -82,16 +82,18 @@ export default class Subview4 extends Component {
     };
     return (
       <div className="content-container-4">
-        <div className="problem-text-container">
-          <h1 className="problem-text-title">{data.t1}</h1>
-          <p className="problem-text-paragraph">{data.p1}</p>
-        </div>
-        <div className="problem-carousel-container">
-          <Slider { ...settings }>
-            {
-              this.getCarouselContent()
-            }
-          </Slider>
+        <div className="problem-container">
+          <div className="problem-text-container">
+            <h1 className="problem-text-title">{data.t1}</h1>
+            <p className="problem-text-paragraph">{data.p1}</p>
+          </div>
+          <div className="problem-carousel-container">
+            <Slider { ...settings }>
+              {
+                this.getCarouselContent()
+              }
+            </Slider>
+          </div>
         </div>
       </div>
     );

@@ -16,7 +16,7 @@ export default class Subview3 extends Component {
   render() {
     var settings = {
       dots: true,
-      // arrows: false,
+      arrows: false,
       dotsClass: "dot-style",
       className: "slider-component",
       infinite: false,
@@ -43,8 +43,10 @@ export default class Subview3 extends Component {
     return (
         <div className="content-segment-3">
           <div className="ribbon">
-            <h1 className="ribbon-title">{data.t1}</h1>
-            <p className="ribbon-text">{data.p1}</p>
+            <div className="ribbon-content">
+              <h1 className="ribbon-title">{data.t1}</h1>
+              <p className="ribbon-text">{data.p1}</p>
+            </div>
           </div>
           <div className="wicked-content">
             <div className="ribbon-triangle" />

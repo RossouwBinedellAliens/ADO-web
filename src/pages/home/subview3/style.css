@@ -2,32 +2,39 @@
   width: 100%;
   background-color: #2e3135;
   min-height: 250px;
-  padding-left: 100px;
-  padding-right: 50px;
-  display: flex;
-  flex-wrap: wrap;
   padding-top: 55px; }
 
-.content-segment-3 .ribbon-title {
-  height: 48px;
-  min-width: 420px;
-  font-size: 48px;
-  font-weight: 900;
-  text-align: left;
-  color: #ffffff; }
-
-.content-segment-3 .ribbon-text {
-  flex-shrink: 1;
-  flex-grow: 1;
-  font-size: 24px;
-  line-height: 1.5;
-  text-align: left;
-  color: #ffffff;
-  margin-bottom: 60px; }
+.content-segment-3 .ribbon-content {
+  max-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap; }
+  .content-segment-3 .ribbon-content .ribbon-title {
+    height: 48px;
+    min-width: 420px;
+    font-size: 48px;
+    font-weight: 900;
+    text-align: left;
+    color: #ffffff; }
+  .content-segment-3 .ribbon-content .ribbon-text {
+    flex-shrink: 1;
+    flex-grow: 1;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 60px; }
 
 .content-segment-3 .wicked-content {
+  max-width: 1440px;
   padding-left: 100px;
-  padding-right: 100px; }
+  padding-right: 100px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 .content-segment-3 .ribbon-triangle {
   width: 80px;

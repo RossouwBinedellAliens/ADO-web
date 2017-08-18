@@ -1,24 +1,23 @@
 .content-segment {
-  width: 100%;
-  padding-left: 100px; }
+  max-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto; }
 
-.row-1 .col-1, .row-2 .col-1 {
-  width: 55%;
-  float: left; }
+.row-1 {
+  display: flex; }
 
-.row-1 .col-2 {
-  width: 45%;
-  float: right; }
+.content-image {
+  width: 600px;
+  height: 350px;
+  margin-top: 150px; }
 
 .row-3 {
   width: 100%;
   display: flex;
-  padding-right: 100px;
   margin-bottom: 120px;
   flex-wrap: wrap; }
-
-.image-container {
-  padding-top: 150px; }
 
 h2 {
   font-size: 32px;
@@ -29,9 +28,6 @@ p {
   font-size: 20px;
   line-height: 1.8; }
 
-.content-image {
-  width: 100%; }
-
 h1 {
   font-size: 72px;
   color: #2e3135;
@@ -40,12 +36,15 @@ h1 {
 @media only screen and (max-width: 600px) {
   .content-segment {
     padding-left: 20px;
-    padding-right: 20px; }
-    .content-segment .row-1 .col-1, .content-segment .row-2 .col-1 {
-      width: 100%; }
-    .content-segment .row-1 .col-2 {
-      width: 100%;
-      float: right;
-      margin-right: -20px; }
-    .content-segment .image-container {
-      padding-top: 0px; } }
+    padding-right: 20px; } }
+
+@media only screen and (max-width: 1200px) {
+  .row-1 {
+    flex-direction: column; }
+  .content-image {
+    margin-top: 0px; } }
+
+@media only screen and (max-width: 800px) {
+  .content-image {
+    width: 100%;
+    height: auto; } }

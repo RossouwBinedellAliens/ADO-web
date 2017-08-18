@@ -1,38 +1,84 @@
 .pillar {
     text-align: center;
     height: 140px;
+    width: 135px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20px;
+    margin-top: 55px;
     min-width: 130px;
+    .pillar-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;    
+    }
+    
+    .pillar-title {
+        font-size: 24px;
+        font-weight: bold;
+        display: block;
+        color: #2e3135;
+    }
+    
+    .pillar-text {
+        display: none;
+        width: 170px;
+        margin-left: -17.5px;
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 1.1;
+        text-align: center;
+        color: #5b1647;
+    }
 }
 
-.pillar-image {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 10px;    
-}
 
-.pillar-text {
-    font-size: 24px;
-    font-weight: bold;
-    display: block;
+.pillar:hover{
+    .pillar-text {
+        display: block
+    }
+    .pillar-image {        
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;    
+    }
+    
+    div {
+        .pillar-title {
+            color: #5b1647;
+        }
+    }
 }
+        
 
 @media only screen and (max-width: 600px) {
     .pillar {
         width: 100%;
-        text-align: left;
-        padding-left: 20px;
         height: 80px;
-        margin-bottom: 20px;
         display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        
+        .pillar-image {
+            display: inline-block;
+            
+        }
+        div {
+            display: inline-block;
+        
+
+            .pillar-title {
+                padding-left: 40px;
+            }
+        
+            .pillar-text {
+                margin-left: 40px;
+                text-align: left;
+                width: auto;
+            }
+        }
     }
-    
-    .pillar-text {
-        margin-left: 30px;
-        margin-top: auto;
-        margin-bottom: auto;
-    }
+
 
 }
