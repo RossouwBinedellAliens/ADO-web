@@ -3,6 +3,7 @@ import Subview1 from "./subview1";
 import Subview2 from "./subview2";
 import Subview3 from "./subview3";
 import Subview4 from "./subview4";
+import Subview5 from "./subview5";
 import "./style.css";
 import TopNav from "./../../components/TopNav/index.js";
 
@@ -16,6 +17,7 @@ class Home extends Component {
           <Subview2 />
           <Subview3 />
           <Subview4 />
+          <Subview5 />
       </div>
     );
   }
