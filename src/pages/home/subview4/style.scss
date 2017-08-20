@@ -123,8 +123,10 @@
 @media only screen and (max-width: 600px) {
 
     .content-container-4 {
-        padding-left: 10px;
-        padding-right: 10px;
+        .problem-container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     
     }
 }
