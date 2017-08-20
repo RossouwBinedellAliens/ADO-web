@@ -1,0 +1,14 @@
+{
+    "title": "Come Join Us",
+    "text": "At ADO, we hire people not skills. We want to invest in you so that you can master your skills. Spend some time with us and who knows, it could be the start of a career for you. ",
+    "citizen": "Non SA citizen?",
+    "citizenContent": "Non SA Citizens are required to have a valid visa to work on a contract or permanent position for ADO_Absa.",
+    "vacation": {
+        "title": "Vacation work",
+        "text": "You don’t even have to be finished with school. Come spend a few days in our world while you are on holiday. We’ll show you what we’re all about."
+    },
+    "graduate": {
+        "title": "Graduate programme",
+        "text": "You’ve found us and boy oh boy have we been waiting for you to finish up your studies. Get a 12-month kick start to your career. Come and learn the ins and outs of our world with us. "
+    }
+}

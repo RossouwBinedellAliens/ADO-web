@@ -63,10 +63,6 @@ export default class Subview4 extends Component {
     }
   }
 
-  getNextButton() {
-    return <button {...this.props}>Next</button>    
-  }
-
   render() {
     var settings = {
       dots: true,
