@@ -29,8 +29,6 @@
   display: block; }
 
 .pillar:hover .pillar-image {
-  width: 80px;
-  height: 80px;
   margin-bottom: 10px; }
 
 .pillar:hover div .pillar-title {
@@ -45,6 +43,8 @@
     padding-right: 20px;
     margin-bottom: 20px;
     text-align: left; }
+    .pillar .pillar-text {
+      display: block; }
     .pillar .pillar-image {
       display: inline-block; }
     .pillar div {
