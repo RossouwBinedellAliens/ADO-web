@@ -5,13 +5,22 @@
   margin-left: auto;
   margin-right: auto; }
 
-.row-1 {
+.col-1 {
   display: flex; }
 
 .content-image {
-  width: 600px;
-  height: 350px;
+  width: 620px;
+  height: 290px;
   margin-top: 150px; }
+
+.col-2 {
+  display: flex; }
+
+.text-container {
+  max-width: 620px;
+  min-width: 0px;
+  margin-right: 20px;
+  white-space: pre-wrap; }
 
 .row-3 {
   width: 100%;
@@ -39,7 +48,8 @@ h1 {
     padding-right: 20px; } }
 
 @media only screen and (max-width: 1200px) {
-  .row-1 {
+  .col-1 {
+    max-width: 800px;
     flex-direction: column; }
   .content-image {
     margin-top: 0px; } }

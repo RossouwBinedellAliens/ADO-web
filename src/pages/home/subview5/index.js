@@ -5,6 +5,7 @@ import "./style.css";
 import data from "../../../assets/data/EN/home-subview5.json";
 
 import vacation from '../../../assets/images/vacation-work.svg';
+import graduate from '../../../assets/images/graduate-program.svg';
 
 export default class Subview5 extends Component {
 
@@ -25,7 +26,7 @@ export default class Subview5 extends Component {
             <a href="/vacation" className="program-button">Find out more</a>       
           </div>
           <div className="program-item">
-            <img className="program-icon" src={vacation} alt="Vacation Icon"/>
+            <img className="program-icon" src={graduate} alt="Vacation Icon"/>
             <h2 className="program-title">{data.graduate.title}</h2>
             <p className="program-text">{data.graduate.text}</p>
             <a href="/graduate" className="program-button">Find out more</a>       

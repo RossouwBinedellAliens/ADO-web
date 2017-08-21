@@ -37,8 +37,6 @@
         display: block
     }
     .pillar-image {        
-        width: 80px;
-        height: 80px;
         margin-bottom: 10px;    
     }
     
@@ -60,6 +58,10 @@
         margin-bottom: 20px;
         text-align: left;
         
+        .pillar-text {
+            display: block
+        }
+
         .pillar-image {
             display: inline-block;
             

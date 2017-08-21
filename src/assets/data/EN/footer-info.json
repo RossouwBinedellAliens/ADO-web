@@ -1,0 +1,14 @@
+{
+    "title": "Say Hello!",
+    "contact1": {
+        "title": "Johannesburg",
+        "content": "011 325 5000 \nAbsa Towers West \n15 Troye Street \nJohannesburg, 2001 \nSandton \n15 Alice Ln, \nSandhurst, 2196"
+    },
+    "contact2": {
+        "title": "Cape Town",
+        "content": "011 345 4444 \nLongkloof Studios\n4 Darters Rd, \nGardens,  8001"
+    },
+    "p1": "WORK FOR US!",
+    "p2": "Join the team! We are always looking for great talent to join \nthe team and help us change \nthe banking world.",
+    "a1": "ATYoungTalent@absa.co.za"
+}

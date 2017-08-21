@@ -83,10 +83,10 @@
     background-color: #98708c; }
 
 @media only screen and (max-width: 600px) {
-  .content-segment-3 .ribbon {
+  .content-segment-3 .ribbon-content {
     padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 20px;
+    padding-right: 20px; }
   .content-segment-3 .ribbon-title {
     padding-top: 10px; }
   .content-segment-3 .title {
