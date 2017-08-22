@@ -13,13 +13,13 @@ class Home extends Component {
   render() {
     return (
       <div >
-        <TopNav/>
-          <Subview1 />
-          <Subview2 />
-          <Subview3 />
-          <Subview4 />
-          <Subview5 />
-          <Footer />
+        {/* <TopNav/> */}
+        <Subview1 />
+        <Subview2 />
+        <Subview3 />
+        <Subview4 />
+        <Subview5 />
+        <Footer />
       </div>
     );
   }

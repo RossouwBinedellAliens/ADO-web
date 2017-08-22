@@ -1,0 +1,59 @@
+.content-segment {
+  width: 100%;
+  position: relative;
+  height: 51vw;
+  min-height: 747px; }
+  .content-segment .dash-background {
+    overflow: hidden;
+    position: absolute;
+    min-width: 1440px;
+    width: 100%; }
+  .content-segment .content-container {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 51vw;
+    width: 100vw;
+    min-height: 747px;
+    padding-right: 100px;
+    padding-left: 100px; }
+    .content-segment .content-container .title {
+      padding-top: 250px;
+      margin-left: auto;
+      width: 300px;
+      font-size: 110px;
+      font-weight: 900;
+      line-height: 1.04;
+      letter-spacing: -1.2px;
+      text-align: right;
+      color: #ffffff; }
+    .content-segment .content-container .explore {
+      text-align: center;
+      width: 80px;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto; }
+      .content-segment .content-container .explore div a {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        position: absolute;
+        bottom: 20px; }
+      .content-segment .content-container .explore div a span {
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff; }
+    @media only screen and (min-width: 1440px) {
+      .content-segment .content-container .title {
+        font-size: 7.5vw;
+        margin-right: 50px; } }
+
+@media only screen and (max-width: 850px) {
+  .content-segment .dash-background {
+    left: calc((100vw - 850px)/2); }
+  .content-segment .content-container {
+    padding-left: 0px;
+    padding-right: 0px; }
+    .content-segment .content-container .title {
+      text-align: center;
+      margin-right: auto; } }

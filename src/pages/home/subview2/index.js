@@ -34,7 +34,7 @@ constructor(props){
   
   render() {
     return (
-      <div className="content-segment">
+      <div className="content-segment-2" id="content-segment-2">
         <div className="row-1">
           <div className="col-1">
             <div>

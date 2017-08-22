@@ -16,7 +16,7 @@ export default class TopNav extends Component {
             </div>
         </div> 
         <a className="top-nav-a" href="">Work</a>
-        </div> 
+      </div> 
     );
   }
 }
