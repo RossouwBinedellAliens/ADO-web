@@ -82,15 +82,6 @@
         display: flex;
         margin-top: 30px;
 
-        span {
-            margin-right: auto;
-            font-size: 14px;
-            font-weight: 300;
-            text-align: left;
-            color: #ffffff;
-            padding-top: 25px;          
-        }
-
         .footer-absa-logo {
             margin-left: auto;
             width: 190px;
@@ -140,11 +131,6 @@
 
         .footer-bottom {
             flex-direction: column;
-
-            span {
-                margin-left: auto; 
-                margin-bottom: 25px;
-            }
     
             .footer-absa-logo {
                 margin-right: auto;                
