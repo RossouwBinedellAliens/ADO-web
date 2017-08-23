@@ -1,0 +1,59 @@
+{
+    "t1": "Vacation Work",
+    "t2": "What you can expect…",
+    "expectations": [
+        {
+            "title": "Mentorship"
+        },
+        {
+            "title": "Training"
+        },
+        {
+            "title": "Fun"
+        }
+    ],
+    "p1": "Our vacation program is a short unpaid, 1 to 4 week job shadow and mentorship opportunity that allows young problem solvers to experience the Africa Design Office and strengthen a specific growth area.\n\nIf you’re young, creative and want to see how we solve wicked problems, come spend some time with us. You are never too young to make a difference and we have many opportunities for you to explore. ",
+    "t3": "Lets get started …",
+    "steps": [
+        {
+            "num": "01",
+            "title": "Who are you?",
+            "text": "Send us a little bit about who you are(Submit an application)"
+        },
+        {
+            "num": "02",
+            "title": "What’s next?",
+            "text": "Just a little chat with somebody on the team "
+        },
+        {
+            "num": "03",
+            "title": "Decisions, decisions…",
+            "text": "And you can decide how much time you would like to spend with us"
+        }
+    ],
+
+    "p2": "Share this oppertunity",
+    "t4": "How we work",
+    "p3": "Here are some of the ways we work. We are a designed focused team that heavily relies on design thinking.",
+
+    "workTypes": [
+        {
+            "title": "Customer Experience",
+            "content": "An interaction between an organization and a customer over the duration of their relationship. "
+        },
+        {
+            "title": "User experience",
+            "content": "Enhancing user satisfaction with a product by improving the usability and accessibility, provided in the interaction with the product."
+        },
+        {
+            "title": "User-Interface ",
+            "content": "Design of user interfaces for computers, mobile devices, with the focus on maximizing usability and the user experience."
+        },
+        {
+            "title": "Prototyping",
+            "content": "A basic version of the system is built, tested, and then reworked until an acceptable prototype is finally achieved."
+        }
+    ]
+
+
+}
