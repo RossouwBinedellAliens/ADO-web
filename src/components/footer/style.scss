@@ -4,7 +4,7 @@
     padding: 75px 100px 55px 100px;
     
     .footer-top {
-        max-width: 1440px;
+        max-width: 1240px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -156,10 +156,8 @@
 
 @media only screen and (max-width: 600px) {
     .footer {
-        .footer-top, .footer-bottom {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
