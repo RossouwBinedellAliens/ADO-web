@@ -1,9 +1,10 @@
-.content-segment {
+.content-segment-2 {
   max-width: 1440px;
   padding-left: 100px;
   padding-right: 100px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 40px; }
 
 .col-1 {
   display: flex; }
@@ -43,7 +44,7 @@ h1 {
   font-weight: 900; }
 
 @media only screen and (max-width: 600px) {
-  .content-segment {
+  .content-segment-2 {
     padding-left: 20px;
     padding-right: 20px; } }
 
