@@ -18,6 +18,73 @@
             "title": "Fun"
         }
     ],
-    "p1": "Young talent is something we are very passionate about. At the Design Office we hire people, not skills. Even if you’re not a designer but you’ve finished your studies and have interest in solving wicked problems, we’d love for you to grow your skills with us. \n\nThe year will focus on allowing you to explore different areas of design and business to see what interests you most and where your strengths lie. This is a paid programme that runs over 12 months and will provide you with training, mentorship and tons of fun throughout the year."
+    "p1": "Young talent is something we are very passionate about. At the Design Office we hire people, not skills. Even if you’re not a designer but you’ve finished your studies and have interest in solving wicked problems, we’d love for you to grow your skills with us. \n\nThe year will focus on allowing you to explore different areas of design and business to see what interests you most and where your strengths lie. This is a paid programme that runs over 12 months and will provide you with training, mentorship and tons of fun throughout the year.",
+    "t3": "Lets get started …",
+    "steps": [
+        {
+            "num": "01",
+            "title": "Submission",
+            "text": "Submit your application"
+        },
+        {
+            "num": "02",
+            "title": "What’s next?",
+            "text": "We’ll have a look at it and let you know what’s next "
+        },
+        {
+            "num": "03",
+            "title": "Challenge",
+            "text": "You’ll come in so we can get to know you a bit better and we’ll give you a challenge to complete on the day in order to see where your strengths lie"
+        },
+        {
+            "num": "04",
+            "title": "Results",
+            "text": "We’ll get back to you again to let you know if you’ve been accepted into the programme or not."
+        },
+        {
+            "num": "05",
+            "title": "Introduction",
+            "text": "Once onboard we’ll introduce you to the office and get you settled into the ADO culture"
+        },
+        {
+            "num": "06",
+            "title": "Exploration ",
+            "text": "You’ll get to explore CX, UX, UI and PE (Don’t stress if you dont know what these things are yet)"
+        },
+        {
+            "num": "07",
+            "title": "The grind",
+            "text": "You’ll work on some wicked problems in sets of three month rotations to find out what interests you most"
+        },
+        {
+            "num": "08",
+            "title": "Hope",
+            "text": "And finally, fingers crossed, you might get permenantly placed"
+        }
+    ],
+
+    "p2": "Share this oppertunity",
+    "t4": "How we work",
+    "p3": "Here are some of the ways we work. We are a designed focused team that heavily relies on design thinking.",
+
+    "workTypes": [
+        {
+            "title": "Customer Experience",
+            "content": "An interaction between an organization and a customer over the duration of their relationship. "
+        },
+        {
+            "title": "User experience",
+            "content": "Enhancing user satisfaction with a product by improving the usability and accessibility, provided in the interaction with the product."
+        },
+        {
+            "title": "User-Interface ",
+            "content": "Design of user interfaces for computers, mobile devices, with the focus on maximizing usability and the user experience."
+        },
+        {
+            "title": "Prototyping",
+            "content": "A basic version of the system is built, tested, and then reworked until an acceptable prototype is finally achieved."
+        }
+    ]
+
 
 }
