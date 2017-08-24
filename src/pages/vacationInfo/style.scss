@@ -15,14 +15,22 @@
             margin-bottom: 0px;
         }
     
-        .secondary-title {
+        .secondary-title-top {
             font-size: 48px;
             text-align: left;
             font-weight: 400;        
             color: #000000;
             margin-bottom: 50px;
             margin-top: 0px;
-            
+        }
+
+        .secondary-title-bottom {
+            font-size: 48px;
+            text-align: left;
+            font-weight: 400;        
+            color: #000000;
+            margin-bottom: 50px;
+
         }
         
         
@@ -115,8 +123,8 @@
             flex-wrap: wrap-reverse;
             margin-bottom: 30px;
 
-            span, .image-container {
-                margin-top: 10px;
+            span {
+                margin-top: 7px;
             }
 
             span {
