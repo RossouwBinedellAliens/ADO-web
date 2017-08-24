@@ -61,8 +61,8 @@
     display: flex;
     flex-wrap: wrap-reverse;
     margin-bottom: 30px; }
-    .graduate-info .top-content .button-container span, .graduate-info .top-content .button-container .image-container {
-      margin-top: 10px; }
+    .graduate-info .top-content .button-container span {
+      margin-top: 7px; }
     .graduate-info .top-content .button-container span {
       font-size: 22px;
       text-align: left;

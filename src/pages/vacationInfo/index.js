@@ -7,15 +7,13 @@ import "./style.css";
 
 import data from '../../assets/data/EN/vacation-info.json';
 
-import google from '../../assets/images/Left-arrow.svg';
-import twitter from '../../assets/images/Left-arrow.svg';
-import linkedin from '../../assets/images/Left-arrow.svg';
-import facebook from '../../assets/images/Left-arrow.svg';
+import linkedin from '../../assets/images/facebook.svg';
+import facebook from '../../assets/images/linkedin.svg';
 
-import expectation1 from '../../assets/images/ADO-Image.png';
-import expectation2 from '../../assets/images/ADO-Image.png';
-import expectation3 from '../../assets/images/ADO-Image.png';
-import mainImage from '../../assets/images/ADO-Image.png';
+import expectation1 from '../../assets/images/challenges/mentoship.svg';
+import expectation2 from '../../assets/images/challenges/training.svg';
+import expectation3 from '../../assets/images/challenges/training.svg';
+import mainImage from '../../assets/images/vacation-image.png';
 
 const images = [expectation1, expectation2, expectation3];
 // Rooting to be added later
@@ -28,7 +26,7 @@ export default class VacationInfo extends Component {
           <h1 className="main-title">{data.t1}</h1>
           <div className="main-text-container">
             <div className="content-column-1">
-              <h2 className="secondary-title">{data.t2}</h2>
+              <h2 className="secondary-title-top">{data.t2}</h2>
               <div className="expectation-container">
                 {
                   data.expectations.map((item, i) => {
@@ -42,7 +40,7 @@ export default class VacationInfo extends Component {
               <img src={mainImage} alt="Group Photo"/>
             </div>
           </div>
-          <h2 className="secondary-title">{data.t3}</h2>
+          <h2 className="secondary-title-bottom">{data.t3}</h2>
           <div className="step-container">
             <div className="step-row">
               {
@@ -61,8 +59,6 @@ export default class VacationInfo extends Component {
           <div className="button-container">
             <span>{data.p2}</span>
             <div className="image-container">
-              <img className="share-google" src={google} alt="google share button"/>
-              <img className="share-twitter" src={twitter} alt="twitter share button"/>
               <img className="share-linkedin" src={linkedin} alt="linkedin share button"/>
               <img className="share-facebook" src={facebook} alt="facebook share button"/>
             </div>

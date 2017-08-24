@@ -7,17 +7,15 @@ import Expectation from '../../components/expectations';
 import WorkTypeBar from '../../components/worktypebar';
 
 import data from "../../assets/data/EN/graduate-info.json";
-import expectation1 from '../../assets/images/ADO-Image.png';
-import expectation2 from '../../assets/images/ADO-Image.png';
-import expectation3 from '../../assets/images/ADO-Image.png';
-import expectation4 from '../../assets/images/ADO-Image.png';
-import expectation5 from '../../assets/images/ADO-Image.png';
-import mainImage from '../../assets/images/ADO-Image.png';
+import expectation1 from '../../assets/images/challenges/mentoship.svg';
+import expectation2 from '../../assets/images/challenges/mentoship.svg';
+import expectation3 from '../../assets/images/challenges/training.svg';
+import expectation4 from '../../assets/images/challenges/training.svg';
+import expectation5 from '../../assets/images/challenges/training.svg';
+import mainImage from '../../assets/images/vacation-image.png';
 
-import google from '../../assets/images/Left-arrow.svg';
-import twitter from '../../assets/images/Left-arrow.svg';
-import linkedin from '../../assets/images/Left-arrow.svg';
-import facebook from '../../assets/images/Left-arrow.svg';
+import linkedin from '../../assets/images/facebook.svg';
+import facebook from '../../assets/images/linkedin.svg';
 
 const images = [expectation1, expectation2, expectation3, expectation4, expectation5];
 
@@ -74,8 +72,6 @@ export default class GraduateInfo extends Component {
           <div className="button-container">
             <span>{data.p2}</span>
             <div className="image-container">
-              <img className="share-google" src={google} alt="google share button"/>
-              <img className="share-twitter" src={twitter} alt="twitter share button"/>
               <img className="share-linkedin" src={linkedin} alt="linkedin share button"/>
               <img className="share-facebook" src={facebook} alt="facebook share button"/>
             </div>
