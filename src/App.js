@@ -6,7 +6,7 @@ import {
   Switch
 } from 'react-router-dom';
 import Home from "./pages/home";
-import GraduateInfo from './pages/graduateInfo';
+//import GraduateInfo from './pages/graduateInfo';
 import GraduateForm from './pages/graduateForm';
 import VacationInfo from './pages/vacationInfo';
 import VacationForm from './pages/vacationForm';
@@ -19,7 +19,6 @@ class App extends Component {
         <div>
           <Switch>
             <Route path="/home" component={Home}/>
-            <Route path="/graduate" component={GraduateInfo}/>
             <Route path="/graduate/form" component={GraduateForm}/>
             <Route path="/vacation" component={VacationInfo}/>
             <Route path="/vacation/form" component={VacationForm}/>
