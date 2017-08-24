@@ -1,0 +1,117 @@
+.graduate-info .top-content {
+  max-width: 1440px;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-left: auto;
+  margin-right: auto; }
+  .graduate-info .top-content .main-title {
+    font-size: 72px;
+    font-weight: 900;
+    text-align: left;
+    color: #000000;
+    font-style: bold; }
+  .graduate-info .top-content .secondary-title {
+    font-size: 48px;
+    text-align: left;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 50px; }
+  .graduate-info .top-content .expectation-container {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap; }
+  .graduate-info .top-content .main-text-container {
+    display: flex; }
+    .graduate-info .top-content .main-text-container img {
+      max-width: 650px;
+      width: 100%;
+      height: 433px; }
+    .graduate-info .top-content .main-text-container p {
+      font-size: 24px;
+      line-height: 1.5;
+      text-align: left;
+      color: #2e3135;
+      margin-right: 65px; }
+  .graduate-info .top-content .step-container {
+    display: flex; }
+    .graduate-info .top-content .step-container .step-column {
+      margin-right: auto; }
+      .graduate-info .top-content .step-container .step-column .step-item {
+        display: flex;
+        min-height: 150px;
+        max-width: 420px; }
+        .graduate-info .top-content .step-container .step-column .step-item span {
+          font-size: 48px;
+          font-weight: bold;
+          text-align: left;
+          color: #ffc600; }
+        .graduate-info .top-content .step-container .step-column .step-item div {
+          margin-left: 10px; }
+          .graduate-info .top-content .step-container .step-column .step-item div h3 {
+            font-size: 28.8px;
+            font-weight: bold;
+            text-align: left;
+            color: #000000;
+            margin-top: 10px;
+            margin-bottom: 0px; }
+          .graduate-info .top-content .step-container .step-column .step-item div p {
+            margin-top: 0px;
+            font-size: 16px; }
+  .graduate-info .top-content .button-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 30px; }
+    .graduate-info .top-content .button-container span, .graduate-info .top-content .button-container .image-container {
+      margin-top: 10px; }
+    .graduate-info .top-content .button-container span {
+      font-size: 22px;
+      text-align: left;
+      color: #000000; }
+    .graduate-info .top-content .button-container .image-container {
+      margin-left: 25px; }
+      .graduate-info .top-content .button-container .image-container img {
+        margin-left: 5px;
+        margin-right: 5px; }
+    .graduate-info .top-content .button-container .program-button {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      width: 260px;
+      height: 50px;
+      padding-top: 13px;
+      background-color: #ffffff;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      border: solid 2px #2e3135;
+      text-align: center;
+      font-size: 16px;
+      color: #2e3135;
+      text-decoration: none; }
+    .graduate-info .top-content .button-container .program-button:hover {
+      background-color: #2e3135;
+      border: solid 1px #979797;
+      color: #ffffff; }
+    .graduate-info .top-content .button-container .program-button:active {
+      background-color: #5b1647;
+      border: solid 1px #979797;
+      color: #ffffff; }
+
+@media only screen and (max-width: 1250px) {
+  .graduate-info .top-content .main-text-container {
+    flex-direction: column; }
+    .graduate-info .top-content .main-text-container p {
+      margin-right: 0px; }
+    .graduate-info .top-content .main-text-container img {
+      margin-left: auto;
+      margin-right: auto; } }
+
+@media only screen and (max-width: 600px) {
+  .graduate-info .top-content {
+    padding-left: 20px;
+    padding-right: 20px; }
+    .graduate-info .top-content .expectation-container {
+      flex-direction: column; } }
+
+@media only screen and (max-width: 750px) {
+  .graduate-info .top-content .step-container {
+    flex-direction: column; } }

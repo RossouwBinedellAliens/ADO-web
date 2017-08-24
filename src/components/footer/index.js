@@ -49,7 +49,6 @@ export default class Footer extends Component {
           </div>
 
           <div className="footer-bottom">
-            <span>PRIVACY & COOKIES POLICY 2017 ADO</span>
             <img className="footer-absa-logo" src={absa} alt="absa logo" />
           </div>
 
@@ -78,7 +77,6 @@ export default class Footer extends Component {
           </div>
           
           <div className="footer-bottom">
-            <span>PRIVACY & COOKIES POLICY 2017 ADO</span>
             <img className="footer-absa-logo" src={absa} alt="absa logo" />
           </div>
 
@@ -109,7 +107,6 @@ export default class Footer extends Component {
           </div>
 
           <div className="footer-bottom">
-            <span>PRIVACY & COOKIES POLICY 2017 ADO</span>
             <img className="footer-absa-logo" src={absa} alt="absa logo" />
           </div>
 

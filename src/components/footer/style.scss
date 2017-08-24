@@ -4,7 +4,7 @@
     padding: 75px 100px 55px 100px;
     
     .footer-top {
-        max-width: 1440px;
+        max-width: 1240px;
         margin-left: auto;
         margin-right: auto;
         display: flex;
@@ -82,15 +82,6 @@
         display: flex;
         margin-top: 30px;
 
-        span {
-            margin-right: auto;
-            font-size: 14px;
-            font-weight: 300;
-            text-align: left;
-            color: #ffffff;
-            padding-top: 25px;          
-        }
-
         .footer-absa-logo {
             margin-left: auto;
             width: 190px;
@@ -140,11 +131,6 @@
 
         .footer-bottom {
             flex-direction: column;
-
-            span {
-                margin-left: auto; 
-                margin-bottom: 25px;
-            }
     
             .footer-absa-logo {
                 margin-right: auto;                
@@ -156,10 +142,8 @@
 
 @media only screen and (max-width: 600px) {
     .footer {
-        .footer-top, .footer-bottom {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
