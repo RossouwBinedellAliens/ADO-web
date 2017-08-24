@@ -16,7 +16,13 @@ const port = 8080;
 app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
     res.send("Trying to send Email with Attachment: " + req.file.path);
     console.log(req.body);
-    sendEmail(req.file, req.body.username, req.body.surname, req.body.email, req.body.cellnumber, req.body.form);
+    
+    sendEmail(req.file, 
+              req.body.username, 
+              req.body.surname, 
+              req.body.email, 
+              req.body.cellnumber, 
+              req.body.form);
 })
 
 var sendEmail = function(filePath, username, surname, email, cellnumber, form){
@@ -24,22 +30,26 @@ var sendEmail = function(filePath, username, surname, email, cellnumber, form){
   let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: 'karendze13@gmail.com',
-          pass: ""
+          user: 'adoEmail@gmail.com',
+          pass: "adoPassword"
       }
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Keanu Arendze 👻" <karendze13@gmail.com>', 
-      to: 'ross@cowboyaliens.com',
+      from: '"ADO Team 👻" <adoEmail@gmail.com>', 
+      to: 'adoEmail@gmail.com',
       subject: form + username + surname, 
       text: "This is a new Applicant!",
       attachments: [{ 
           content: filePath,
           filename: filePath.originalname
       }],
-      html: '<p> Im Applying at ADO For the Graduate Program!</p>' + {email} + {cellnumber}
+      html: '<p> Im Applying at ADO For the Graduate Program!</p>' + <br></br> +
+            <label> Username: </label>  + {username} +  <br></br> +
+            <label> Surname: </label>  + {surname} +  <br></br> +
+            <label> Email: </label>  + {email} +  <br></br> + 
+            <label> CellNumber: </label>  + {cellnumber}
   };
 
   // send mail with defined transport object

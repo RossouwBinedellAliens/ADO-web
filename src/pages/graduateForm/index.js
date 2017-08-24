@@ -148,7 +148,6 @@ export default class GraduateForm extends Component {
                 <Form layout="inline" onSubmit={this.handleFormSubmit}>
                   <FormItem
                     validateStatus={this.state.usernameError}
-                    //help={this.state.usernameError}
                   >
                     
                   <Input
