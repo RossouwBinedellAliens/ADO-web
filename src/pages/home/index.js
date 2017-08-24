@@ -13,7 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div >
-        {/* <TopNav/> */}
+         <TopNav/> 
         <Subview1 />
         <Subview2 />
         <Subview3 />

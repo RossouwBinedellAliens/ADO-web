@@ -7,7 +7,7 @@ export default class TopNav extends Component {
     return (
        <div className="container">
         <a className="logo" href="/"><img src={logo} alt="..."/></a>
-        <a className="last-nav-a top-nav-a" href="">Contact</a>
+        <a className="last-nav-a top-nav-a" href="/">Contact</a>
         <div className="dropdown">
             <button className="dropbtn">Careers</button>
             <div className="dropdown-content">
