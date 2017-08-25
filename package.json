@@ -12,6 +12,7 @@
     "react-dom": "^15.6.1",
     "react-dropzone": "^4.0.1",
     "react-file-drag-and-drop": "^0.1.6",
+    "react-modal": "^2.2.4",
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.10",
     "react-slick": "^0.14.11",

@@ -1,0 +1,12 @@
+{
+    "success": {
+        "title": "Whooohoo! Thank you for your application.",
+        "content": "Please give us some time to look through your application. We have quite a few to get through but you should hear from us soon.",
+        "button": "Okay"
+    },
+    "failed": {
+        "title": "Well thats not cool…",
+        "content": "Your application failed to send.\nPlease check your internet connection and try again.",
+        "button": "Try again"        
+    }
+}

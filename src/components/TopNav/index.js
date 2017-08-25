@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./style.css";
 import logoLight from "./../../assets/images/ado-logo.png";
 import logoDark from "./../../assets/images/ado-logo.png";
-import close from "../../assets/images/close.svg";
+import close from "../../assets/images/close-light.svg";
 
 export default class TopNav extends Component {
   constructor(props){
