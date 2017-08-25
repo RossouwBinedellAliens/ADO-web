@@ -1,4 +1,5 @@
 .graduate-info {
+    position: relative;
     .top-content {
         max-width: 1440px;
         padding-left: 100px;
@@ -12,6 +13,8 @@
             text-align: left;
             color: #000000;
             font-style: bold;
+            margin-top: 0px;
+            padding-top: 150px;
         }
     
         .secondary-title {

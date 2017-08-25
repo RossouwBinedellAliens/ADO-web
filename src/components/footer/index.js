@@ -28,7 +28,7 @@ export default class Footer extends Component {
     if (this.state.width > 1100) {
 
       return (
-        <div className="footer">
+        <div className="footer" id="footer">
           <div className="footer-top">
             <div className="footer-item-1">
               <span>{data.title}</span>

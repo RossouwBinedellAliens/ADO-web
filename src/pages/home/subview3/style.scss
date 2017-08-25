@@ -24,6 +24,7 @@
             font-weight: 900;
             text-align: left;
             color: #ffffff;
+            margin-top: 15px;
         }
         
         .ribbon-text {
@@ -33,7 +34,9 @@
             line-height: 1.5;
             text-align: left;
             color: #ffffff;
-            margin-bottom: 60px
+            margin-bottom: 60px;
+            margin-top: 20px;
+            
         }
 
     }
@@ -59,10 +62,12 @@
      }
 
     .title {
-        padding-top: 40px;
+        margin-top: 20px;
+        margin-bottom: 40px;
         width: 420px;
         font-size: 42px;
         font-weight: 900;
+        line-height: 1;
         text-align: left;
         color: #2e3135;
     }

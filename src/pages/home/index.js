@@ -6,14 +6,12 @@ import Subview4 from "./subview4";
 import Subview5 from "./subview5";
 import Footer from '../../components/footer';
 import "./style.css";
-import TopNav from "./../../components/TopNav/index.js";
 
 // Main container for the homescreen
 class Home extends Component {
   render() {
     return (
-      <div >
-         <TopNav/> 
+      <div className="home">
         <Subview1 />
         <Subview2 />
         <Subview3 />

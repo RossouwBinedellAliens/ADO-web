@@ -88,3 +88,13 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .content-segment {
+        .content-container {
+            .explore {
+                display: none;
+            }
+        }
+    }
+}

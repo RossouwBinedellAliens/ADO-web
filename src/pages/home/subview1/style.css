@@ -57,3 +57,7 @@
     .content-segment .content-container .title {
       text-align: center;
       margin-right: auto; } }
+
+@media only screen and (max-width: 600px) {
+  .content-segment .content-container .explore {
+    display: none; } }
