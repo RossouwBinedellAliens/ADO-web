@@ -6,11 +6,14 @@ import "./style.css";
 import data from "./../../../assets/data/EN/home-subview3.json";
 import carouselData from "./../../../assets/data/EN/home-wickedCarousel.json";
 
-import image1 from "./../../../assets/images/Wicked Carousel/Wicked-1.png"
-import image2 from "./../../../assets/images/Wicked Carousel/Wicked-2.png"
-import image3 from "./../../../assets/images/Wicked Carousel/Wicked-3.png"
+import wicked1 from "./../../../assets/images/Wicked Carousel/Wicked-1.png"
+import wicked2 from "./../../../assets/images/Wicked Carousel/Wicked-2.png"
+import wicked3 from "./../../../assets/images/Wicked Carousel/Wicked-3.png"
+import wicked4 from "./../../../assets/images/Wicked Carousel/Wicked-1.png"
+import wicked5 from "./../../../assets/images/Wicked Carousel/Wicked-2.png"
+import wicked6 from "./../../../assets/images/Wicked Carousel/Wicked-3.png"
 
-const images = [image1, image2, image3];
+const images = [wicked1,wicked2, wicked3, wicked4, wicked5, wicked6];
 
 export default class Subview3 extends Component {
   render() {

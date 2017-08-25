@@ -4,44 +4,40 @@
   padding-right: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px; }
-
-.col-1 {
-  display: flex; }
-
-.content-image {
-  width: 620px;
-  height: 290px;
-  margin-top: 150px; }
-
-.col-2 {
-  display: flex; }
-
-.text-container {
-  max-width: 620px;
-  min-width: 0px;
-  margin-right: 20px;
-  white-space: pre-wrap; }
-
-.row-3 {
-  width: 100%;
-  display: flex;
-  margin-bottom: 120px;
-  flex-wrap: wrap; }
-
-h2 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 1.15; }
-
-p {
-  font-size: 20px;
-  line-height: 1.8; }
-
-h1 {
-  font-size: 72px;
-  color: #2e3135;
-  font-weight: 900; }
+  margin-top: 100px; }
+  .content-segment-2 .col-1 {
+    display: flex; }
+    .content-segment-2 .col-1 h1 {
+      font-size: 72px;
+      color: #2e3135;
+      font-weight: 900; }
+    .content-segment-2 .col-1 p {
+      font-size: 20px;
+      line-height: 1.8;
+      color: #2e3135; }
+    .content-segment-2 .col-1 .content-image {
+      width: 620px;
+      height: 290px;
+      margin-top: 100px; }
+  .content-segment-2 .text-container {
+    max-width: 620px;
+    min-width: 0px;
+    margin-right: 20px;
+    white-space: pre-wrap; }
+    .content-segment-2 .text-container h2 {
+      font-size: 32px !important;
+      font-weight: 600;
+      line-height: 1.15; }
+    .content-segment-2 .text-container p {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 1.8;
+      color: #2e3135; }
+  .content-segment-2 .row-3 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 120px;
+    flex-wrap: wrap; }
 
 @media only screen and (max-width: 600px) {
   .content-segment-2 {
@@ -49,13 +45,14 @@ h1 {
     padding-right: 20px; } }
 
 @media only screen and (max-width: 1200px) {
-  .col-1 {
-    max-width: 800px;
+  .content-segment-2 .col-1 {
     flex-direction: column; }
-  .content-image {
-    margin-top: 0px; } }
+    .content-segment-2 .col-1 .content-image {
+      margin-top: 0px; } }
 
 @media only screen and (max-width: 800px) {
-  .content-image {
-    width: 100%;
-    height: auto; } }
+  .content-segment-2 .col-1 {
+    flex-direction: column; }
+    .content-segment-2 .col-1 .content-image {
+      width: 100%;
+      height: auto; } }

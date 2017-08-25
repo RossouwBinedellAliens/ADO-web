@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./style.css";
+import TopNav from "../../../components/TopNav/index.js";
 
 import data from "../../../assets/data/EN/home-subview1.json"
 
@@ -13,6 +14,7 @@ export default class Subview1 extends Component {
       <div className="content-segment">
         <img className="dash-background" src={background} alt="Dashboard background"/>
         <div className="content-container">
+          <TopNav isDashboard={true}/>
           <h1 className="title">{data.title}</h1>
           <div className="explore">
             <div>

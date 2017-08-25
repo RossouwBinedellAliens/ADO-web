@@ -4,10 +4,10 @@ import logo from "./../../assets/images/ado-logo.png";
 
 import WorkType from '../worktype';
 
-import worktype1 from '../../assets/images/vacation-work.svg';
-import worktype2 from '../../assets/images/vacation-work.svg';
-import worktype3 from '../../assets/images/vacation-work.svg';
-import worktype4 from '../../assets/images/vacation-work.svg';
+import worktype1 from '../../assets/images/cx-design.svg';
+import worktype2 from '../../assets/images/ux-design.svg';
+import worktype3 from '../../assets/images/ui-design.svg';
+import worktype4 from '../../assets/images/prototype.svg';
 
 export default class WorkTypeBar extends Component {
   render() {

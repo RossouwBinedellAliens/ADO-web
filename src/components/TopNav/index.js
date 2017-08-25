@@ -1,22 +1,137 @@
 import React, { Component } from 'react';
 import "./style.css";
-import logo from "./../../assets/images/ado-logo.png";
+import logoLight from "./../../assets/images/ado-logo.png";
+import logoDark from "./../../assets/images/ado-logo.png";
+import close from "../../assets/images/close.svg";
 
 export default class TopNav extends Component {
+  constructor(props){
+    super(props)
+    
+    this.state = {
+      showSideMenu: false
+    }
+  }
+
+toggleEvent() {
+  this.setState({showSideMenu: !this.state.showSideMenu})
+}
+
   render() {
+  if (this.props.isDashboard){
+    var menuOptions = "side-menu";
+    if (this.state.showSideMenu) 
+      menuOptions += " open";
+    else 
+      menuOptions += " close";    
     return (
-       <div className="container">
-        <a className="logo" href="/"><img src={logo} alt="..."/></a>
-        <a className="last-nav-a top-nav-a" href="/">Contact</a>
-        <div className="dropdown">
-            <button className="dropbtn">Careers</button>
-            <div className="dropdown-content">
-            <a className="top-nav-a" href="/graduate/form">Graduate Programme</a>
-            <a className="top-nav-a" href="/">Vacation Worker</a>
+       <div className="top-nav">
+          <a className="dashboard-navigator" href="/home">
+            <img className="home" src={logoLight} alt="ADO Logo for navigation"/>
+          </a>
+          <div className="right-links">
+            <a href="">
+              <span className="link-text">
+                OUR WORK
+              </span>
+            </a>
+            <a className="dropdown">
+              <span className="link-text">
+                CAREERS
+              </span>
+              <div className="menu-dropdown">
+                <a href="/graduate">
+                  Graduate Programme
+                </a>
+                <a href="/vacation">
+                  Vacation Programme
+                </a>
+              </div>
+            </a>
+            <a href="#footer">
+              <span className="link-text">
+                CONTACT
+              </span>
+            </a>
+          </div>
+          <div className="hamburger" onClick={e => this.toggleEvent()}>
+            <div className="line-1" />
+            <div className="line-1" />
+            <div className="line-1" />
+          </div>
+          <div className={menuOptions}>
+            <div className="content">
+              <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
+              <div className="text-content">
+                <a className="text-item-1">Our Work</a>
+                <a className="text-item-1">Careers</a>
+                <div className="line-2"/>
+                <a href="/graduate" className="text-item-2">Graduate Program</a>
+                <a href="/vacation" className="text-item-2">Vacation Program</a>
+                <a href="#footer" className="text-item-1" onClick={e => this.toggleEvent()}>Contact Us</a>
+              </div>
             </div>
-        </div> 
-        <a className="top-nav-a" href="">Work</a>
+          </div>
+      </div> 
+    );
+  }  else {
+    var menuOptions = "side-menu";
+    if (this.state.showSideMenu) 
+      menuOptions += " open";
+    else 
+      menuOptions += " close";    
+    return (
+      <div className="dark">
+       <div className="top-nav">
+          <a className="dashboard-navigator" href="/home">
+            <img className="home" src={logoDark} alt="ADO Logo for navigation"/>
+          </a>
+          <div className="right-links">
+            <a href="">
+              <span className="link-text">
+                OUR WORK
+              </span>
+            </a>
+            <a className="dropdown">
+              <span className="link-text">
+                CAREERS
+              </span>
+              <div className="menu-dropdown">
+                <a href="/graduate">
+                  Graduate Programme
+                </a>
+                <a href="/vacation">
+                  Vacation Programme
+                </a>
+              </div>
+            </a>
+            <a href="#footer">
+              <span className="link-text">
+                CONTACT
+              </span>
+            </a>
+          </div>
+          <div className="hamburger" onClick={e => this.toggleEvent()}>
+            <div className="line-1" />
+            <div className="line-1" />
+            <div className="line-1" />
+          </div>
+          <div className={menuOptions}>
+            <div className="content">
+              <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
+              <div className="text-content">
+                <a className="text-item-1">Our Work</a>
+                <a className="text-item-1">Careers</a>
+                <div className="line-2"/>
+                <a href="/graduate" className="text-item-2">Graduate Program</a>
+                <a href="/vacation" className="text-item-2">Vacation Program</a>
+                <a href="#footer" className="text-item-1" onClick={e => this.toggleEvent()}>Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>  
       </div> 
     );
   }
+}
 }

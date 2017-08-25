@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="116" height="104" viewBox="0 0 116 104">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <rect width="80.461" height="54.509" x="16.207" y="21.593" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="2.75"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M19.766 25.743h73.34v46.451h-73.34zM69.722 90.509a2.453 2.453 0 0 1-2.444 2.44H45.593a2.443 2.443 0 0 1-2.444-2.442 2.443 2.443 0 0 1 2.444-2.44h21.685a2.446 2.446 0 0 1 2.444 2.442z"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M52.068 76.101h8.744v11.968h-8.744z"/>
+        <path fill="#B91320" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M98.906 83.328h3.45c.918.002 1.66.744 1.663 1.66v12.73a1.666 1.666 0 0 1-1.662 1.66H86.27a1.666 1.666 0 0 1-1.663-1.66v-12.73a1.666 1.666 0 0 1 1.663-1.66h3.45"/>
+        <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M80.442 48.968A27.64 27.64 0 0 1 56.44 62.89a27.64 27.64 0 0 1-24.003-13.92A27.64 27.64 0 0 1 56.44 35.046a27.64 27.64 0 0 1 24.002 13.921z"/>
+        <path fill="#5A1846" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M56.44 36.699c-6.786 0-12.288 5.494-12.288 12.27 0 6.778 5.502 12.271 12.289 12.271S68.73 55.747 68.73 48.97a12.258 12.258 0 0 0-3.598-8.678 12.294 12.294 0 0 0-8.691-3.593zm0 19.177c-3.819 0-6.916-3.092-6.916-6.906 0-3.815 3.097-6.907 6.917-6.907s6.916 3.092 6.916 6.907c-.001 3.813-3.097 6.905-6.916 6.906z"/>
+        <ellipse cx="56.441" cy="48.97" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="6.916" ry="6.906"/>
+        <ellipse cx="56.441" cy="48.97" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="6.916" ry="6.906"/>
+        <ellipse cx="56.44" cy="48.968" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="2.492" ry="2.488"/>
+        <rect width="27.607" height="45.516" x="2.155" y="54.989" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="1.1"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M2.155 60.29h27.607M14.318 57.56h3.28M2.155 93.583h27.607"/>
+        <ellipse cx="15.958" cy="97.318" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="1.64" ry="1.637"/>
+        <path fill="#FFC30F" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M6.93 75.902l3.1-3.448h11.856l3.1 3.448M24.986 75.902H6.93l9.027 9.961z"/>
+        <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M13.78 72.454l-.967 3.448 3.145 9.961 3.145-9.961-1.21-3.448"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M102.937 69.928c0 .114.009.22.017.329h-.017v-.33zM110.86 69.928v.329h-.016c.01-.109.016-.215.016-.33z"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M110.86 27.264v42.664c0 .114-.008.22-.016.329a3.957 3.957 0 0 1-3.946 3.63 3.957 3.957 0 0 1-3.946-3.63c-.009-.107-.017-.212-.017-.33V27.265h7.925zM106.9 18.303l-3.963 8.96h7.925zM102.937 63.335h7.909M102.937 67.423h7.909M106.9 31.01v28.58"/>
+        <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M99.236.206v2.48M95.413 1.804l1.759 1.755M103.16 1.925l-1.755 1.754M97.364 7.713l-1.76 1.756M102.927 9.4l-1.754-1.75M99.236 8.402v2.427M96.373 5.544h-2.492M104.59 5.544h-2.493M76.758 90.875v2.48M72.936 92.472l1.758 1.756M80.683 92.594l-1.756 1.753M74.887 98.381l-1.76 1.757M80.45 100.07l-1.755-1.752M76.758 99.07v2.428M73.896 96.212h-2.493M82.113 96.212H79.62M3.982 27.264H9.88M6.93 24.351v5.825M41.104 11.343H47M44.052 8.43v5.825M5.832 39.988v2.48M2.01 41.585l1.758 1.756M9.756 41.707L8 43.46M3.96 47.495L2.2 49.25M9.523 49.182L7.77 47.431M5.832 48.184v2.427M2.97 45.325H.476M11.187 45.325H8.694M107.897 78.814h5.897M110.846 75.902v5.824"/>
+        <rect width="9.845" height="14.547" x="89.391" y="81.639" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" rx="3.063"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M94.313 81.64v3.882"/>
+        <path fill="#FFC30F" fill-rule="nonzero" d="M103.5 63.871h6.83v3.007h-6.83z"/>
+    </g>
+</svg>

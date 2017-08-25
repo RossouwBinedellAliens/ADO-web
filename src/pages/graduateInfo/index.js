@@ -23,7 +23,7 @@ export default class GraduateInfo extends Component {
   render() {
     return (
       <div className="graduate-info">
-        <TopNav />
+        <TopNav isDashboard={false}/>
         <div className="top-content">
           <h1 className="main-title">{data.t1}</h1>
           <h2 className="secondary-title">{data.t2}</h2>

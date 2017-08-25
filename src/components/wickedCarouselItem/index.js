@@ -9,7 +9,6 @@ export default class WickedCarouselItem extends Component {
             <div>
               <h3>{this.props.text.title}</h3>
               <p>{this.props.text.content}</p>
-              <a href={this.props.text.link}>Read Full Article ></a>
             </div>
             <div className="bottom-line" />
         </div>

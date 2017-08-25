@@ -1,19 +1,23 @@
 .content-container-4 {
     width: 100%;
-    background-color: #5b1647;
+    background-color: rgba(91,22,71, 0.85);
+    // opacity: 0.85;
     padding-top: 25px;
     
     .problem-container {
         max-width: 1440px;
         padding-left: 100px;
         padding-right: 100px;
+        padding-top: 20px;
         margin-left: auto;
         margin-right: auto;
         
         display: flex;
     
         .problem-text-container {
-            padding-right: 60px;
+            margin-top: 30px;
+            margin-right: 60px;
+            max-width: 420px;
 
             .problem-text-title {
                 font-size: 48px;
@@ -21,6 +25,7 @@
                 line-height: 1.1;
                 color: #ffffff;
                 white-space: pre-wrap;
+                margin-bottom: 40px;
             }
 
             .problem-text-paragraph {
@@ -46,7 +51,6 @@
                 justify-content: center;
                 margin-top: 40px;
                 margin-bottom: 70px;
-                margin-right: 40px;
                 li {
                     display: block;
                     
