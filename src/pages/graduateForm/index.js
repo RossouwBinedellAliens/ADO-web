@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
-import "./style.css";
-import 'antd/dist/antd.css';
 import TopNav from "./../../components/TopNav/index.js";
 import leftBlockImage from "./../../assets/images/grad-left-image.png";
+import "./style.css";
+import 'antd/dist/antd.css';
 import axios from 'axios';
 var Dropzone = require('react-dropzone');
 
-
 const FormItem = Form.Item;
-
-function hasErrors(fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field]);
-}
 
 export default class GraduateForm extends Component {
 
@@ -29,15 +24,16 @@ export default class GraduateForm extends Component {
       surnameError: "",
       emailError: "",
       cellnumberError: "",
+      checked: false,
 
-      dataset: ""
+      dataset: new FormData()
     };
 
     this.username_OnChange = this.username_OnChange.bind(this);
     this.surname_OnChange = this.surname_OnChange.bind(this);
     this.email_OnChange = this.email_OnChange.bind(this);
     this.cellnumber_OnChange = this.cellnumber_OnChange.bind(this);
-
+    this.checkbox_OnChange = this.checkbox_OnChange.bind(this);
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.whenFileDropped = this.whenFileDropped.bind(this);
@@ -52,9 +48,12 @@ export default class GraduateForm extends Component {
     newData.append("surname", this.state.surname);
     newData.append("email", this.state.email);
     newData.append("cellnumber", this.state.cellnumber);
-    newData.append("form", " - Graduate Applicant");
+    newData.append("form", "Graduate Applicant - ");
 
-
+    if(this.state.checked){
+      newData.append("informAgain", "Yes");
+    }
+    
     this.setState({dataset: newData});
 
     var options = {
@@ -71,11 +70,26 @@ export default class GraduateForm extends Component {
     axios.post("http://localhost:8080/ado-gradForm/sendEmail", this.state.dataset).then(res => {
       console.log(res);
     });
+
+    this.setState({ 
+      username: "",
+      surname: "",
+      email: "",
+      cellnumber: "",
+
+      usernameError: "",
+      surnameError: "",
+      emailError: "",
+      cellnumberError: "",
+      checked: false,
+
+      dataset: new FormData()
+    });
   }
 
   whenFileDropped(files) {
     const file = files[0];
-    var data = new FormData();
+    var data = this.state.dataset;
     data.append("file", file);
 
     this.setState({dataset: data});
@@ -83,7 +97,7 @@ export default class GraduateForm extends Component {
 
   username_OnChange(username){
     this.setState(username);
-    if(this.state.username.length === 0){
+    if(this.state.username === ""){
       this.setState({usernameError: "error"});
     }else{
       this.setState({usernameError: "success"});
@@ -117,8 +131,11 @@ export default class GraduateForm extends Component {
     }
   }
 
+  checkbox_OnChange(checked){
+    this.setState(checked);
+  }
+
   render() {
-    const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
 
     return (
       <div>
@@ -154,7 +171,6 @@ export default class GraduateForm extends Component {
                     style={{ width: "320px" , marginTop:"35px", height: "50px", marginLeft: "64px"}}
                     placeholder="  Enter your Username"
                     prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
-                    suffix={suffix}
                     size="large"
                     onChange={(e) => this.username_OnChange({username: e.target.value})}
                     value={this.state.username}
@@ -166,7 +182,6 @@ export default class GraduateForm extends Component {
                           style={{ width: "320px" , height: "50px", marginLeft: "64px", marginTop:"35px"}}
                           placeholder="  Enter your Surname"
                           prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
-                          suffix={suffix}
                           size="large"
                           onChange={(e) => this.surname_OnChange({surname: e.target.value})}
                           value={this.state.surname}
@@ -178,7 +193,6 @@ export default class GraduateForm extends Component {
                           style={{ width: "320px" , height: "50px", marginLeft: "64px", marginTop:"35px"}}
                           placeholder="  Enter your Email address"
                           prefix={<Icon type="mail" style={{ fontSize: "18px"}}/>}
-                          suffix={suffix}
                           size="large"
                           onChange={(e) => this.email_OnChange({email: e.target.value})}
                           value={this.state.email}
@@ -189,28 +203,26 @@ export default class GraduateForm extends Component {
                           style={{ width: "320px" , height: "50px", marginLeft: "64px", marginTop:"35px"}}
                           placeholder="  Enter your Phone Number"
                           prefix={<Icon type="phone" style={{ fontSize: "18px"}}/>}
-                          suffix={suffix}
                           size="large"
                           onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
                           value={this.state.cellnumber}
                         />
                   </FormItem>
 
-                  <Checkbox className="form-checkbox">Can we give you a shout in future?</Checkbox>
+                  <Checkbox className="form-checkbox" onChange={(e) => this.checkbox_OnChange({checked: e.target.value})}>Can we give you a shout in future?</Checkbox>
                   
                 </Form>
                 <p className="file-drop-text"> Who are you? Upload a video, drawing, poem or anything you like so we can get to know you. Be Creative.</p>
                 <Dropzone onDrop={this.whenFileDropped} className="file-drop">
                 </Dropzone>
-
-                 <Button type="primary" onClick={this.handleFormSubmit}>
-                    Submit
-                  </Button>
-          </div>
+                <Button type="primary" onClick={this.handleFormSubmit}>
+                  Submit
+                </Button>
+            </div>
           <div>
-          </div>
         </div>
       </div>
+    </div>
     );
   }
   

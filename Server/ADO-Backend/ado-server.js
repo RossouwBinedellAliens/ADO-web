@@ -22,34 +22,27 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
               req.body.surname, 
               req.body.email, 
               req.body.cellnumber, 
-              req.body.form);
+              req.body.form,
+              req.body.informAgain);
 })
 
-var sendEmail = function(filePath, username, surname, email, cellnumber, form){
+var sendEmail = function(filePath, username, surname, email, cellnumber, form, informAgain){
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-          user: 'adoEmail@gmail.com',
-          pass: "adoPassword"
       }
   });
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"ADO Team 👻" <adoEmail@gmail.com>', 
-      to: 'adoEmail@gmail.com',
       subject: form + username + surname, 
       text: "This is a new Applicant!",
       attachments: [{ 
           content: filePath,
           filename: filePath.originalname
       }],
-      html: '<p> Im Applying at ADO For the Graduate Program!</p>' + <br></br> +
-            <label> Username: </label>  + {username} +  <br></br> +
-            <label> Surname: </label>  + {surname} +  <br></br> +
-            <label> Email: </label>  + {email} +  <br></br> + 
-            <label> CellNumber: </label>  + {cellnumber}
+      html: '<p> Im Applying for a Program!</p>'
   };
 
   // send mail with defined transport object
