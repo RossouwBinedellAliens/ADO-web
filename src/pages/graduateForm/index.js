@@ -55,6 +55,7 @@ export default class GraduateForm extends Component {
     this.email_OnChange = this.email_OnChange.bind(this);
     this.cellnumber_OnChange = this.cellnumber_OnChange.bind(this);
 
+    this.informAgainOnChange = this.informAgainOnChange.bind(this);
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.whenFileDropped = this.whenFileDropped.bind(this);
@@ -91,6 +92,12 @@ export default class GraduateForm extends Component {
     newData.append("cellnumber", this.state.cellnumber);
     newData.append("informAgain", this.state.informAgain);
     newData.append("form", " - Graduate Applicant");
+
+    if(this.state.informAgain){
+      newData.append("informAgain", "Yes");
+    }else{
+      newData.append("informAgain", "No");
+    }
 
     this.setState({dataset: newData});
 
@@ -169,6 +176,10 @@ export default class GraduateForm extends Component {
   checkboxOnChange(checkbox){
     this.setState(checkbox);
   }
+  
+  informAgainOnChange(informAgain){
+    this.setState(informAgain);
+  }
 
   render() {
     const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
@@ -229,7 +240,7 @@ export default class GraduateForm extends Component {
                       suffix={suffix}
                       size="large"
                       onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
-                      value={this.state.cellnumber}
+                      value={this.state.cellnumber}                     
                     />
                 </FormItem>
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
