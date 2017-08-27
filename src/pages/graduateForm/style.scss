@@ -80,6 +80,8 @@
                     width: 320px;
                     height: 50px;
                     margin-right: auto;
+                    z-index: 0;
+                    
                 }
 
                 .form-checkbox {
@@ -185,9 +187,64 @@
         .content-container-form {
             flex-direction: column;
             .col-1 {
-                width: 100%
+                max-width: 100%;
+                min-width: 320px;
+            }
+            .col-2 {
+                margin-top: 40px;
+                margin-left: 0px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 800px) {
+        
+        .content-container-form {
+            padding-left: 20px;
+            padding-right: 20px;
+            .col-1 {
+                padding-top: 30px;
+                margin-top: 180px;
+                img {
+                    display: none;
+                }
+
+                .top-title {
+                    left: 50px;
+                    top: -130px
+                }
+            }
+            .col-2 {
+                margin-top: 40px;
+                margin-left: 0px;
+                min-width: 320px;   
+            
             }
         }
     }
     
+    @media only screen and (max-width: 500px) {
+        
+        .content-container-form {
+            .col-1 {
+                .top-title {
+                    h1 {
+                        width: 300px;
+                        font-size: 40px;                        
+                    }
+                }
+            }
+            .col-2 {
+                margin-top: 40px;
+                margin-left: 0px;
+                .form-container {
+                    .input-field {
+                        margin-left: 0px;
+                        margin-right: 0px;
+                    }                    
+                }
+            }
+        }
+    }
+
 }

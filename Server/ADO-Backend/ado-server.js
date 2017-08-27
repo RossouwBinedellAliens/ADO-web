@@ -5,20 +5,22 @@ var cors =          require('cors');
 var multer =        require('multer');
 var upload =        multer({ dest: "uploads/"});
 
+var config =        require("../../config.json");
+
 var app = express();
 
 app.use(cors());
 app.use(parser.json());
 
-var hostname = '0.0.0.0';
-const port = 8080;
+var hostname = config.address;
+const port = config.port;
 
 // create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '@gmail.com',
-        pass: ""
+        user: config.hostEmail,
+        pass: config.hostEmailPassword
     }
 });
 
@@ -40,8 +42,8 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
 var sendEmailGraduate = function(filePath, username, surname, email, cellnumber, form, informAgain){
   
   let mailOptions = {
-      from: '"ADO " <adoteam@gmail.com>', // the transporter email address. i.e. Email which will send the form from website
-      to: '@gmail.com', // replace with proper email. i.e. Email which will receive emails from the website
+      from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
+      to: config.recieverEmail, // replace with proper email. i.e. Email which will receive emails from the website
       subject: form + username + "  " + surname, 
       attachments: [{ 
           content: filePath,
@@ -81,8 +83,8 @@ app.post('/ado-vacationForm/sendEmail', function(req, res){
 var sendEmailVacation = function(textBlock, username, surname, email, cellnumber, form, informAgain){
 
   let mailOptions = {
-        from: '"ADO " <adoteam@gmail.com>', // the transporter email address. i.e. Email which will send the form from website
-        to: '@gmail.com', // replace with proper email. i.e. Email which will receive emails from the website
+        from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
+        to: config.recieverEmail, // replace with proper email. i.e. Email which will receive emails from the website
         subject: form + username + "  " + surname, 
         text: "Name: " + username + "\n" + 
               "Surname: " + surname + '\n' +
@@ -104,4 +106,4 @@ var sendEmailVacation = function(textBlock, username, surname, email, cellnumber
 
 app.listen(port, hostname);
 
-console.log('Listening at http://localhost:' + port)
+console.log('Listening at http://' + hostname + ":" + port)

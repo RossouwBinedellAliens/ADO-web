@@ -63,7 +63,8 @@
           justify-content: center;
           width: 320px;
           height: 50px;
-          margin-right: auto; }
+          margin-right: auto;
+          z-index: 0; }
         .formpage-content .content-container-form .col-2 .form-container .form-checkbox {
           width: 100%;
           font-size: 18px;
@@ -131,4 +132,34 @@
     .formpage-content .content-container-form {
       flex-direction: column; }
       .formpage-content .content-container-form .col-1 {
-        width: 100%; } }
+        max-width: 100%;
+        min-width: 320px; }
+      .formpage-content .content-container-form .col-2 {
+        margin-top: 40px;
+        margin-left: 0px; } }
+  @media only screen and (max-width: 800px) {
+    .formpage-content .content-container-form {
+      padding-left: 20px;
+      padding-right: 20px; }
+      .formpage-content .content-container-form .col-1 {
+        padding-top: 30px;
+        margin-top: 180px; }
+        .formpage-content .content-container-form .col-1 img {
+          display: none; }
+        .formpage-content .content-container-form .col-1 .top-title {
+          left: 50px;
+          top: -130px; }
+      .formpage-content .content-container-form .col-2 {
+        margin-top: 40px;
+        margin-left: 0px;
+        min-width: 320px; } }
+  @media only screen and (max-width: 500px) {
+    .formpage-content .content-container-form .col-1 .top-title h1 {
+      width: 300px;
+      font-size: 40px; }
+    .formpage-content .content-container-form .col-2 {
+      margin-top: 40px;
+      margin-left: 0px; }
+      .formpage-content .content-container-form .col-2 .form-container .input-field {
+        margin-left: 0px;
+        margin-right: 0px; } }

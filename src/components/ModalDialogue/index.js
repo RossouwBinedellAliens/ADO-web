@@ -23,8 +23,8 @@ const modalStyle = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '5px',
     outline                    : 'none',
-    padding                    : '0px'
-
+    padding                    : '0px',
+    "z-index"                  : '999'
   }
 }
 

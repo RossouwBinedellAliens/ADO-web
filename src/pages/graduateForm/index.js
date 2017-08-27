@@ -33,6 +33,7 @@ export default class GraduateForm extends Component {
       surname: "",
       email: "",
       cellnumber: "",
+      informAgain: false,
 
       usernameError: "",
       surnameError: "",
@@ -61,7 +62,6 @@ export default class GraduateForm extends Component {
   }
 
   isValid() {
-    return true;    
     if (this.state.username.length <= 1) 
       return false
     if (this.state.surname.length <= 1) 
@@ -89,6 +89,7 @@ export default class GraduateForm extends Component {
     newData.append("surname", this.state.surname);
     newData.append("email", this.state.email);
     newData.append("cellnumber", this.state.cellnumber);
+    newData.append("informAgain", this.state.informAgain);
     newData.append("form", " - Graduate Applicant");
 
     this.setState({dataset: newData});
@@ -231,7 +232,7 @@ export default class GraduateForm extends Component {
                       value={this.state.cellnumber}
                     />
                 </FormItem>
-                <Checkbox className="form-checkbox">{data.p3}</Checkbox>  
+                <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
                     <img src={leftBlockImage} alt="star"/>

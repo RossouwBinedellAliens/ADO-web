@@ -1,9 +1,7 @@
 {
-    "server": {
-        "port": "8080",
-        "address": "0.0.0.0",
-        "host-email": "email address",
-        "host-email-password": "password",
-        "reciever-email": "email address"
-    }
+    "port": "8080",
+    "address": "192.168.0.6",
+    "hostEmail": "email address",
+    "hostEmailPassword": "password",
+    "recieverEmail": "email address"
 }
