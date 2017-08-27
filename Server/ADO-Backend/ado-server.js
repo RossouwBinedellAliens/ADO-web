@@ -34,6 +34,7 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
                       req.body.email, 
                       req.body.cellnumber, 
                       req.body.form,
+                      req.body.isCitizen,
                       req.body.informAgain);
 })
 
@@ -51,7 +52,8 @@ var sendEmailGraduate = function(filePath, username, surname, email, cellnumber,
             "Surname: " + surname + '\n' +
             "Cellnumber: " + cellnumber + '\n' +
             "Email: " + email + '\n' +
-            "Inform Again: " + informAgain + '\n'
+            "Inform Again: " + informAgain + '\n' +
+            "Citizen: " + isCitizen + '\n' 
   };
 
   // send mail with defined transport object

@@ -33,6 +33,7 @@ export default class GraduateForm extends Component {
       surname: "",
       email: "",
       cellnumber: "",
+      informAgain: false,
 
       usernameError: "",
       surnameError: "",
@@ -54,6 +55,7 @@ export default class GraduateForm extends Component {
     this.email_OnChange = this.email_OnChange.bind(this);
     this.cellnumber_OnChange = this.cellnumber_OnChange.bind(this);
 
+    this.informAgainOnChange = this.informAgainOnChange.bind(this);
 
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.whenFileDropped = this.whenFileDropped.bind(this);
@@ -89,7 +91,13 @@ export default class GraduateForm extends Component {
     newData.append("surname", this.state.surname);
     newData.append("email", this.state.email);
     newData.append("cellnumber", this.state.cellnumber);
-    newData.append("form", " - Graduate Applicant");
+    newData.append("form", "Graduate Applicant - ");
+
+    if(this.state.informAgain){
+      newData.append("informAgain", "Yes");
+    }else{
+      newData.append("informAgain", "No");
+    }
 
     this.setState({dataset: newData});
 
@@ -168,6 +176,10 @@ export default class GraduateForm extends Component {
   checkboxOnChange(checkbox){
     this.setState(checkbox);
   }
+  
+  informAgainOnChange(informAgain){
+    this.setState(informAgain);
+  }
 
   render() {
     const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
@@ -228,10 +240,10 @@ export default class GraduateForm extends Component {
                       suffix={suffix}
                       size="large"
                       onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
-                      value={this.state.cellnumber}
+                      value={this.state.cellnumber}                     
                     />
                 </FormItem>
-                <Checkbox className="form-checkbox">{data.p3}</Checkbox>  
+                <Checkbox className="form-checkbox" value={this.state.informAgain} onChange={(e) => this.informAgainOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
                     <img src={leftBlockImage} alt="star"/>
