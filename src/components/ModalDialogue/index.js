@@ -46,6 +46,7 @@ export default class ModalDialogue extends Component {
   
     closeModal() {
       this.setState({modalIsOpen: false});
+      this.props.closeAction();
     }
   
     render() {
