@@ -72,8 +72,12 @@ export default class GraduateInfo extends Component {
           <div className="button-container">
             <span>{data.p2}</span>
             <div className="image-container">
-              <img className="share-linkedin" src={linkedin} alt="linkedin share button"/>
-              <img className="share-facebook" src={facebook} alt="facebook share button"/>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=#url&t=ADO%20Graduate%20Page" target="_blank" >
+                <img className="share-linkedin" src={linkedin} alt="linkedin share button"/>
+              </a>
+              <a href={"https://www.linkedin.com/shareArticle?mini=true&url=" + window.location.href + "&title=ADO%20Graduate&summary=ADO%20has%20many%20open%20spaces%20for%20graduates%20looking%20to%20shape%20the%20future!&source=Africa%20Design%20Office"} target="_blank">
+                <img className="share-facebook" src={facebook} alt="facebook share button"/>
+              </a>
             </div>
             <a href="/graduate/form" className="program-button">JOIN THE TEAM</a>       
           </div>

@@ -23,8 +23,8 @@ const modalStyle = {
     WebkitOverflowScrolling    : 'touch',
     borderRadius               : '5px',
     outline                    : 'none',
-    padding                    : '0px'
-
+    padding                    : '0px',
+    "z-index"                  : '999'
   }
 }
 
@@ -46,6 +46,7 @@ export default class ModalDialogue extends Component {
   
     closeModal() {
       this.setState({modalIsOpen: false});
+      this.props.closeAction();
     }
   
     render() {
