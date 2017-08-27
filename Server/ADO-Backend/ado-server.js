@@ -13,55 +13,94 @@ app.use(parser.json());
 var hostname = '0.0.0.0';
 const port = 8080;
 
+// create reusable transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: '@gmail.com',
+        pass: ""
+    }
+});
+
 app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
     console.log(req.body);
     res.statusCode = 200;
     res.statusMessage="success";
     res.send(true);
-
-    // sendEmail(req.file, 
-    //           req.body.username, 
-    //           req.body.surname, 
-    //           req.body.email, 
-    //           req.body.cellnumber, 
-    //           req.body.form);
+    
+    sendEmailGraduate(req.file, 
+                      req.body.username, 
+                      req.body.surname, 
+                      req.body.email, 
+                      req.body.cellnumber, 
+                      req.body.form,
+                      req.body.informAgain);
 })
 
-// var sendEmail = function(filePath, username, surname, email, cellnumber, form){
-//   // create reusable transporter object using the default SMTP transport
-//   let transporter = nodemailer.createTransport({
-//       service: 'gmail',
-//       auth: {
-//           user: 'adoEmail@gmail.com',
-//           pass: "adoPassword"
-//       }
-//   });
+var sendEmailGraduate = function(filePath, username, surname, email, cellnumber, form, informAgain){
+  
+  let mailOptions = {
+      from: '"ADO " <adoteam@gmail.com>', // the transporter email address. i.e. Email which will send the form from website
+      to: '@gmail.com', // replace with proper email. i.e. Email which will receive emails from the website
+      subject: form + username + "  " + surname, 
+      attachments: [{ 
+          content: filePath,
+          filename: filePath.originalname
+      }],
+      text: "Name: " + username + "\n" + 
+            "Surname: " + surname + '\n' +
+            "Cellnumber: " + cellnumber + '\n' +
+            "Email: " + email + '\n' +
+            "Inform Again: " + informAgain + '\n'
+  };
 
-//   // setup email data with unicode symbols
-//   let mailOptions = {
-//       from: '"ADO Team 👻" <adoEmail@gmail.com>', 
-//       to: 'adoEmail@gmail.com',
-//       subject: form + username + surname, 
-//       text: "This is a new Applicant!",
-//       attachments: [{ 
-//           content: filePath,
-//           filename: filePath.originalname
-//       }],
-//       html: '<p> Im Applying at ADO For the Graduate Program!</p>' + <br></br> +
-//             <label> Username: </label>  + {username} +  <br></br> +
-//             <label> Surname: </label>  + {surname} +  <br></br> +
-//             <label> Email: </label>  + {email} +  <br></br> + 
-//             <label> CellNumber: </label>  + {cellnumber}
-//   };
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      console.log('Message %s sent: %s', info.messageId, info.response);
+  });
+}
 
-//   // send mail with defined transport object
-//   transporter.sendMail(mailOptions, (error, info) => {
-//       if (error) {
-//           return console.log(error);
-//       }
-//       console.log('Message %s sent: %s', info.messageId, info.response);
-//   });
-// }
+app.post('/ado-vacationForm/sendEmail', function(req, res){
+   console.log(req.body);
+    res.statusCode = 200;
+    res.statusMessage="success";
+    res.send(true);
+    
+    sendEmailVacation(req.body.textBlock, 
+                      req.body.username, 
+                      req.body.surname, 
+                      req.body.email, 
+                      req.body.cellnumber, 
+                      req.body.form,
+                      req.body.informAgain);
+})
+
+var sendEmailVacation = function(textBlock, username, surname, email, cellnumber, form, informAgain){
+
+  let mailOptions = {
+        from: '"ADO " <adoteam@gmail.com>', // the transporter email address. i.e. Email which will send the form from website
+        to: '@gmail.com', // replace with proper email. i.e. Email which will receive emails from the website
+        subject: form + username + "  " + surname, 
+        text: "Name: " + username + "\n" + 
+              "Surname: " + surname + '\n' +
+              "Cellnumber: " + cellnumber + '\n' +
+              "Email: " + email + '\n' +
+              "Inform Again: " + informAgain + '\n' + 
+              "Additional Text: " + textBlock + '\n'
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+          return console.log(error);
+      }
+      console.log('Message %s sent: %s', info.messageId, info.response);
+  });
+}
+
 
 app.listen(port, hostname);
 
