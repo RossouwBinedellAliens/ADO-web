@@ -22,6 +22,7 @@ let transporter = nodemailer.createTransport({
         user: config.hostEmail,
         pass: config.hostEmailPassword
     }
+
 });
 
 app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
@@ -89,13 +90,13 @@ var sendEmailVacation = function(textBlock, username, surname, email, cellnumber
   let mailOptions = {
         from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
         to: config.recieverEmail, // replace with proper email. i.e. Email which will receive emails from the website
-        subject: form + username + "  " + surname, 
+        subject: form + username + " " + surname, 
         text: "Name: " + username + "\n" + 
               "Surname: " + surname + '\n' +
               "Cellnumber: " + cellnumber + '\n' +
               "Email: " + email + '\n' +
               "Inform Again: " + informAgain + '\n' + 
-              "Additional Text: " + textBlock + '\n'
+              "Additional Text: \n" + textBlock + '\n'
   };
 
   // send mail with defined transport object

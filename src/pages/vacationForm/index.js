@@ -71,19 +71,18 @@ export default class VacationForm extends Component {
   }
 
   handleFormSubmit(){
-    var newData = this.state.dataset;
 
-    newData.append("username", this.state.username);
-    newData.append("surname", this.state.surname);
-    newData.append("email", this.state.email);
-    newData.append("cellnumber", this.state.cellnumber);
-    newData.append("informAgain", this.state.informAgain);    
-    newData.append("textBlock", this.state.story);
-    newData.append("form", " - Graduate Applicant");
+    var data = {
+      username: this.state.username,
+      surname: this.state.surname,
+      email: this.state.email,
+      cellnumber: this.state.cellnumber,
+      informAgain: this.state.informAgain? "Yes": "No",
+      textBlock: this.state.story,
+      form: "Vacation Applicant - "
+    }
 
-    this.setState({dataset: newData});
-
-    axios.post(config.serverUrl + "/ado-vacationForm/sendEmail", this.state.dataset).then(res => {
+    axios.post(config.serverUrl + "/ado-vacationForm/sendEmail", data).then(res => {
       if (res.status === 200) {
         console.log("Succesfully sent email!");
         this.setState({
@@ -154,6 +153,8 @@ export default class VacationForm extends Component {
 
   render() {
     const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
+
+  console.log(this.state);
 
     return (
       <div className="formpage-content">

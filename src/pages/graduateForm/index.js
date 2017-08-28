@@ -74,7 +74,7 @@ export default class GraduateForm extends Component {
     if (!this.validateEmail(this.state.email)) 
       return false
     if (!this.state.citizen === true){
-      if (!this.state.visa === true)
+      if (this.state.visa === null)
         return false;
     }
     return true;
@@ -93,7 +93,7 @@ export default class GraduateForm extends Component {
     newData.append("email", this.state.email);
     newData.append("cellnumber", this.state.cellnumber);
     newData.append("informAgain", this.state.informAgain);
-    newData.append("form", " - Graduate Applicant");
+    newData.append("form", "Graduate Applicant - ");    
 
     if(this.state.informAgain){
       newData.append("informAgain", "Yes");
@@ -115,7 +115,7 @@ export default class GraduateForm extends Component {
 
     this.setState({dataset: newData});
 
-    axios.post(config.serverUrl + "/ado-gradForm/sendEmail", this.state.dataset).then(res => {
+    axios.post(config.serverUrl + "/ado-gradForm/sendEmail", newData).then(res => {
       if (res.status === 200) {
         console.log("Succesfully sent email!");
         this.setState({
@@ -146,10 +146,9 @@ export default class GraduateForm extends Component {
 
   whenFileDropped(files) {
     const file = files[0];
+
     var data = this.state.dataset;
-
-    data.append("file", file);
-
+    data.append("file", file);    
     this.setState({dataset: data});
   }
 
