@@ -2,6 +2,6 @@
     "port": "8080",
     "address": "127.0.0.1",
     "hostEmail": "ross.binedell@gmail.com",
-    "hostEmailPassword": "Rossouw12",
+    "hostEmailPassword": "password",
     "recieverEmail": "ross.binedell@gmail.com"
 }

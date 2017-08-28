@@ -27,11 +27,10 @@ let transporter = nodemailer.createTransport({
 
 app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
     console.log(req.body);
-    res.statusCode = 200;
-    res.statusMessage="success";
-    res.send(true);
     
-    sendEmailGraduate(req.file, 
+    
+    sendEmailGraduate(res,
+                      req.file, 
                       req.body.username, 
                       req.body.surname, 
                       req.body.email, 
@@ -42,7 +41,7 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
                       req.body.visa);
 })
 
-var sendEmailGraduate = function(filePath, username, surname, email, cellnumber, form, isCitizen, informAgain, visa){
+var sendEmailGraduate = function(res, filePath, username, surname, email, cellnumber, form, isCitizen, informAgain, visa){
   
   let mailOptions = {
       from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
@@ -65,18 +64,22 @@ var sendEmailGraduate = function(filePath, username, surname, email, cellnumber,
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           return console.log(error);
+          res.statusCode = 400;
+          res.statusMessage="failed";
+          res.send(false);
       }
+      res.statusCode = 200;
+      res.statusMessage="success";
+      res.send(true);
       console.log('Message %s sent: %s', info.messageId, info.response);
   });
 }
 
 app.post('/ado-vacationForm/sendEmail', function(req, res){
    console.log(req.body);
-    res.statusCode = 200;
-    res.statusMessage="success";
-    res.send(true);
     
-    sendEmailVacation(req.body.textBlock, 
+    sendEmailVacation(res,
+                      req.body.textBlock, 
                       req.body.username, 
                       req.body.surname, 
                       req.body.email, 
@@ -85,7 +88,7 @@ app.post('/ado-vacationForm/sendEmail', function(req, res){
                       req.body.informAgain);
 })
 
-var sendEmailVacation = function(textBlock, username, surname, email, cellnumber, form, informAgain){
+var sendEmailVacation = function(res, textBlock, username, surname, email, cellnumber, form, informAgain){
 
   let mailOptions = {
         from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
@@ -103,7 +106,13 @@ var sendEmailVacation = function(textBlock, username, surname, email, cellnumber
   transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
           return console.log(error);
+          res.statusCode = 400;
+          res.statusMessage="failed";
+          res.send(false);
       }
+      res.statusCode = 200;
+      res.statusMessage="success";
+      res.send(true);
       console.log('Message %s sent: %s', info.messageId, info.response);
   });
 }
