@@ -19,9 +19,6 @@ var Dropzone = require('react-dropzone');
 
 const FormItem = Form.Item;
 
-function hasErrors(fieldsError) {
-  return Object.keys(fieldsError).some(field => fieldsError[field]);
-}
 
 export default class GraduateForm extends Component {
 
@@ -39,6 +36,11 @@ export default class GraduateForm extends Component {
       surnameError: "",
       emailError: "",
       cellnumberError: "",
+
+      usernameHelp: "", 
+      surnameHelp: "", 
+      emailHelp: "", 
+      cellnumberHelp: "",
 
       dataset: new FormData(),
 
@@ -99,6 +101,18 @@ export default class GraduateForm extends Component {
       newData.append("informAgain", "No");
     }
 
+    if(!this.state.citizen){
+      newData.append("isCitizen", "No");
+      if(this.state.visa){
+        newData.append("visa", "Yes");
+      }else{
+        newData.append("visa", "No");
+      }
+    }else{
+      newData.append("isCitizen", "Yes");
+      newData.append("visa", "N/A");
+    }
+
     this.setState({dataset: newData});
 
     axios.post(config.serverUrl + "/ado-gradForm/sendEmail", this.state.dataset).then(res => {
@@ -132,6 +146,8 @@ export default class GraduateForm extends Component {
 
   whenFileDropped(files) {
     const file = files[0];
+    var data = this.state.dataset;
+
     data.append("file", file);
 
     this.setState({dataset: data});
@@ -140,36 +156,36 @@ export default class GraduateForm extends Component {
   username_OnChange(username){
     this.setState(username);
     if(this.state.username.length === 0){
-      this.setState({usernameError: "error"});
+      this.setState({usernameError: "error", usernameHelp: "Please enter your name. Characters only."});
     }else{
-      this.setState({usernameError: "success"});
+      this.setState({usernameError: "success", usernameHelp: ""});
     }
   }
 
   surname_OnChange(surname){
     this.setState(surname);
     if(this.state.surname === ""){
-      this.setState({surnameError: "error"});
+      this.setState({surnameError: "error", surnameHelp: "Please enter your surname. Characters only."});
     }else{
-      this.setState({surnameError: "success"});
+      this.setState({surnameError: "success", surnameHelp: ""});
     }
   }
 
   email_OnChange(email){
      this.setState(email);
      if(this.state.email === ""){
-      this.setState({emailError: "error"});
+      this.setState({emailError: "error", emailHelp: "Please enter a valid email address."});
     }else{
-      this.setState({emailError: "success"});
+      this.setState({emailError: "success", emailHelp: ""});
     }
   }
 
   cellnumber_OnChange(cellnumber){
     this.setState(cellnumber);
     if(this.state.cellnumber === ""){
-      this.setState({cellnumberError: "error"});
+      this.setState({cellnumberError: "error", cellnumberHelp: "Please enter a valid Cell Number. Digits only."});
     }else{
-      this.setState({cellnumberError: "success"});
+      this.setState({cellnumberError: "success", cellnumberHelp: ""});
     }
   }
 
@@ -182,7 +198,7 @@ export default class GraduateForm extends Component {
   }
 
   render() {
-    const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
+    const suffix = false ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
 
     return (
       <div className="formpage-content">
@@ -190,7 +206,7 @@ export default class GraduateForm extends Component {
         {this.state.modal? <ModalDialogue closeAction={this.modalAction} isOpen={this.state.modal} success={this.state.mailStatus} />: null }
         <div className="content-container-form">
           <div className="col-1">
-            <img className="left-info-block-image" src={leftBlockImage} alt="ddd" />
+            <img className="left-info-block-image" src={leftBlockImage} alt="This is a picture." />
             <div className="top-title">
               <h1>{data.t1}</h1>
             </div>
@@ -199,7 +215,11 @@ export default class GraduateForm extends Component {
           </div>
           <div className="col-2">
             <Form className="form-container" onSubmit={this.handleFormSubmit}>
-              <FormItem className="input-field" validateStatus={this.state.usernameError}>
+              <FormItem 
+                className="input-field" 
+                validateStatus={this.state.usernameError}
+                help={this.state.usernameHelp}
+                hasFeedback>
                 <Input
                   className="input-field"
                   placeholder="Enter your Username"
@@ -210,7 +230,11 @@ export default class GraduateForm extends Component {
                   value={this.state.username}
                 />
               </FormItem>
-              <FormItem className="input-field" validateStatus={this.state.surnameError}>
+              <FormItem 
+                className="input-field" 
+                validateStatus={this.state.surnameError}
+                help={this.state.surnameHelp}
+                hasFeedback>
                 <Input
                   className="input-field"                
                   placeholder="  Enter your Surname"
@@ -219,9 +243,14 @@ export default class GraduateForm extends Component {
                   size="large"
                   onChange={(e) => this.surname_OnChange({surname: e.target.value})}
                   value={this.state.surname}
+                  ref={node => this.surname = node}
                 />
               </FormItem>
-                <FormItem className="input-field" validateStatus={this.state.emailError}> 
+                <FormItem 
+                  className="input-field" 
+                  validateStatus={this.state.emailError}
+                  help={this.state.emailHelp}
+                  hasFeedback> 
                   <Input
                     className="input-field"                  
                     placeholder="  Enter your Email address"
@@ -232,7 +261,11 @@ export default class GraduateForm extends Component {
                     value={this.state.email}
                   />
                 </FormItem>
-                  <FormItem className="input-field" validateStatus={this.state.cellnumberError}>
+                  <FormItem 
+                  className="input-field" 
+                  validateStatus={this.state.cellnumberError}
+                  help={this.state.cellnumberHelp}
+                  hasFeedback>
                     <Input
                       className="input-field"                    
                       placeholder="  Enter your Phone Number"

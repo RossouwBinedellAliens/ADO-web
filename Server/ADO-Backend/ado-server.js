@@ -37,10 +37,11 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
                       req.body.cellnumber, 
                       req.body.form,
                       req.body.isCitizen,
-                      req.body.informAgain);
+                      req.body.informAgain,
+                      req.body.visa);
 })
 
-var sendEmailGraduate = function(filePath, username, surname, email, cellnumber, form, informAgain){
+var sendEmailGraduate = function(filePath, username, surname, email, cellnumber, form, isCitizen, informAgain, visa){
   
   let mailOptions = {
       from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
@@ -55,7 +56,8 @@ var sendEmailGraduate = function(filePath, username, surname, email, cellnumber,
             "Cellnumber: " + cellnumber + '\n' +
             "Email: " + email + '\n' +
             "Inform Again: " + informAgain + '\n' +
-            "Citizen: " + isCitizen + '\n' 
+            "Citizen: " + isCitizen + '\n' +
+            "Valid Visa: " + visa + '\n' 
   };
 
   // send mail with defined transport object
