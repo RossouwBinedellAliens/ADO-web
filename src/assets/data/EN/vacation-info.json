@@ -18,17 +18,17 @@
         {
             "num": "01",
             "title": "Who are you?",
-            "text": "Send us a little bit about who you are(Submit an application)"
+            "text": "Send us a little bit about who you are (submit an application)."
         },
         {
             "num": "02",
             "title": "What’s next?",
-            "text": "Just a little chat with somebody on the team "
+            "text": "Just a little chat with somebody on the team. "
         },
         {
             "num": "03",
             "title": "Decisions, decisions…",
-            "text": "And you can decide how much time you would like to spend with us"
+            "text": "And you can decide how much time you would like to spend with us."
         }
     ],
 

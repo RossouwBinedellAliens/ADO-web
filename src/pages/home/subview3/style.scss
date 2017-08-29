@@ -70,6 +70,7 @@
         line-height: 1;
         text-align: left;
         color: #2e3135;
+        margin-bottom: 20px;
     }
 
     .title-text {
@@ -109,8 +110,6 @@
 }
 
 
-
-
 @media only screen and (max-width: 600px) {
     
     .content-segment-3 {
@@ -118,9 +117,6 @@
             padding-bottom: 20px;
             padding-left: 20px;
             padding-right: 20px;
-        }
-        .ribbon-title {
-            padding-top: 10px;
         }
 
         .title {

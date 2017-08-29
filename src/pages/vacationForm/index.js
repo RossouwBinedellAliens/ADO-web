@@ -5,8 +5,10 @@ import axios from 'axios';
 import TopNav from "./../../components/TopNav";
 import Footer from "./../../components/footer";
 import ModalDialogue from '../../components/ModalDialogue';
+import ModalLoading from '../../components/loadingModal';
 
 import leftBlockImage from "./../../assets/images/vacation-work.svg";
+import star from '../../assets/images/star.png';
 
 import 'antd/dist/antd.css';
 import "./style.css";
@@ -38,6 +40,7 @@ export default class VacationForm extends Component {
       citizen: null,
       visa: null,
 
+      loading: false,
       modal: false,
       mailStatus: null,
       redirect: false
@@ -72,6 +75,8 @@ export default class VacationForm extends Component {
 
   handleFormSubmit(){
 
+    this.setState({loading: true});
+
     var data = {
       username: this.state.username,
       surname: this.state.surname,
@@ -86,12 +91,14 @@ export default class VacationForm extends Component {
       if (res.status === 200) {
         console.log("Succesfully sent email!");
         this.setState({
+          loading: false,
           mailStatus: true,
           modal: true
         })
       } else {
         console.log("Failed to send email");
         this.setState({
+          loading: false,          
           mailStatus: false,
           modal: true
         })
@@ -99,6 +106,7 @@ export default class VacationForm extends Component {
     }, err => {
       console.log(err);
       this.setState({
+        loading: false,
         mailStatus: false,
         modal: true
       })
@@ -152,13 +160,14 @@ export default class VacationForm extends Component {
   }
 
   render() {
-    const suffix = true ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
+    const suffix = false ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
 
   console.log(this.state);
 
     return (
       <div className="formpage-content">
         <TopNav />
+        {this.state.loading? <ModalLoading />: null }
         {this.state.modal? <ModalDialogue closeAction={this.modalAction} isOpen={this.state.modal} success={this.state.mailStatus} />: null }
         <div className="content-container-form">
           <div className="col-1">
@@ -170,54 +179,71 @@ export default class VacationForm extends Component {
           </div>
           <div className="col-2">
             <Form className="form-container" onSubmit={this.handleFormSubmit}>
-              <FormItem className="input-field" validateStatus={this.state.usernameError}>
+            <FormItem 
+            className="input-field" 
+            validateStatus={this.state.usernameError}
+            help={this.state.usernameHelp}
+            hasFeedback>
+            <Input
+              className="input-field"
+              placeholder="First name"
+              prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
+              suffix={suffix}
+              size="large"
+              onChange={(e) => this.username_OnChange({username: e.target.value})}
+              value={this.state.username}
+            />
+          </FormItem>
+          <FormItem 
+            className="input-field" 
+            validateStatus={this.state.surnameError}
+            help={this.state.surnameHelp}
+            hasFeedback>
+            <Input
+              className="input-field"                
+              placeholder="Surname"
+              prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
+              suffix={suffix}
+              size="large"
+              onChange={(e) => this.surname_OnChange({surname: e.target.value})}
+              value={this.state.surname}
+              ref={node => this.surname = node}
+            />
+          </FormItem>
+            <FormItem 
+              className="input-field" 
+              validateStatus={this.state.emailError}
+              help={this.state.emailHelp}
+              hasFeedback> 
+              <Input
+                className="input-field"                  
+                placeholder="Email address"
+                prefix={<Icon type="mail" style={{ fontSize: "18px"}}/>}
+                suffix={suffix}
+                size="large"
+                onChange={(e) => this.email_OnChange({email: e.target.value})}
+                value={this.state.email}
+              />
+            </FormItem>
+              <FormItem 
+              className="input-field" 
+              validateStatus={this.state.cellnumberError}
+              help={this.state.cellnumberHelp}
+              hasFeedback>
                 <Input
-                  className="input-field"
-                  placeholder="Enter your Username"
-                  prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
+                  className="input-field"                    
+                  placeholder="Phone Number"
+                  prefix={<Icon type="phone" style={{ fontSize: "18px"}}/>}
                   suffix={suffix}
                   size="large"
-                  onChange={(e) => this.username_OnChange({username: e.target.value})}
-                  value={this.state.username}
+                  onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
+                  value={this.state.cellnumber}                     
                 />
-              </FormItem>
-              <FormItem className="input-field" validateStatus={this.state.surnameError}>
-                <Input
-                  className="input-field"                
-                  placeholder="  Enter your Surname"
-                  prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
-                  suffix={suffix}
-                  size="large"
-                  onChange={(e) => this.surname_OnChange({surname: e.target.value})}
-                  value={this.state.surname}
-                />
-              </FormItem>
-                <FormItem className="input-field" validateStatus={this.state.emailError}> 
-                  <Input
-                    className="input-field"                  
-                    placeholder="  Enter your Email address"
-                    prefix={<Icon type="mail" style={{ fontSize: "18px"}}/>}
-                    suffix={suffix}
-                    size="large"
-                    onChange={(e) => this.email_OnChange({email: e.target.value})}
-                    value={this.state.email}
-                  />
-                </FormItem>
-                  <FormItem className="input-field" validateStatus={this.state.cellnumberError}>
-                    <Input
-                      className="input-field"                    
-                      placeholder="  Enter your Phone Number"
-                      prefix={<Icon type="phone" style={{ fontSize: "18px"}}/>}
-                      suffix={suffix}
-                      size="large"
-                      onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
-                      value={this.state.cellnumber}
-                    />
-                </FormItem>
+            </FormItem>
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.story_OnChange({informAgain: !this.state.informAgain})}>{data.p2}</Checkbox>  
                 <div className="textarea-container">
                   <div className="textarea-content" >
-                    <img src={leftBlockImage} alt="star"/>
+                    <img src={star} alt="star"/>
                     <p className="textarea-text">{data.p3}</p>
                   </div>
                 </div>

@@ -9,9 +9,9 @@ import carouselData from "./../../../assets/data/EN/home-wickedCarousel.json";
 import wicked1 from "./../../../assets/images/Wicked Carousel/Wicked-1.png"
 import wicked2 from "./../../../assets/images/Wicked Carousel/Wicked-2.png"
 import wicked3 from "./../../../assets/images/Wicked Carousel/Wicked-3.png"
-import wicked4 from "./../../../assets/images/Wicked Carousel/Wicked-1.png"
-import wicked5 from "./../../../assets/images/Wicked Carousel/Wicked-2.png"
-import wicked6 from "./../../../assets/images/Wicked Carousel/Wicked-3.png"
+import wicked4 from "./../../../assets/images/Wicked Carousel/Wicked-4.png"
+import wicked5 from "./../../../assets/images/Wicked Carousel/Wicked-5.png"
+import wicked6 from "./../../../assets/images/Wicked Carousel/Wicked-6.png"
 
 const images = [wicked1,wicked2, wicked3, wicked4, wicked5, wicked6];
 
@@ -44,7 +44,7 @@ export default class Subview3 extends Component {
       ]
     };
     return (
-        <div className="content-segment-3">
+        <div className="content-segment-3" id="our-content">
           <div className="ribbon">
             <div className="ribbon-content">
               <h1 className="ribbon-title">{data.t1}</h1>

@@ -59,7 +59,7 @@ export default class ModalDialogue extends Component {
           >
               <div className="modal-content">
                 <div className="top-container">
-                  <img className="close" src={close} alt="Close image"/>
+                  <img className="close" src={close} onClick={this.closeModal} alt="Close image"/>
                   <img className="top-image" src={this.props.success? modalSuccess: modalFailed} alt="Success image" />
                 </div>
                 <div className="bottom-container">

@@ -36,6 +36,15 @@
 
         }
         
+        .third-title-bottom {
+            margin-top: 20px;
+            font-size: 48px;
+            text-align: left;
+            font-weight: 400;        
+            color: #000000;
+            margin-bottom: 50px;
+
+        }
         
         .main-text-container {
             display: flex;
@@ -212,7 +221,7 @@
     }
     
     
-    @media only screen and (max-width: 1310px) {
+    @media only screen and (max-width: 1400px) {
         
         .top-content {
             .main-text-container {
@@ -227,6 +236,7 @@
                 }
                 .content-column-2 {
                     img {
+                        margin-top: 30px;
                         width: 100%;                
                     }
                 }     

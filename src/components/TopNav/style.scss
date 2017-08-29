@@ -5,6 +5,8 @@
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: 5;
+    
     .dashboard-navigator {
         height: 70px;
         margin-right: auto;
@@ -166,6 +168,17 @@
     .top-nav {
         border-bottom: solid 1px #979797;
         
+        .dashboard-navigator {
+            height: 70px;
+            margin-right: left;
+            
+            img {
+                margin-left: 10px;
+                margin-top: 0px;
+            }
+    
+        }
+
         .right-links {
             span {
                 font-size: 20px;

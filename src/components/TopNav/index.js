@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./style.css";
 import logoLight from "./../../assets/images/ado-logo.png";
-import logoDark from "./../../assets/images/ado-logo.png";
+import logoDark from "./../../assets/images/ado-logo-dark.svg";
 import close from "../../assets/images/close-light.svg";
 
 export default class TopNav extends Component {
@@ -30,7 +30,7 @@ toggleEvent() {
             <img className="home" src={logoLight} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a href="">
+            <a href="#our-content">
               <span className="link-text">
                 OUR WORK
               </span>
@@ -87,7 +87,7 @@ toggleEvent() {
             <img className="home" src={logoDark} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a href="">
+            <a href="/home">
               <span className="link-text">
                 OUR WORK
               </span>

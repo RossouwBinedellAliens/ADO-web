@@ -12,7 +12,7 @@ import facebook from '../../assets/images/linkedin.svg';
 
 import expectation1 from '../../assets/images/challenges/mentoship.svg';
 import expectation2 from '../../assets/images/challenges/training.svg';
-import expectation3 from '../../assets/images/challenges/training.svg';
+import expectation3 from '../../assets/images/challenges/fun.png';
 import mainImage from '../../assets/images/vacation-image.png';
 
 const images = [expectation1, expectation2, expectation3];
@@ -40,7 +40,7 @@ export default class VacationInfo extends Component {
               <img src={mainImage} alt="Group Photo"/>
             </div>
           </div>
-          <h2 className="secondary-title-bottom">{data.t3}</h2>
+          <h2 className="third-title-bottom">{data.t3}</h2>
           <div className="step-container">
             <div className="step-row">
               {

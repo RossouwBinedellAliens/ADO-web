@@ -11,9 +11,6 @@ import solver2 from '../../../assets/images/Solver Carousel/Solver-2.png';
 import solver3 from '../../../assets/images/Solver Carousel/Solver-3.png';
 import solver4 from '../../../assets/images/Solver Carousel/Solver-4.png';
 
-import LeftArrow from '../../../assets/images/Left-arrow.svg';
-import RightArrow from '../../../assets/images/Right-arrow.svg';
-
 const images = [solver1, solver2, solver3, solver4];
 const carouselSnapWidth = 1200;
 
@@ -66,13 +63,12 @@ export default class Subview4 extends Component {
   render() {
     var settings = {
       dots: true,
+      arrows: false,
       dotsClass: "dot-style",
       className: "slider-component",
       infinite: false,
       speed: 500,
       slidesToShow: 2,
-      nextArrow: <CustomNextArrow />,
-      prevArrow: <CustomPrevArrow />,
       slidesToScroll: 2,
       responsive: [ { breakpoint: carouselSnapWidth, settings: { slidesToShow: 1, slidesToScroll: 1 } }]
     };
@@ -94,18 +90,4 @@ export default class Subview4 extends Component {
       </div>
     );
   }
-}
-
-function CustomNextArrow(props) {
-  const {className, style, onClick} = props
-  return (
-    <img onClick={onClick} src={RightArrow} className="right-arrow"/>
-  );
-}
-
-function CustomPrevArrow(props) {
-  const {className, style, onClick} = props
-  return (
-    <img onClick={onClick} src={LeftArrow} className="left-arrow"/>
-  );
 }

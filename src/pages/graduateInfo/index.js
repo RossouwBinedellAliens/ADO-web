@@ -8,11 +8,11 @@ import WorkTypeBar from '../../components/worktypebar';
 
 import data from "../../assets/data/EN/graduate-info.json";
 import expectation1 from '../../assets/images/challenges/mentoship.svg';
-import expectation2 from '../../assets/images/challenges/mentoship.svg';
-import expectation3 from '../../assets/images/challenges/training.svg';
+import expectation2 from '../../assets/images/challenges/challanges.png';
+import expectation3 from '../../assets/images/challenges/rotation.svg';
 import expectation4 from '../../assets/images/challenges/training.svg';
-import expectation5 from '../../assets/images/challenges/training.svg';
-import mainImage from '../../assets/images/vacation-image.png';
+import expectation5 from '../../assets/images/challenges/fun.png';
+import mainImage from '../../assets/images/graduate-image.png';
 
 import linkedin from '../../assets/images/facebook.svg';
 import facebook from '../../assets/images/linkedin.svg';
@@ -38,7 +38,7 @@ export default class GraduateInfo extends Component {
             <p>{data.p1}</p>
             <img src={mainImage} alt="Group Photo"/>
           </div>
-          <h2 className="secondary-title">{data.t3}</h2>
+          <h2 className="third-title">{data.t3}</h2>
           <div className="step-container">
             <div className="step-column">
               {

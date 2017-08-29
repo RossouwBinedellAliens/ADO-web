@@ -5,8 +5,14 @@ import axios from 'axios';
 import TopNav from "./../../components/TopNav";
 import Footer from "./../../components/footer";
 import ModalDialogue from '../../components/ModalDialogue';
+import ModalLoading from '../../components/loadingModal';
 
 import leftBlockImage from "./../../assets/images/grad-left-image.png";
+import star from '../../assets/images/star.png';
+import dropDark from '../../assets/images/drop-dark.png';
+import dropLight from '../../assets/images/drop-light.png';
+import success from '../../assets/images/drop-success.png';
+import close from '../../assets/images/close.png';
 
 import 'antd/dist/antd.css';
 import "./style.css";
@@ -41,12 +47,14 @@ export default class GraduateForm extends Component {
       surnameHelp: "", 
       emailHelp: "", 
       cellnumberHelp: "",
+      file: null,
 
       dataset: new FormData(),
 
       citizen: null,
       visa: null,
 
+      loading: false,
       modal: false,
       mailStatus: null,
       redirect: false
@@ -92,7 +100,6 @@ export default class GraduateForm extends Component {
     newData.append("surname", this.state.surname);
     newData.append("email", this.state.email);
     newData.append("cellnumber", this.state.cellnumber);
-    newData.append("informAgain", this.state.informAgain);
     newData.append("form", "Graduate Applicant - ");    
 
     if(this.state.informAgain){
@@ -113,18 +120,20 @@ export default class GraduateForm extends Component {
       newData.append("visa", "N/A");
     }
 
-    this.setState({dataset: newData});
+    this.setState({dataset: newData, loading: true});
 
     axios.post(config.serverUrl + "/ado-gradForm/sendEmail", newData).then(res => {
       if (res.status === 200) {
         console.log("Succesfully sent email!");
         this.setState({
+          loading: false,          
           mailStatus: true,
           modal: true
         })
       } else {
         console.log("Failed to send email");
         this.setState({
+          loading: false,          
           mailStatus: false,
           modal: true
         })
@@ -132,6 +141,7 @@ export default class GraduateForm extends Component {
     }, err => {
       console.log(err);
       this.setState({
+        loading: false,        
         mailStatus: false,
         modal: true
       })
@@ -145,11 +155,15 @@ export default class GraduateForm extends Component {
   }
 
   whenFileDropped(files) {
-    const file = files[0];
+    let file = files[0];
 
-    var data = this.state.dataset;
-    data.append("file", file);    
-    this.setState({dataset: data});
+    if (file.size <= 5000000){
+      var data = this.state.dataset;
+      data.append("file", file);    
+      this.setState({dataset: data, file: file});
+    } else {
+      
+    }
   }
 
   username_OnChange(username){
@@ -198,10 +212,10 @@ export default class GraduateForm extends Component {
 
   render() {
     const suffix = false ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
-
     return (
       <div className="formpage-content">
         <TopNav />
+        {this.state.loading? <ModalLoading />: null }
         {this.state.modal? <ModalDialogue closeAction={this.modalAction} isOpen={this.state.modal} success={this.state.mailStatus} />: null }
         <div className="content-container-form">
           <div className="col-1">
@@ -209,7 +223,7 @@ export default class GraduateForm extends Component {
             <div className="top-title">
               <h1>{data.t1}</h1>
             </div>
-            <p className="main-text">{data.p1}</p>
+            <p className="main-text"><b>{data.p1}</b></p>
             <p className="closure-text">{data.p2}</p>
           </div>
           <div className="col-2">
@@ -221,7 +235,7 @@ export default class GraduateForm extends Component {
                 hasFeedback>
                 <Input
                   className="input-field"
-                  placeholder="Enter your Username"
+                  placeholder="First name"
                   prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
                   suffix={suffix}
                   size="large"
@@ -236,7 +250,7 @@ export default class GraduateForm extends Component {
                 hasFeedback>
                 <Input
                   className="input-field"                
-                  placeholder="  Enter your Surname"
+                  placeholder="Surname"
                   prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
                   suffix={suffix}
                   size="large"
@@ -252,7 +266,7 @@ export default class GraduateForm extends Component {
                   hasFeedback> 
                   <Input
                     className="input-field"                  
-                    placeholder="  Enter your Email address"
+                    placeholder="Email address"
                     prefix={<Icon type="mail" style={{ fontSize: "18px"}}/>}
                     suffix={suffix}
                     size="large"
@@ -267,7 +281,7 @@ export default class GraduateForm extends Component {
                   hasFeedback>
                     <Input
                       className="input-field"                    
-                      placeholder="  Enter your Phone Number"
+                      placeholder="Phone Number"
                       prefix={<Icon type="phone" style={{ fontSize: "18px"}}/>}
                       suffix={suffix}
                       size="large"
@@ -278,10 +292,26 @@ export default class GraduateForm extends Component {
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
-                    <img src={leftBlockImage} alt="star"/>
+                    <img src={star} alt="star"/>
                     <p className="file-drop-text">{data.p4}</p>
                   </div>
-                  <Dropzone onDrop={this.whenFileDropped} className="file-drop" />
+                  <Dropzone onDrop={this.whenFileDropped} className="file-drop" >
+                    {
+                      this.state.file === null? (
+                      <div className="drop-no-file">
+                        <img src={dropDark} alt="drop-zone" />
+                        <span className="line-1">Select file to upload</span>
+                        <span className="line-2">MAX 5mb</span>
+                      </div> ): (
+                        <div className="drop-file">
+                          <img className="remove" src={close} onClick={ex => this.checkboxOnChange({file: null})} alt="close"/>
+                          <img className="success" src={success} alt="drop-zone"/>
+                          <span className="line-1">File Selected!</span>
+                          <span className="line-2">{this.state.file.name}</span>
+                        </div>
+                      )
+                    }
+                  </Dropzone>
                 </div>
                 <div className="checkbox-container">
                   <div>

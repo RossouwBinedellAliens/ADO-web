@@ -36,6 +36,13 @@
         text-align: left;
         color: #2e3135;
         margin-right: 65px; }
+    .graduate-info .top-content .third-title {
+      margin-top: 30px;
+      font-size: 48px;
+      text-align: left;
+      font-weight: 400;
+      color: #000000;
+      margin-bottom: 20px; }
     .graduate-info .top-content .step-container {
       display: flex; }
       .graduate-info .top-content .step-container .step-column {
@@ -99,7 +106,7 @@
         background-color: #5b1647;
         border: solid 1px #979797;
         color: #ffffff; }
-  @media only screen and (max-width: 1250px) {
+  @media only screen and (max-width: 1350px) {
     .graduate-info .top-content .main-text-container {
       flex-direction: column; }
       .graduate-info .top-content .main-text-container p {

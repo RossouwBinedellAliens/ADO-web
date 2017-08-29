@@ -50,7 +50,15 @@
     
                 margin-right: 65px;
             }
-    
+        }
+
+        .third-title {
+            margin-top: 30px;
+            font-size: 48px;
+            text-align: left;
+            font-weight: 400;        
+            color: #000000;
+            margin-bottom: 20px;
         }
     
         .step-container {
@@ -149,7 +157,7 @@
     }
     
     
-    @media only screen and (max-width: 1250px) {
+    @media only screen and (max-width: 1350px) {
         
         .top-content {
             .main-text-container {

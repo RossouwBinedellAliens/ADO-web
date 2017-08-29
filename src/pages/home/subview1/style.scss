@@ -2,6 +2,7 @@
     width: 100%;
     position: relative;
     height: 51vw;
+    margin-bottom: 80px;
     min-height: 747px;
     
     
@@ -42,13 +43,14 @@
             height: 100%;
             margin-left: auto;
             margin-right: auto;
+            z-index: 1;
             div {
                 a {
                     display: flex;
                     flex-direction: column;
                     text-decoration: none;
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 0px;
                 }
                 a span {
                     font-size: 24px;
@@ -61,8 +63,13 @@
 
         @media only screen and (min-width: 1440px) {
             .title {
+                position: absolute;
+                width: 22%;
+                left: 70%;
+                top:30%;
                 font-size: 7.5vw;
-                margin-right: 50px;
+                // margin-right: 50px;
+                padding-top: 30px;
             }
         }
             
@@ -84,16 +91,6 @@
             .title {
                 text-align: center;
                 margin-right: auto;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .content-segment {
-        .content-container {
-            .explore {
-                display: none;
             }
         }
     }

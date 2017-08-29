@@ -47,6 +47,7 @@
                 margin: 50px 15px 30px 15px;
                 font-size: 20px;
                 line-height: 1.8;
+                font-weight: 200;
                 text-align: left;
                 color: #2e3135;
             }
@@ -59,7 +60,7 @@
                 color: #2e3135;
                 margin-left: 15px;
                 margin-right: 15px;
-
+                font-weight: bold;
             }
         }
         .col-2 {
@@ -99,15 +100,14 @@
                     .file-drop-content {
                         display: flex;
                         .file-drop-text {
-                            margin-left: 10px;
                             font-size: 18px;
                             text-align: left;
                             color: #2e3135;
                         }
     
                         img {
-                            width: 20px;
-                            height: 20px;
+                            width: 23px;
+                            height: 30px;
                         }
     
                     }
@@ -117,6 +117,69 @@
                         border-radius: 5px;
                         background-color: #fafafa;
                         box-shadow: inset 0 0 2px 0 rgba(153, 153, 153, 0.5);
+
+                        .drop-no-file{
+                            padding-top: 90px;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+
+                            img {
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 120px;
+                            }
+
+                            .line-1 {
+                                font-size: 20.2px;
+                                font-weight: 600;
+                                line-height: 1.04;
+                                color: #999999;
+                            }
+
+                            .line-2 {
+                                font-size: 15.1px;
+                                font-weight: normal;
+                                line-height: 1.38;
+                                color: #999999;
+                            }
+
+
+                        }
+                        .drop-file {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+
+                            .remove {
+                                width: 70px;
+                                height: 70px;
+                                margin-left: auto;
+                                margin-right: 10px;
+                            }
+
+                            .success {
+                                margin-top: 20px;                            
+                                margin-left: auto;
+                                margin-right: auto;
+                                width: 120px;
+                            }
+
+                            .line-1 {
+                                font-size: 20.2px;
+                                font-weight: 600;
+                                line-height: 1.04;
+                                color: #999999;
+                            }
+
+                            .line-2 {
+                                font-size: 15.1px;
+                                font-weight: normal;
+                                line-height: 1.38;
+                                color: #999999;
+                            }
+                        }
+
                     }
                 }
     
@@ -195,6 +258,10 @@
                 margin-left: 0px;
             }
         }
+    }
+
+    .ant-input {
+        padding-left: 35px !important;
     }
 
     @media only screen and (max-width: 800px) {

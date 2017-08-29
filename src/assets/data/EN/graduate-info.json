@@ -24,17 +24,17 @@
         {
             "num": "01",
             "title": "Submission",
-            "text": "Submit your application"
+            "text": "Submit your application."
         },
         {
             "num": "02",
             "title": "What’s next?",
-            "text": "We’ll have a look at it and let you know what’s next "
+            "text": "We’ll have a look at it and let you know what’s next. "
         },
         {
             "num": "03",
             "title": "Challenge",
-            "text": "You’ll come in so we can get to know you a bit better and we’ll give you a challenge to complete on the day in order to see where your strengths lie"
+            "text": "You’ll come in so we can get to know you a bit better and we’ll give you a challenge to complete on the day in order to see where your strengths lie."
         },
         {
             "num": "04",
@@ -44,22 +44,22 @@
         {
             "num": "05",
             "title": "Introduction",
-            "text": "Once onboard we’ll introduce you to the office and get you settled into the ADO culture"
+            "text": "Once onboard we’ll introduce you to the office and get you settled into the ADO culture."
         },
         {
             "num": "06",
             "title": "Exploration ",
-            "text": "You’ll get to explore CX, UX, UI and PE (Don’t stress if you dont know what these things are yet)"
+            "text": "You’ll get to explore CX, UX, UI and PE (don’t stress if you dont know what these things are yet)."
         },
         {
             "num": "07",
             "title": "The grind",
-            "text": "You’ll work on some wicked problems in sets of three month rotations to find out what interests you most"
+            "text": "You’ll work on some wicked problems in sets of three month rotations to find out what interests you most."
         },
         {
             "num": "08",
             "title": "Hope",
-            "text": "And finally, fingers crossed, you might get permenantly placed"
+            "text": "And finally, fingers crossed, you might get permenantly placed."
         }
     ],
 

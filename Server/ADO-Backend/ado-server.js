@@ -1,10 +1,17 @@
+// There are two config files in the app that need to be changed. The one in root, "config.json" 
+// is for the node server and all the settings here will only affect the node server hosting. 
+// The email and the password for the sender are set here.
+
+// The other file is in "./src/config.json" and it is used by the sight to point to the server. Just
+// add the ip-port location in there to let the website know where to go.
+
 var express =       require('express');
 var parser =        require('body-parser');
 const nodemailer =  require('nodemailer');
 var cors =          require('cors');
 var multer =        require('multer');
-var upload =        multer({ dest: "uploads/"});
-
+var upload =        multer({ dest: 'uploads/' })
+var fs =            require('fs');
 var config =        require("../../config.json");
 
 var app = express();
@@ -42,7 +49,7 @@ app.post('/ado-gradForm/sendEmail', upload.single("file"), function(req, res){
 })
 
 var sendEmailGraduate = function(res, filePath, username, surname, email, cellnumber, form, isCitizen, informAgain, visa){
-  
+    console.log(filePath);
   let mailOptions = {
       from: '"ADO " <' + config.hostEmail + '>', // the transporter email address. i.e. Email which will send the form from website
       to: config.recieverEmail, // replace with proper email. i.e. Email which will receive emails from the website
@@ -67,11 +74,19 @@ var sendEmailGraduate = function(res, filePath, username, surname, email, cellnu
           res.statusCode = 400;
           res.statusMessage="failed";
           res.send(false);
+      }else {
+          res.statusCode = 200;
+          res.statusMessage="success";
+          res.send(true);
+          console.log('Message %s sent: %s', info.messageId, info.response);
       }
-      res.statusCode = 200;
-      res.statusMessage="success";
-      res.send(true);
-      console.log('Message %s sent: %s', info.messageId, info.response);
+      fs.unlink(filePath.path, (err) => {
+          if (err) {
+              console.log("Some error has occurred: " + err);
+          } else {
+              console.log("Succesfully deleted the file: " + filePath.path);
+          }
+      })
   });
 }
 
@@ -109,11 +124,12 @@ var sendEmailVacation = function(res, textBlock, username, surname, email, celln
           res.statusCode = 400;
           res.statusMessage="failed";
           res.send(false);
+      } else {
+          res.statusCode = 200;
+          res.statusMessage="success";
+          res.send(true);
+          console.log('Message %s sent: %s', info.messageId, info.response);
       }
-      res.statusCode = 200;
-      res.statusMessage="success";
-      res.send(true);
-      console.log('Message %s sent: %s', info.messageId, info.response);
   });
 }
 
