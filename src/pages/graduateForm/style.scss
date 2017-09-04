@@ -1,5 +1,8 @@
-.formpage-content{
+.graduate-form-content {
     position: relative;
+    *:focus {
+        outline: 0 !important;
+    }
     .content-container-form {
         padding-top: 70px;
         max-width: 1440px;
@@ -44,7 +47,7 @@
             }
 
             .main-text {
-                margin: 50px 15px 30px 15px;
+                margin: 50px 30px 30px 30px;
                 font-size: 20px;
                 line-height: 1.8;
                 font-weight: 200;
@@ -58,8 +61,8 @@
                 line-height: 1.3;
                 text-align: left;
                 color: #2e3135;
-                margin-left: 15px;
-                margin-right: 15px;
+                margin-left: 30px;
+                margin-right: 30px;
                 font-weight: bold;
             }
         }
@@ -69,179 +72,176 @@
             margin-top: 350px;
             margin-left: 65px;
 
-            .form-container{
-                width: 100%;
+
+            .form-container {
                 display: flex;
                 flex-wrap: wrap;
-
-                .input-field {
-                    vertical-align: middle;
-                    text-align: center;
-                    justify-content: center;
-                    width: 320px;
-                    height: 50px;
+                .form-item {
                     margin-right: auto;
-                    z-index: 0;
-                    
+                    margin-bottom: 10px;
                 }
-
-                .form-checkbox {
-                    width: 100%;
-                    font-size: 18px;
-                    text-align: left;
-                    color: #2e3135;
-                    margin-bottom: 50px;                        
-                }
-    
-                .file-drop-container {
-                    width: 100%;
-                    margin-bottom: 50px;
-    
-                    .file-drop-content {
-                        display: flex;
-                        .file-drop-text {
-                            font-size: 18px;
-                            text-align: left;
-                            color: #2e3135;
-                        }
-    
-                        img {
-                            width: 23px;
-                            height: 30px;
-                        }
-    
-                    }
-    
-                    .file-drop {
-                        height: 340px;
-                        border-radius: 5px;
-                        background-color: #fafafa;
-                        box-shadow: inset 0 0 2px 0 rgba(153, 153, 153, 0.5);
-
-                        .drop-no-file{
-                            padding-top: 90px;
-                            display: flex;
-                            flex-direction: column;
-                            text-align: center;
-
-                            img {
-                                margin-left: auto;
-                                margin-right: auto;
-                                width: 120px;
-                            }
-
-                            .line-1 {
-                                font-size: 20.2px;
-                                font-weight: 600;
-                                line-height: 1.04;
-                                color: #999999;
-                            }
-
-                            .line-2 {
-                                font-size: 15.1px;
-                                font-weight: normal;
-                                line-height: 1.38;
-                                color: #999999;
-                            }
-
-
-                        }
-                        .drop-file {
-                            display: flex;
-                            flex-direction: column;
-                            text-align: center;
-
-                            .remove {
-                                width: 70px;
-                                height: 70px;
-                                margin-left: auto;
-                                margin-right: 10px;
-                            }
-
-                            .success {
-                                margin-top: 20px;                            
-                                margin-left: auto;
-                                margin-right: auto;
-                                width: 120px;
-                            }
-
-                            .line-1 {
-                                font-size: 20.2px;
-                                font-weight: 600;
-                                line-height: 1.04;
-                                color: #999999;
-                            }
-
-                            .line-2 {
-                                font-size: 15.1px;
-                                font-weight: normal;
-                                line-height: 1.38;
-                                color: #999999;
-                            }
-                        }
-
-                    }
-                }
-    
-                .checkbox-container {
-                    width: 100%;
-                    div {
-                        display: flex;
-                        .checkbox-text {
-                            width: 300px;
-                            font-size: 18px;
-                            line-height: 2;
-                            text-align: left;
-                            color: #2e3135;
-                        }
-                        
-                        .checkbox-item {
-                            font-size: 18px;
-                            text-align: left;
-                            color: #2e3135;
-                        }
-                        
-                    }
-                }
-    
-                .program-button {
-                    margin-top: 10px;
-                    margin-left: auto;
-                    display: block;
-                    width: 260px;
-                    height: 50px;
-                    background-color: #ffffff;
-                    margin-bottom: 30px;
-                    
-                    border-radius: 5px;
-                    border: solid 2px #2e3135;
-                    
-                    text-align: center; 
-                    font-size: 16px;
-                    color: #2e3135;
-                    text-decoration: none;
-                }
-                .program-button:hover {
-                    background-color: #2e3135;
-                    border: solid 1px #979797;
-                    color: #ffffff;   
-                }
-        
-                .program-button:active {
-                    background-color: #5b1647;
-                    border: solid 1px #979797;
-                    color: #ffffff;   
-                }
-        
             }
+
+
+            .form-checkbox {
+                width: 100%;
+                font-size: 18px;
+                text-align: left;
+                color: #2e3135;
+                margin-bottom: 50px;                        
+            }
+
+            .file-drop-container {
+                width: 100%;
+                margin-bottom: 50px;
+
+                .file-drop-content {
+                    display: flex;
+                    .file-drop-text {
+                        font-size: 18px;
+                        text-align: left;
+                        color: #2e3135;
+                    }
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                }
+
+                .file-drop {
+                    height: 340px;
+                    border-radius: 5px;
+                    background-color: #fafafa;
+                    box-shadow: inset 0 0 2px 0 rgba(153, 153, 153, 0.5);
+
+                    .drop-no-file{
+                        padding-top: 90px;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        img {
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 120px;
+                        }
+
+                        .line-1 {
+                            font-size: 20.2px;
+                            font-weight: 600;
+                            line-height: 1.04;
+                            color: #999999;
+                        }
+
+                        .line-2 {
+                            font-size: 15.1px;
+                            font-weight: normal;
+                            line-height: 1.38;
+                            color: #999999;
+                        }
+
+
+                    }
+                    .drop-file {
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+
+                        .remove {
+                            width: 70px;
+                            height: 70px;
+                            margin-left: auto;
+                            margin-right: 10px;
+                        }
+
+                        .success {
+                            margin-top: 20px;                            
+                            margin-left: auto;
+                            margin-right: auto;
+                            width: 120px;
+                        }
+
+                        .line-1 {
+                            font-size: 20.2px;
+                            font-weight: 600;
+                            line-height: 1.04;
+                            color: #999999;
+                        }
+
+                        .line-2 {
+                            font-size: 15.1px;
+                            font-weight: normal;
+                            line-height: 1.38;
+                            color: #999999;
+                        }
+                    }
+
+                }
+            }
+
+            .checkbox-container {
+                width: 100%;
+                div {
+                    display: flex;
+                    .checkbox-text {
+                        width: 300px;
+                        font-size: 18px;
+                        line-height: 2;
+                        text-align: left;
+                        color: #2e3135;
+                    }
+                    
+                    .checkbox-item {
+                        font-size: 18px;
+                        text-align: left;
+                        color: #2e3135;
+                    }
+                    
+                }
+            }
+
+            .program-button {
+                display: block;
+                margin-left: auto;
+                width: 260px;
+                height: 50px;
+                padding-top: 2px;
+                margin-bottom: 30px;
+                margin-top: 10px;
+
+                background-color: #2e3135;
+                border: solid 1px #979797;
+                border-radius: 5px;
+                
+                color: #ffffff;   
+                text-align: center; 
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .program-button:hover {
+                background-color: #5b1647;
+                border: solid 1px #979797;
+            }
+
+            .disabled {
+                background-color: rgba(46, 49, 53, 0.2);
+                border: none;
+                
+            }
+
+            .disabled:hover {
+                background-color: rgba(46, 49, 53, 0.2);
+                border: none;
+            }
+
         }
 
-        @media only screen and (max-width: 1310px) {
-            
-            .col-2 {
-                .form-container .input-field {
-                    margin-left: auto;
-                }
+        @media only screen and (max-width: 1265px) {
+            .col-2 .form-container .form-item {
+                margin-left: auto;
             }
         }
     }

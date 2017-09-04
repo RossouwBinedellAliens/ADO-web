@@ -12,7 +12,16 @@ import pillar5 from "./../../../assets/images/Pillar/Pillar-5.svg";
 import pillar6 from "./../../../assets/images/Pillar/Pillar-6.svg";
 import pillar7 from "./../../../assets/images/Pillar/Pillar-7.svg";
 
+import pillarHover1 from "./../../../assets/images/Pillar/Pillar-1.svg";
+import pillarHover2 from "./../../../assets/images/Pillar/Pillar-2.svg";
+import pillarHover3 from "./../../../assets/images/Pillar/Pillar-3.svg";
+import pillarHover4 from "./../../../assets/images/Pillar/Pillar-4.svg";
+import pillarHover5 from "./../../../assets/images/Pillar/Pillar-5.svg";
+import pillarHover6 from "./../../../assets/images/Pillar/Pillar-6.svg";
+import pillarHover7 from "./../../../assets/images/Pillar/Pillar-7.svg";
+
 const pillarImages = [ pillar1, pillar2, pillar3, pillar4, pillar5, pillar6, pillar7 ];
+const pillarHoverImages = [ pillar1, pillar2, pillar3, pillar4, pillar5, pillar6, pillar7 ];
 
 export default class Subview2 extends Component {
 constructor(props){
@@ -55,7 +64,7 @@ constructor(props){
         <div className="row-3"> 
           {
             this.state.pillarText.map((text, i) => {
-              return <Pillar text={text} image={pillarImages[i]}/>
+              return <Pillar text={ text } image={ pillarImages[i] } hoverImage={ pillarHoverImages[i] }/>
             })
           }
         </div> 

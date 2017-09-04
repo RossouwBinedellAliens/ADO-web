@@ -1,7 +1,7 @@
 .content-segment {
     width: 100%;
     position: relative;
-    height: 51vw;
+    height: 51%;
     margin-bottom: 80px;
     min-height: 747px;
     
@@ -56,6 +56,12 @@
                     font-size: 24px;
                     font-weight: 600;
                     color: #ffffff;
+                }
+
+                a:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    text-decoration-color: #fff;
                 }
 
             }

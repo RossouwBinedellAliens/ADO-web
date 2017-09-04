@@ -6,12 +6,18 @@
     margin-right: auto;
     margin-top: 55px;
     min-width: 130px;
+
     .pillar-image {
+        display: inline;
         width: 70px;
         height: 70px;
         margin-bottom: 10px;    
     }
-    
+
+    .hover {
+        display: none;
+    }
+
     .pillar-title {
         font-size: 24px;
         font-weight: bold;
@@ -32,7 +38,17 @@
 }
 
 
-.pillar:hover{
+.pillar:hover {
+    cursor: pointer;
+
+    .pillar-image {
+        display: none;
+    }
+
+    .hover {
+        display: inline;
+    }
+
     .pillar-text {
         display: block
     }

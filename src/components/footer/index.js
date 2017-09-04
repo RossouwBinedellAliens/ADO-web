@@ -3,8 +3,6 @@ import "./style.css";
 
 import data from "../../assets/data/EN/footer-info.json";
 
-import absa from '../../assets/images/absa.svg';
-
 export default class Footer extends Component {
   constructor(props) {
     super(props);
@@ -44,14 +42,9 @@ export default class Footer extends Component {
             <div className="footer-item-3">
               <span>{data.p1}</span>
               <p>{data.p2}</p>
-              <a>{data.a1}</a>
+              <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a>
             </div>
           </div>
-
-          <div className="footer-bottom">
-            <img className="footer-absa-logo" src={absa} alt="absa logo" />
-          </div>
-
         </div>
       );
     } else if (this.state.width > 680) {
@@ -73,13 +66,8 @@ export default class Footer extends Component {
             </div>
           </div>
           <div className="footer-item-3">
-            <a>{data.a1}</a>
+            <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a>
           </div>
-          
-          <div className="footer-bottom">
-            <img className="footer-absa-logo" src={absa} alt="absa logo" />
-          </div>
-
         </div>
       );
     } else {
@@ -102,14 +90,9 @@ export default class Footer extends Component {
             <div className="footer-item-3">
               <span>{data.p1}</span>
               <p>{data.p2}</p>
-              <a>{data.a1}</a>
+              <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a> 
             </div>
           </div>
-
-          <div className="footer-bottom">
-            <img className="footer-absa-logo" src={absa} alt="absa logo" />
-          </div>
-
         </div>
       );
     }

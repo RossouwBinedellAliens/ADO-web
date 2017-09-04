@@ -100,30 +100,24 @@
             }
             
             .program-button {
+                display: block;
                 margin-left: auto;
                 margin-right: auto;
-                display: block;
                 width: 260px;
                 height: 50px;
                 padding-top: 13px;
-                background-color: #ffffff;
-                
+
+                background-color: #2e3135;
+                border: solid 1px #979797;
                 border-radius: 5px;
-                border: solid 2px #2e3135;
                 
+                color: #ffffff;   
                 text-align: center; 
                 font-size: 16px;
-                color: #2e3135;
                 text-decoration: none;
             }
 
             .program-button:hover {
-                background-color: #2e3135;
-                border: solid 1px #979797;
-                color: #ffffff;   
-            }
-
-            .program-button:active {
                 background-color: #5b1647;
                 border: solid 1px #979797;
                 color: #ffffff;   

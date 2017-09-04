@@ -7,9 +7,12 @@
   margin-top: 55px;
   min-width: 130px; }
   .pillar .pillar-image {
+    display: inline;
     width: 70px;
     height: 70px;
     margin-bottom: 10px; }
+  .pillar .hover {
+    display: none; }
   .pillar .pillar-title {
     font-size: 24px;
     font-weight: bold;
@@ -25,14 +28,18 @@
     text-align: center;
     color: #5b1647; }
 
-.pillar:hover .pillar-text {
-  display: block; }
-
-.pillar:hover .pillar-image {
-  margin-bottom: 10px; }
-
-.pillar:hover div .pillar-title {
-  color: #5b1647; }
+.pillar:hover {
+  cursor: pointer; }
+  .pillar:hover .pillar-image {
+    display: none; }
+  .pillar:hover .hover {
+    display: inline; }
+  .pillar:hover .pillar-text {
+    display: block; }
+  .pillar:hover .pillar-image {
+    margin-bottom: 10px; }
+  .pillar:hover div .pillar-title {
+    color: #5b1647; }
 
 @media only screen and (max-width: 600px) {
   .pillar {

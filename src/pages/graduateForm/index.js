@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import { Checkbox } from 'antd';
 import axios from 'axios';
 import TopNav from "./../../components/TopNav";
 import Footer from "./../../components/footer";
 import ModalDialogue from '../../components/ModalDialogue';
 import ModalLoading from '../../components/loadingModal';
+import FormInput from '../../components/forminput';
 
 import leftBlockImage from "./../../assets/images/grad-left-image.png";
 import star from '../../assets/images/star.png';
@@ -21,10 +22,6 @@ import data from '../../assets/data/EN/graduate-form.json';
 import config from '../../config.json';
 
 var Dropzone = require('react-dropzone');
-
-
-const FormItem = Form.Item;
-
 
 export default class GraduateForm extends Component {
 
@@ -122,7 +119,12 @@ export default class GraduateForm extends Component {
 
     this.setState({dataset: newData, loading: true});
 
-    axios.post(config.serverUrl + "/ado-gradForm/sendEmail", newData).then(res => {
+    var instance = axios.create({
+      baseURL: config.serverUrl,
+      timeout: 60000
+    });
+
+    instance.post(config.serverUrl + "ado-gradForm/sendEmail", newData).then(res => {
       if (res.status === 200) {
         console.log("Succesfully sent email!");
         this.setState({
@@ -167,38 +169,34 @@ export default class GraduateForm extends Component {
   }
 
   username_OnChange(username){
-    this.setState(username);
-    if(this.state.username.length === 0){
-      this.setState({usernameError: "error", usernameHelp: "Please enter your name. Characters only."});
+    if(username.length <= 1){
+      this.setState({username: username, usernameError: "error", usernameHelp: "Please enter your name. Characters only."});
     }else{
-      this.setState({usernameError: "success", usernameHelp: ""});
+      this.setState({username: username, usernameError: "success", usernameHelp: ""});
     }
   }
 
   surname_OnChange(surname){
-    this.setState(surname);
-    if(this.state.surname === ""){
-      this.setState({surnameError: "error", surnameHelp: "Please enter your surname. Characters only."});
+    if(surname.length <= 1){
+      this.setState({surname: surname, surnameError: "error", surnameHelp: "Please enter your surname. Characters only."});
     }else{
-      this.setState({surnameError: "success", surnameHelp: ""});
+      this.setState({surname: surname, surnameError: "success", surnameHelp: ""});
     }
   }
 
   email_OnChange(email){
-     this.setState(email);
-     if(this.state.email === ""){
-      this.setState({emailError: "error", emailHelp: "Please enter a valid email address."});
+     if(!this.validateEmail(this.state.email)){
+      this.setState({email: email, emailError: "error", emailHelp: "Please enter a valid email address."});
     }else{
-      this.setState({emailError: "success", emailHelp: ""});
+      this.setState({email: email, emailError: "success", emailHelp: ""});
     }
   }
 
   cellnumber_OnChange(cellnumber){
-    this.setState(cellnumber);
-    if(this.state.cellnumber === ""){
-      this.setState({cellnumberError: "error", cellnumberHelp: "Please enter a valid Cell Number. Digits only."});
-    }else{
-      this.setState({cellnumberError: "success", cellnumberHelp: ""});
+    if(cellnumber.length < 10){
+      this.setState({cellnumber: cellnumber, cellnumberError: "error", cellnumberHelp: "Please enter a valid Cell Number. Digits only."});
+    } else if (cellnumber.length === 10) {
+      this.setState({cellnumber: cellnumber, cellnumberError: "success", cellnumberHelp: ""});
     }
   }
 
@@ -211,9 +209,8 @@ export default class GraduateForm extends Component {
   }
 
   render() {
-    const suffix = false ? <Icon type="close-circle" onClick={this.emitEmpty} /> : null;
     return (
-      <div className="formpage-content">
+      <div className="graduate-form-content">
         <TopNav />
         {this.state.loading? <ModalLoading />: null }
         {this.state.modal? <ModalDialogue closeAction={this.modalAction} isOpen={this.state.modal} success={this.state.mailStatus} />: null }
@@ -227,68 +224,55 @@ export default class GraduateForm extends Component {
             <p className="closure-text">{data.p2}</p>
           </div>
           <div className="col-2">
-            <Form className="form-container" onSubmit={this.handleFormSubmit}>
-              <FormItem 
-                className="input-field" 
-                validateStatus={this.state.usernameError}
+            <div className="form-container">
+              <FormInput
+                className="form-item"
+                doChange={this.username_OnChange}
+                placeHolder="First name"
+                value={this.state.username}
+                isError={this.state.usernameError}
                 help={this.state.usernameHelp}
-                hasFeedback>
-                <Input
-                  className="input-field"
-                  placeholder="First name"
-                  prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
-                  suffix={suffix}
-                  size="large"
-                  onChange={(e) => this.username_OnChange({username: e.target.value})}
-                  value={this.state.username}
-                />
-              </FormItem>
-              <FormItem 
-                className="input-field" 
-                validateStatus={this.state.surnameError}
+                icon={success}
+                iconError={success}
+                successImage={success}
+                errorImage={close}
+              />
+              <FormInput
+                className="form-item"              
+                doChange={this.surname_OnChange}
+                placeHolder="SurName"
+                value={this.state.surname}
+                isError={this.state.surnameError}
                 help={this.state.surnameHelp}
-                hasFeedback>
-                <Input
-                  className="input-field"                
-                  placeholder="Surname"
-                  prefix={<Icon type="user" style={{ fontSize: "18px"}}/>}
-                  suffix={suffix}
-                  size="large"
-                  onChange={(e) => this.surname_OnChange({surname: e.target.value})}
-                  value={this.state.surname}
-                  ref={node => this.surname = node}
-                />
-              </FormItem>
-                <FormItem 
-                  className="input-field" 
-                  validateStatus={this.state.emailError}
-                  help={this.state.emailHelp}
-                  hasFeedback> 
-                  <Input
-                    className="input-field"                  
-                    placeholder="Email address"
-                    prefix={<Icon type="mail" style={{ fontSize: "18px"}}/>}
-                    suffix={suffix}
-                    size="large"
-                    onChange={(e) => this.email_OnChange({email: e.target.value})}
-                    value={this.state.email}
-                  />
-                </FormItem>
-                  <FormItem 
-                  className="input-field" 
-                  validateStatus={this.state.cellnumberError}
-                  help={this.state.cellnumberHelp}
-                  hasFeedback>
-                    <Input
-                      className="input-field"                    
-                      placeholder="Phone Number"
-                      prefix={<Icon type="phone" style={{ fontSize: "18px"}}/>}
-                      suffix={suffix}
-                      size="large"
-                      onChange={(e) => this.cellnumber_OnChange({cellnumber: e.target.value})}
-                      value={this.state.cellnumber}                     
-                    />
-                </FormItem>
+                icon={success}
+                iconError={success}
+                successImage={success}
+                errorImage={close}
+              />
+              <FormInput
+                className="form-item"
+                doChange={this.email_OnChange}
+                placeHolder="Email address"
+                value={this.state.email}
+                isError={this.state.emailError}
+                help={this.state.emailHelp}
+                icon={success}
+                iconError={success}
+                successImage={success}
+                errorImage={close}
+              />
+              <FormInput
+                className="form-item"              
+                doChange={this.cellnumber_OnChange}
+                placeHolder="Phone number"
+                value={this.state.cellnumber}
+                isError={this.state.cellnumberError}
+                help={this.state.cellnumberHelp}
+                icon={success}
+                iconError={success}
+                successImage={success}
+                errorImage={close}
+              />
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
@@ -335,10 +319,10 @@ export default class GraduateForm extends Component {
                 </div>
                 {
                   this.isValid()? 
-                    <Button className="program-button" onClick={this.handleFormSubmit}>Submit</Button>:
-                    <Button className="program-button disabled" disabled>Submit</Button>
+                    <button className="program-button" onClick={this.handleFormSubmit}>Submit</button>:
+                    <button className="program-button disabled" disabled>Submit</button>
                 }
-              </Form>
+              </div>
           </div>
         </div>
         <Footer />

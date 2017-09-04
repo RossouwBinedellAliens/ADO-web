@@ -62,7 +62,7 @@ export default class Subview4 extends Component {
 
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       arrows: false,
       dotsClass: "dot-style",
       className: "slider-component",
@@ -70,7 +70,7 @@ export default class Subview4 extends Component {
       speed: 500,
       slidesToShow: 2,
       slidesToScroll: 2,
-      responsive: [ { breakpoint: carouselSnapWidth, settings: { slidesToShow: 1, slidesToScroll: 1 } }]
+      responsive: [ { breakpoint: carouselSnapWidth, settings: { slidesToShow: 1, slidesToScroll: 1, dots: true } }]
     };
     return (
       <div className="content-container-4">
