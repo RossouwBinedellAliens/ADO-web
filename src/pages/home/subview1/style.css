@@ -1,7 +1,7 @@
 .content-segment {
   width: 100%;
   position: relative;
-  height: 51%;
+  height: 51.35vw;
   margin-bottom: 80px;
   min-height: 747px; }
   .content-segment .dash-background {
@@ -18,16 +18,27 @@
     min-height: 747px;
     padding-right: 100px;
     padding-left: 100px; }
-    .content-segment .content-container .title {
-      padding-top: 250px;
-      margin-left: auto;
-      width: 300px;
-      font-size: 110px;
-      font-weight: 900;
-      line-height: 1.04;
-      letter-spacing: -1.2px;
-      text-align: right;
-      color: #ffffff; }
+    .content-segment .content-container .title-container {
+      position: absolute;
+      bottom: 140px;
+      width: 500px; }
+      .content-segment .content-container .title-container .title {
+        position: relative;
+        font-size: 36px;
+        letter-spacing: 1px;
+        font-weight: 900;
+        line-height: 1.04;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 15px;
+        margin-left: 5px; }
+      .content-segment .content-container .title-container .slogan {
+        position: relative;
+        font-size: 62px;
+        font-weight: bolder;
+        line-height: 1.2;
+        text-align: left;
+        color: #ffffff; }
     .content-segment .content-container .explore {
       text-align: center;
       width: 80px;
@@ -40,30 +51,33 @@
         flex-direction: column;
         text-decoration: none;
         position: absolute;
-        bottom: 0px; }
+        bottom: 60px; }
       .content-segment .content-container .explore div a span {
-        font-size: 24px;
-        font-weight: 600;
+        font-size: 22px;
+        font-weight: 100;
         color: #ffffff; }
       .content-segment .content-container .explore div a:hover {
         cursor: pointer;
         text-decoration: underline;
         text-decoration-color: #fff; }
     @media only screen and (min-width: 1440px) {
-      .content-segment .content-container .title {
-        position: absolute;
-        width: 22%;
-        left: 70%;
-        top: 30%;
-        font-size: 7.5vw;
-        padding-top: 30px; } }
+      .content-segment .content-container .title-container .title {
+        font-size: 2.5vw;
+        width: 50vw; }
+      .content-segment .content-container .title-container .slogan {
+        font-size: 5vw;
+        width: 40vw; } }
 
 @media only screen and (max-width: 850px) {
   .content-segment .dash-background {
     left: calc((100vw - 850px)/2); }
   .content-segment .content-container {
-    padding-left: 0px;
-    padding-right: 0px; }
-    .content-segment .content-container .title {
-      text-align: center;
-      margin-right: auto; } }
+    padding-right: 10px;
+    padding-left: 10px; }
+    .content-segment .content-container .title-container {
+      width: 100%; }
+      .content-segment .content-container .title-container .title, .content-segment .content-container .title-container .slogan {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 500px;
+        text-align: center; } }

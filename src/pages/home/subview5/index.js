@@ -23,13 +23,13 @@ export default class Subview5 extends Component {
             <img className="program-icon" src={vacation} alt="Vacation Icon"/>
             <h2 className="program-title">{data.vacation.title}</h2>
             <p className="program-text">{data.vacation.text}</p>
-            <a href="/vacation" className="program-button">Find out more</a>       
+            <a href="/vacation" className="program-button">Show Me</a>       
           </div>
           <div className="program-item">
             <img className="program-icon" src={graduate} alt="Vacation Icon"/>
             <h2 className="program-title">{data.graduate.title}</h2>
             <p className="program-text">{data.graduate.text}</p>
-            <a href="/graduate" className="program-button">Find out more</a>       
+            <a href="/graduate" className="program-button">Show Me</a>       
           </div>
         </div>
       </div>

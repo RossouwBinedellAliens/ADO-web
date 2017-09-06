@@ -15,6 +15,17 @@ import dropLight from '../../assets/images/drop-light.png';
 import success from '../../assets/images/drop-success.png';
 import close from '../../assets/images/close.png';
 
+import user from '../../assets/images/form-icons/user.svg';
+import userInvalid from '../../assets/images/form-icons/user-invalid.svg';
+import email from '../../assets/images/form-icons/email.svg';
+import emailInvalid from '../../assets/images/form-icons/email-invalid.svg';
+import phone from '../../assets/images/form-icons/phone.svg';
+import phoneInvalid from '../../assets/images/form-icons/phone-invalid.svg';
+
+import formValid from '../../assets/images/form-icons/valid.svg';
+import formInvalid from '../../assets/images/form-icons/invalid.svg';
+
+
 import 'antd/dist/antd.css';
 import "./style.css";
 
@@ -232,10 +243,10 @@ export default class GraduateForm extends Component {
                 value={this.state.username}
                 isError={this.state.usernameError}
                 help={this.state.usernameHelp}
-                icon={success}
-                iconError={success}
-                successImage={success}
-                errorImage={close}
+                icon={user}
+                iconError={userInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"              
@@ -244,10 +255,10 @@ export default class GraduateForm extends Component {
                 value={this.state.surname}
                 isError={this.state.surnameError}
                 help={this.state.surnameHelp}
-                icon={success}
-                iconError={success}
-                successImage={success}
-                errorImage={close}
+                icon={user}
+                iconError={userInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"
@@ -256,10 +267,10 @@ export default class GraduateForm extends Component {
                 value={this.state.email}
                 isError={this.state.emailError}
                 help={this.state.emailHelp}
-                icon={success}
-                iconError={success}
-                successImage={success}
-                errorImage={close}
+                icon={email}
+                iconError={emailInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"              
@@ -268,10 +279,10 @@ export default class GraduateForm extends Component {
                 value={this.state.cellnumber}
                 isError={this.state.cellnumberError}
                 help={this.state.cellnumberHelp}
-                icon={success}
-                iconError={success}
-                successImage={success}
-                errorImage={close}
+                icon={phone}
+                iconError={phoneInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
                 <div className="file-drop-container">

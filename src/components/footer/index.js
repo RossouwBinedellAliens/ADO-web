@@ -23,78 +23,19 @@ export default class Footer extends Component {
   }
 
   render() {
-    if (this.state.width > 1100) {
-
-      return (
-        <div className="footer" id="footer">
-          <div className="footer-top">
-            <div className="footer-item-1">
-              <span>{data.title}</span>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact1.title}</span>
-              <p>{data.contact1.content}</p>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact2.title}</span>
-              <p>{data.contact2.content}</p>
-            </div>
-            <div className="footer-item-3">
-              <span>{data.p1}</span>
-              <p>{data.p2}</p>
-              <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a>
-            </div>
+    return (
+      <div className="footer" id="footer">
+        <div className="footer-top">
+          <div className="footer-left">
+            <span>{data.title}</span>
+          </div>
+          <div className="footer-right">
+            <span>{data.p1}</span>
+            <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a> <br/>
+            <a href="http://google.co.za" target="_top" >Disclaimer</a>
           </div>
         </div>
-      );
-    } else if (this.state.width > 680) {
-
-
-      return (
-        <div className="footer" id="footer">
-          <div className="footer-top">
-            <div className="footer-item-1">
-              <span>{data.title}</span>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact1.title}</span>
-              <p>{data.contact1.content}</p>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact2.title}</span>
-              <p>{data.contact2.content}</p>
-            </div>
-          </div>
-          <div className="footer-item-3">
-            <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a>
-          </div>
-        </div>
-      );
-    } else {
-      
-
-      return (
-        <div className="footer" id="footer">
-          <div className="footer-top">          
-            <div className="footer-item-1">
-              <span>{data.title}</span>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact1.title}</span>
-              <p>{data.contact1.content}</p>
-            </div>
-            <div className="footer-item-2">
-              <span>{data.contact2.title}</span>
-              <p>{data.contact2.content}</p>
-            </div>
-            <div className="footer-item-3">
-              <span>{data.p1}</span>
-              <p>{data.p2}</p>
-              <a href={"mailto:" + data.email} target="_top" >{data.emailText}</a> 
-            </div>
-          </div>
-        </div>
-      );
-    }
+      </div>
+    );
   }
 }

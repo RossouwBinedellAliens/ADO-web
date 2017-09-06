@@ -11,6 +11,16 @@ import FormInput from '../../components/forminput';
 import leftBlockImage from "./../../assets/images/vacation-work.svg";
 import star from '../../assets/images/star.png';
 
+import user from '../../assets/images/form-icons/user.svg';
+import userInvalid from '../../assets/images/form-icons/user-invalid.svg';
+import email from '../../assets/images/form-icons/email.svg';
+import emailInvalid from '../../assets/images/form-icons/email-invalid.svg';
+import phone from '../../assets/images/form-icons/phone.svg';
+import phoneInvalid from '../../assets/images/form-icons/phone-invalid.svg';
+
+import formValid from '../../assets/images/form-icons/valid.svg';
+import formInvalid from '../../assets/images/form-icons/invalid.svg';
+
 import 'antd/dist/antd.css';
 import "./style.css";
 
@@ -182,10 +192,10 @@ export default class VacationForm extends Component {
                 value={this.state.username}
                 isError={this.state.usernameError}
                 help={this.state.usernameHelp}
-                icon={star}
-                iconError={star}
-                successImage={star}
-                errorImage={leftBlockImage}
+                icon={user}
+                iconError={userInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"              
@@ -194,10 +204,10 @@ export default class VacationForm extends Component {
                 value={this.state.surname}
                 isError={this.state.surnameError}
                 help={this.state.surnameHelp}
-                icon={star}
-                iconError={star}
-                successImage={star}
-                errorImage={leftBlockImage}
+                icon={user}
+                iconError={userInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"
@@ -206,10 +216,10 @@ export default class VacationForm extends Component {
                 value={this.state.email}
                 isError={this.state.emailError}
                 help={this.state.emailHelp}
-                icon={star}
-                iconError={star}
-                successImage={star}
-                errorImage={leftBlockImage}
+                icon={email}
+                iconError={emailInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
               <FormInput
                 className="form-item"              
@@ -218,10 +228,10 @@ export default class VacationForm extends Component {
                 value={this.state.cellnumber}
                 isError={this.state.cellnumberError}
                 help={this.state.cellnumberHelp}
-                icon={star}
-                iconError={star}
-                successImage={star}
-                errorImage={leftBlockImage}
+                icon={phone}
+                iconError={phoneInvalid}
+                successImage={formValid}
+                errorImage={formInvalid}
               />
                 <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.story_OnChange({informAgain: !this.state.informAgain})}>{data.p2}</Checkbox>  
                 <div className="textarea-container">
@@ -230,7 +240,7 @@ export default class VacationForm extends Component {
                     <p className="textarea-text">{data.p3}</p>
                   </div>
                 </div>
-                <textarea className="textarea-input" onChange={ev => this.story_OnChange({story: ev.target.value})} maxLength="200" placeholder="MAX 200 Words" />
+                <textarea className="textarea-input" onChange={ev => this.story_OnChange({story: ev.target.value})} maxLength="1300" placeholder="MAX 200 Words" />
                 {
                   this.isValid()? 
                     <button className="program-button" onClick={this.handleFormSubmit}>Submit</button>:

@@ -1,22 +1,22 @@
 [
     {
         "name": "Phil Barrett",
-        "title": "Senior UX Designer",
+        "title": "Design Director",
         "quote": "I believe that the problems which we encounter are wicked problems, because we whack them with a digital bat and make people's lives safe"
     },
     {
-        "name": "Dean Broadley",
-        "title": "Senior UX Designer",
-        "quote": "We hire people, not skills"
-    },
-    {
-        "name": "Alex",
-        "title": "Senior UX Designer",
+        "name": "Alex Oloo",
+        "title": "Head of Prototyping",
         "quote": "Design isn’t about solving problems. It’s about people. About making their lives better. Solving wicked problems is just one of the ways we make lives better."
     },
     {
-        "name": "Nelri Rossam",
-        "title": "Senior UX Designer",
-        "quote": "Be comfortable to stay with the problem. Revisit it and keep it in sight."
+        "name": "Dean Broadley",
+        "title": "Managing Creative Director",
+        "quote": "We hire people, not skills"
+    },
+    {
+        "name": "Tracey Solomon",
+        "title": "Customer Experience Lead",
+        "quote": "Life is about the experiences we create for ourselves and the experiences we create for others."
     }
 ]

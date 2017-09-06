@@ -12,16 +12,16 @@ import pillar5 from "./../../../assets/images/Pillar/Pillar-5.svg";
 import pillar6 from "./../../../assets/images/Pillar/Pillar-6.svg";
 import pillar7 from "./../../../assets/images/Pillar/Pillar-7.svg";
 
-import pillarHover1 from "./../../../assets/images/Pillar/Pillar-1.svg";
-import pillarHover2 from "./../../../assets/images/Pillar/Pillar-2.svg";
-import pillarHover3 from "./../../../assets/images/Pillar/Pillar-3.svg";
-import pillarHover4 from "./../../../assets/images/Pillar/Pillar-4.svg";
-import pillarHover5 from "./../../../assets/images/Pillar/Pillar-5.svg";
-import pillarHover6 from "./../../../assets/images/Pillar/Pillar-6.svg";
-import pillarHover7 from "./../../../assets/images/Pillar/Pillar-7.svg";
+import pillarHover1 from "./../../../assets/images/Pillar/Pillar-1-active.svg";
+import pillarHover2 from "./../../../assets/images/Pillar/Pillar-2-active.svg";
+import pillarHover3 from "./../../../assets/images/Pillar/Pillar-3-active.svg";
+import pillarHover4 from "./../../../assets/images/Pillar/Pillar-4-active.svg";
+import pillarHover5 from "./../../../assets/images/Pillar/Pillar-5-active.svg";
+import pillarHover6 from "./../../../assets/images/Pillar/Pillar-6-active.svg";
+import pillarHover7 from "./../../../assets/images/Pillar/Pillar-7-active.svg";
 
 const pillarImages = [ pillar1, pillar2, pillar3, pillar4, pillar5, pillar6, pillar7 ];
-const pillarHoverImages = [ pillar1, pillar2, pillar3, pillar4, pillar5, pillar6, pillar7 ];
+const pillarHoverImages = [ pillarHover1, pillarHover2, pillarHover3, pillarHover4, pillarHover5, pillarHover6, pillarHover7 ];
 
 export default class Subview2 extends Component {
 constructor(props){
@@ -49,6 +49,7 @@ constructor(props){
             <div>
               <h1>{data.t1}</h1>
               <p>{data.p1Content}</p>
+              <p className="text-chunk">{data.p2Content}</p>
             </div>
             <div>
               <div className="image-container">
@@ -58,7 +59,6 @@ constructor(props){
           </div>
             <div className="text-container">
               <h2>{data.p2Title}</h2>
-              <p>{data.p2Content}</p>
             </div>
           </div>
         <div className="row-3"> 

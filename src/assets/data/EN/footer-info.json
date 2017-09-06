@@ -1,15 +1,6 @@
 {
     "title": "Say Hello!",
-    "contact1": {
-        "title": "Johannesburg",
-        "content": "011 325 5000 \nAbsa Towers West \n15 Troye Street \nJohannesburg, 2001"
-    },
-    "contact2": {
-        "title": "Cape Town",
-        "content": "021 422 3792 \nLongkloof Studios\n4 Darters Rd, \nGardens,  8001"
-    },
-    "p1": "WORK FOR US!",
-    "p2": "Join the team! We are always looking for great talent to join \nthe team and help us change \nthe banking world.",
-    "emailText": "ATYoungTalent@absa.co.za",
+    "p1": "For Johannesburg & Cape Town Contact:\n",
+    "emailText": "Drop us an email here",
     "email": "ATYoungTalent@absa.co.za"
 }

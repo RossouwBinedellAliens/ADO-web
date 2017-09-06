@@ -9,11 +9,14 @@
     .content-segment-2 .col-1 h1 {
       font-size: 72px;
       color: #2e3135;
-      font-weight: 900; }
+      font-weight: 900;
+      margin-bottom: 20px; }
     .content-segment-2 .col-1 p {
       font-size: 20px;
       line-height: 1.8;
       color: #2e3135; }
+    .content-segment-2 .col-1 .text-chunk {
+      max-width: 400px; }
     .content-segment-2 .col-1 .content-image {
       width: 620px;
       height: 290px;
@@ -22,7 +25,8 @@
     max-width: 620px;
     min-width: 0px;
     margin-right: 20px;
-    white-space: pre-wrap; }
+    white-space: pre-wrap;
+    margin-top: 40px; }
     .content-segment-2 .text-container h2 {
       font-size: 32px !important;
       font-weight: 600;
@@ -47,7 +51,7 @@
   .content-segment-2 .col-1 {
     flex-direction: column; }
     .content-segment-2 .col-1 .content-image {
-      margin-top: 0px; } }
+      margin-top: 40px; } }
 
 @media only screen and (max-width: 800px) {
   .content-segment-2 .col-1 {

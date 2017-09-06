@@ -1,45 +1,7 @@
 .content-segment-3 {
-
-    .ribbon {        
-        width: 100%;
-        background-color: #2e3135;
-        min-height: 250px;
-        padding-top: 55px;
-    }
-    
-    .ribbon-content {
-        
-        max-width: 1440px;
-        padding-left: 100px;
-        padding-right: 100px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        flex-wrap: wrap;
-
-        .ribbon-title {
-            height: 48px;
-            min-width: 420px;
-            font-size: 48px;
-            font-weight: 900;
-            text-align: left;
-            color: #ffffff;
-            margin-top: 15px;
-        }
-        
-        .ribbon-text {
-            flex-shrink: 1;
-            flex-grow: 1;
-            font-size: 24px;
-            line-height: 1.5;
-            text-align: left;
-            color: #ffffff;
-            margin-bottom: 60px;
-            margin-top: 20px;
-            
-        }
-
-    }
+    background-color: #F5F6F7;
+    padding-top: 80px;
+    padding-bottom: 80px;
 
     .wicked-content {
         max-width: 1440px;
@@ -50,22 +12,11 @@
         margin-right: auto;
     }
 
-    .ribbon-triangle {
-        width: 80px;
-        height: 80px;
-        display: block;
-        transform: rotate(-315deg);
-        border-radius: 5px;
-        margin-top: -45px;
-        background-color: #2e3135;
-        margin-left: 20px;
-     }
-
     .title {
         margin-top: 20px;
         margin-bottom: 40px;
-        width: 420px;
-        font-size: 42px;
+        width: 100%px;
+        font-size: 56px;
         font-weight: 900;
         line-height: 1;
         text-align: left;
@@ -78,14 +29,19 @@
         line-height: 1.5;
         text-align: left;
         color: #2e3135;
-        margin-bottom: 40px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .slider-container {
+        margin-left: -10px;
+        margin-right: -10px;
     }
 
     .dot-style {
         display: flex !important;
         justify-content: center;
         margin-top: 40px;
-        margin-bottom: 70px;
         padding-left: 0px;
         li {
             display: block;
@@ -113,12 +69,6 @@
 @media only screen and (max-width: 600px) {
     
     .content-segment-3 {
-        .ribbon-content {
-            padding-bottom: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-
         .title {
             width: 100%;
         }
