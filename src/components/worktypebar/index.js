@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./style.css";
-import logo from "./../../assets/images/ado-logo.png";
 
 import WorkType from '../worktype';
 

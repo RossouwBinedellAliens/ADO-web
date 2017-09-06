@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import smoothScroll from 'smoothscroll-polyfill';
 import "./style.css";
-import logoLight from "./../../assets/images/ado-logo.png";
+import logoLight from "./../../assets/images/ado-logo.svg";
 import logoDark from "./../../assets/images/ado-logo-dark.svg";
 import close from "../../assets/images/close-light.svg";
 
@@ -13,17 +12,10 @@ export default class TopNav extends Component {
     this.state = {
       showSideMenu: false
     }
-    smoothScroll.polyfill();
   }
 
 toggleEvent() {
   this.setState({showSideMenu: !this.state.showSideMenu})
-}
-
-scrollToTag(tag) {
-  document.querySelector("." + tag).scrollIntoView({ 
-    behavior: 'smooth' 
-  });
 }
 
   render() {
@@ -39,15 +31,17 @@ scrollToTag(tag) {
             <img className="home" src={logoLight} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a onClick={() => this.scrollToTag("content-segment-3")}>
+            <a href="/home#our-content">
               <span className="link-text">
-                OUR WORK
+                OUR PROJECTS
               </span>
+              <div className="link-text-highlight" />
             </a>
             <a className="dropdown">
               <span className="link-text">
-                CAREERS
+                YOUR CAREERS
               </span>
+              <div className="link-text-highlight" />              
               <div className="menu-dropdown">
                 <a href="/graduate">
                   Graduate Programme
@@ -59,8 +53,9 @@ scrollToTag(tag) {
             </a>
             <a href="/home#footer">
               <span className="link-text">
-                CONTACT
+                CONTACT US
               </span>
+              <div className="link-text-highlight" />              
             </a>
           </div>
           <div className="hamburger" onClick={e => this.toggleEvent()}>
@@ -72,8 +67,8 @@ scrollToTag(tag) {
             <div className="content">
               <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
               <div className="text-content">
-                <a className="text-item-1">Our Work</a>
-                <a className="text-item-1">Careers</a>
+                <a href="/home#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Projects</a>
+                <a className="text-item-1">Your Careers</a>
                 <div className="line-2"/>
                 <a href="/graduate" className="text-item-2">Graduate Program</a>
                 <a href="/vacation" className="text-item-2">Vacation Program</a>
@@ -96,14 +91,14 @@ scrollToTag(tag) {
             <img className="home" src={logoDark} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a href="/home">
+            <a href="/home#our-content">
               <span className="link-text">
-                OUR WORK
+                OUR PROJECTS
               </span>
             </a>
             <a className="dropdown">
               <span className="link-text">
-                CAREERS
+                YOUR CAREERS
               </span>
               <div className="menu-dropdown">
                 <a href="/graduate">
@@ -116,7 +111,7 @@ scrollToTag(tag) {
             </a>
             <a href="#footer">
               <span className="link-text">
-                CONTACT
+                CONTACT US
               </span>
             </a>
           </div>
@@ -129,7 +124,7 @@ scrollToTag(tag) {
             <div className="content">
               <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
               <div className="text-content">
-                <a className="text-item-1">Our Work</a>
+                <a href="/home#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Work</a>
                 <a className="text-item-1">Careers</a>
                 <div className="line-2"/>
                 <a href="/graduate" className="text-item-2">Graduate Program</a>

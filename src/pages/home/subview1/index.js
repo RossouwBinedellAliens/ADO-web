@@ -15,7 +15,10 @@ export default class Subview1 extends Component {
         <img className="dash-background" src={background} alt="Dashboard background"/>
         <div className="content-container">
           <TopNav isDashboard={true}/>
-          <h1 className="title">{data.title}</h1>
+          <div className="title-container">
+            <h1 className="title">{data.title}</h1>
+            <h1 className="slogan">{data.slogan}</h1>
+          </div>
           <div className="explore">
             <div>
               <a href="#content-segment-2">

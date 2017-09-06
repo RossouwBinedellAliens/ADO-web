@@ -7,7 +7,7 @@ export default class FormInput extends Component {
         <div className={"form-input-container " + this.props.className}>
           <div className={"form-input " + (this.props.isError === "error"?"invalid":null)}>
             {
-              this.props.isError === "error"? <img className={"form-icon"} src={this.props.icon} alt="user"/>: <img className={"form-icon"} src={this.props.iconError} alt="user"/>
+              this.props.isError !== "error"? <img className={"form-icon"} src={this.props.icon} alt="user"/>: <img className={"form-icon"} src={this.props.iconError} alt="user"/>
             }
             <input  
               className="form-field" 

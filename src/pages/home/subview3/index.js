@@ -28,14 +28,14 @@ export default class Subview3 extends Component {
       slidesToScroll: 3,
       responsive: [
         {
-          breakpoint: 1350,
+          breakpoint: 1200,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2
           }
         },
         {
-          breakpoint: 970,
+          breakpoint: 870,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -45,16 +45,9 @@ export default class Subview3 extends Component {
     };
     return (
         <div className="content-segment-3" id="our-content">
-          <div className="ribbon">
-            <div className="ribbon-content">
-              <h1 className="ribbon-title">{data.t1}</h1>
-              <p className="ribbon-text">{data.p1}</p>
-            </div>
-          </div>
           <div className="wicked-content">
-            <div className="ribbon-triangle" />
-            <h1 className="title">We solve <font color="#5a1846">WICKED</font> problems!</h1>
-            <p className="title-text">{data.p2}</p>
+            <h1 className="title">{data.t1}</h1>
+            <p className="title-text">{data.p1}</p>
             <div className="slider-container">
               <Slider {...settings}>
                 {carouselData.map((item, i) => {

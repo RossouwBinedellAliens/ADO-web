@@ -1,6 +1,6 @@
 .pillar {
     text-align: center;
-    height: 140px;
+    height: 150px;
     width: 135px;
     margin-left: auto;
     margin-right: auto;
@@ -67,7 +67,7 @@
 @media only screen and (max-width: 600px) {
     .pillar {
         width: 100%;
-        height: 80px;
+        height: 100px;
         display: flex;
         padding-left: 20px;
         padding-right: 20px;
@@ -79,9 +79,12 @@
         }
 
         .pillar-image {
-            display: inline-block;
-            
+            display: none;
         }
+        .hover {
+            display: inline-block;
+        }
+
         div {
             display: inline-block;
         
