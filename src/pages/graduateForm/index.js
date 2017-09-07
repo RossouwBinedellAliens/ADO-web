@@ -288,7 +288,7 @@ export default class GraduateForm extends Component {
                 errorImage={formInvalid}
               />
               
-                <div className="form-checkbox"><div className={this.state.informAgain ? "unticked-form-checkbox" : "ticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}></div><span className="form-checkbox-text">{data.p3}</span></div>
+                <div className="form-checkbox"><div className={this.state.informAgain  ? "ticked-form-checkbox" : "unticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}></div><span className="form-checkbox-text">{data.p3}</span></div>
                 
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
