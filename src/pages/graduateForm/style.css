@@ -68,7 +68,21 @@
         font-size: 18px;
         text-align: left;
         color: #2e3135;
-        margin-bottom: 50px; }
+        margin-bottom: 50px;
+        display: flex; }
+      .graduate-form-content .content-container-form .col-2 .ticked-form-checkbox {
+        width: 22px;
+        height: 22px;
+        content: url("../../assets/images/form-icons/unticked.svg"); }
+      .graduate-form-content .content-container-form .col-2 .unticked-form-checkbox {
+        width: 22px;
+        height: 22px;
+        content: url("../../assets/images/form-icons/ticked.svg"); }
+      .graduate-form-content .content-container-form .col-2 .form-checkbox-text {
+        font-size: 18px;
+        text-align: left;
+        color: #2e3135;
+        margin-left: 10px; }
       .graduate-form-content .content-container-form .col-2 .file-drop-container {
         width: 100%;
         margin-bottom: 50px; }
@@ -140,10 +154,37 @@
             line-height: 2;
             text-align: left;
             color: #2e3135; }
-          .graduate-form-content .content-container-form .col-2 .checkbox-container div .checkbox-item {
+          .graduate-form-content .content-container-form .col-2 .checkbox-container div .ticked {
+            width: 22px;
+            height: 22px;
+            margin-top: 7px;
+            content: url("../../assets/images/form-icons/unticked.svg"); }
+          .graduate-form-content .content-container-form .col-2 .checkbox-container div .unticked {
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            margin-top: 7px;
+            content: url("../../assets/images/form-icons/ticked.svg"); }
+          .graduate-form-content .content-container-form .col-2 .checkbox-container div .span-yes {
+            width: 28px;
+            height: 23px;
+            font-family: SourceSansPro;
             font-size: 18px;
             text-align: left;
-            color: #2e3135; }
+            color: #2e3135;
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 30px; }
+          .graduate-form-content .content-container-form .col-2 .checkbox-container div .span-no {
+            width: 28px;
+            height: 23px;
+            font-family: SourceSansPro;
+            font-size: 18px;
+            text-align: left;
+            color: #2e3135;
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-right: 40px; }
       .graduate-form-content .content-container-form .col-2 .program-button {
         display: block;
         margin-left: auto;
