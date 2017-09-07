@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Checkbox } from 'antd';
 import axios from 'axios';
 import TopNav from "./../../components/TopNav";
 import Footer from "./../../components/footer";
@@ -219,6 +218,10 @@ export default class GraduateForm extends Component {
     this.setState(informAgain);
   }
 
+  check(state){
+    this.setState(state);
+  }
+
   render() {
     return (
       <div className="graduate-form-content">
@@ -284,7 +287,9 @@ export default class GraduateForm extends Component {
                 successImage={formValid}
                 errorImage={formInvalid}
               />
-                <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.checkboxOnChange({informAgain: !this.state.informAgain})}>{data.p3}</Checkbox>  
+              
+                <div className="form-checkbox"><div className={this.state.informAgain ? "unticked-form-checkbox" : "ticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}></div><span className="form-checkbox-text">{data.p3}</span></div>
+                
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
                     <img src={star} alt="star"/>
@@ -311,18 +316,16 @@ export default class GraduateForm extends Component {
                 <div className="checkbox-container">
                   <div>
                     <span className="checkbox-text">{data.p5}</span>
-                    <div>
-                      <Checkbox className="checkbox-item" checked={this.state.citizen} onChange={e => this.checkboxOnChange({citizen: true})}>Yes</Checkbox>
-                      <Checkbox className="checkbox-item" checked={this.state.citizen === null? false: !this.state.citizen} onChange={e => this.checkboxOnChange({citizen: false})}>No</Checkbox>
-                    </div>
+                    <div className={this.state.citizen && this.state.citizen !== null ? "ticked" : "unticked"} onClick={() => this.check({citizen: true})}></div><span className="span-yes">Yes</span>
+                    <div className={this.state.citizen || this.state.citizen === null? "unticked" : "ticked"} onClick={() => this.check({citizen: false})}></div><span className="span-no">No</span>
                   </div>
                   {
                     this.state.citizen === false? (
                       <div>
                         <span className="checkbox-text">{data.p6}</span>
                         <div>
-                          <Checkbox className="checkbox-item" checked={this.state.visa} onChange={e => this.checkboxOnChange({visa: true})}>Yes</Checkbox>
-                          <Checkbox className="checkbox-item" checked={this.state.visa === null? false: !this.state.visa} onChange={e => this.checkboxOnChange({visa: false})}>No</Checkbox>
+                           <div className={this.state.visa ? "ticked" : "unticked"} onClick={() => this.check({visa: true})}></div><span className="span-yes">Yes</span>
+                           <div className={this.state.visa ? "unticked" : "ticked"} onClick={() => this.check({visa: false})}></div><span className="span-no">No</span>
                         </div>
                       </div>
                     ): null
