@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { Checkbox } from 'antd';
 import axios from 'axios';
 import TopNav from "./../../components/TopNav";
 import Footer from "./../../components/footer";
@@ -169,6 +168,10 @@ export default class VacationForm extends Component {
     this.setState(story);
   }
 
+  check(state){
+    this.setState(state);
+  }
+
   render() {
     return (
       <div className="vacation-form-content">
@@ -200,7 +203,7 @@ export default class VacationForm extends Component {
               <FormInput
                 className="form-item"              
                 doChange={this.surname_OnChange}
-                placeHolder="SurName"
+                placeHolder="Surname"
                 value={this.state.surname}
                 isError={this.state.surnameError}
                 help={this.state.surnameHelp}
@@ -233,8 +236,13 @@ export default class VacationForm extends Component {
                 successImage={formValid}
                 errorImage={formInvalid}
               />
-                <Checkbox className="form-checkbox" checked={this.state.informAgain} onChange={ev => this.story_OnChange({informAgain: !this.state.informAgain})}>{data.p2}</Checkbox>  
-                <div className="textarea-container">
+
+              <div className="form-checkbox">
+                <div className={this.state.informAgain  ? "ticked-form-checkbox" : "unticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}/>
+                <span className="form-checkbox-text">{data.p2}</span>
+              </div>
+
+              <div className="textarea-container">
                   <div className="textarea-content" >
                     <img src={star} alt="star"/>
                     <p className="textarea-text">{data.p3}</p>

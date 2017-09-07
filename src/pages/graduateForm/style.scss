@@ -94,12 +94,14 @@
             .ticked-form-checkbox {
                 width: 22px;
                 height: 22px;
+                margin-top: 3px;
                 content:url("../../assets/images/form-icons/unticked.svg");
             }
 
             .unticked-form-checkbox {
                 width: 22px;
                 height: 22px;
+                margin-top: 3px;                
                 content:url("../../assets/images/form-icons/ticked.svg");
             }
 
@@ -233,7 +235,6 @@
                     .span-yes{
                         width: 28px;
                         height: 23px;
-                        font-family: SourceSansPro;
                         font-size: 18px;
                         text-align: left;
                         color: #2e3135;
@@ -245,13 +246,12 @@
                     .span-no{
                         width: 28px;
                         height: 23px;
-                        font-family: SourceSansPro;
                         font-size: 18px;
                         text-align: left;
                         color: #2e3135;
                         margin-top: 5px;
                         margin-left: 10px;
-                        margin-right: 40px;
+                        margin-right: 30px;
                     }
                     
                 }
@@ -364,6 +364,13 @@
                         margin-left: 0px;
                         margin-right: 0px;
                     }                    
+                }
+
+
+                .checkbox-container div {
+                    .span-no, .span-yes {
+                        margin-right: 10px;
+                    }
                 }
             }
         }

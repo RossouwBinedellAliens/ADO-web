@@ -72,8 +72,6 @@ export default class GraduateForm extends Component {
     this.email_OnChange = this.email_OnChange.bind(this);
     this.cellnumber_OnChange = this.cellnumber_OnChange.bind(this);
 
-    this.informAgainOnChange = this.informAgainOnChange.bind(this);
-
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.whenFileDropped = this.whenFileDropped.bind(this);
     this.modalAction = this.modalAction.bind(this);
@@ -210,14 +208,6 @@ export default class GraduateForm extends Component {
     }
   }
 
-  checkboxOnChange(checkbox){
-    this.setState(checkbox);
-  }
-  
-  informAgainOnChange(informAgain){
-    this.setState(informAgain);
-  }
-
   check(state){
     this.setState(state);
   }
@@ -254,7 +244,7 @@ export default class GraduateForm extends Component {
               <FormInput
                 className="form-item"              
                 doChange={this.surname_OnChange}
-                placeHolder="SurName"
+                placeHolder="Surname"
                 value={this.state.surname}
                 isError={this.state.surnameError}
                 help={this.state.surnameHelp}
@@ -288,7 +278,10 @@ export default class GraduateForm extends Component {
                 errorImage={formInvalid}
               />
               
-                <div className="form-checkbox"><div className={this.state.informAgain  ? "ticked-form-checkbox" : "unticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}></div><span className="form-checkbox-text">{data.p3}</span></div>
+                <div className="form-checkbox">
+                  <div className={this.state.informAgain  ? "ticked-form-checkbox" : "unticked-form-checkbox"} onClick={() => this.check({informAgain: !this.state.informAgain})}/>
+                  <span className="form-checkbox-text">{data.p3}</span>
+                </div>
                 
                 <div className="file-drop-container">
                   <div className="file-drop-content" >
@@ -304,7 +297,7 @@ export default class GraduateForm extends Component {
                         <span className="line-2">MAX 5mb</span>
                       </div> ): (
                         <div className="drop-file">
-                          <img className="remove" src={close} onClick={ex => this.checkboxOnChange({file: null})} alt="close"/>
+                          <img className="remove" src={close} onClick={ex => this.check({file: null})} alt="close"/>
                           <img className="success" src={success} alt="drop-zone"/>
                           <span className="line-1">File Selected!</span>
                           <span className="line-2">{this.state.file.name}</span>
@@ -316,8 +309,8 @@ export default class GraduateForm extends Component {
                 <div className="checkbox-container">
                   <div>
                     <span className="checkbox-text">{data.p5}</span>
-                    <div className={this.state.citizen && this.state.citizen !== null ? "ticked" : "unticked"} onClick={() => this.check({citizen: true})}></div><span className="span-yes">Yes</span>
-                    <div className={this.state.citizen || this.state.citizen === null? "unticked" : "ticked"} onClick={() => this.check({citizen: false})}></div><span className="span-no">No</span>
+                    <div><div className={this.state.citizen && this.state.citizen !== null ? "ticked" : "unticked"} onClick={() => this.check({citizen: true})}></div><span className="span-yes">Yes</span></div>
+                    <div><div className={this.state.citizen || this.state.citizen === null? "unticked" : "ticked"} onClick={() => this.check({citizen: false})}></div><span className="span-no">No</span></div>
                   </div>
                   {
                     this.state.citizen === false? (
