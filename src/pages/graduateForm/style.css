@@ -1,5 +1,7 @@
 .graduate-form-content {
   position: relative; }
+  .graduate-form-content * {
+    color: #2e3135; }
   .graduate-form-content *:focus {
     outline: 0 !important; }
   .graduate-form-content .content-container-form {
@@ -11,7 +13,7 @@
     margin-right: auto;
     display: flex; }
     .graduate-form-content .content-container-form .col-1 {
-      min-width: 280px;
+      min-width: 400px;
       max-width: 400px;
       background-color: #f5f5f5;
       padding-top: 100px;
@@ -146,6 +148,8 @@
               font-weight: normal;
               line-height: 1.38;
               color: #999999; }
+      .graduate-form-content .content-container-form .col-2 .drop-selected .file-drop {
+        background-color: #2e3135; }
       .graduate-form-content .content-container-form .col-2 .checkbox-container {
         width: 100%; }
         .graduate-form-content .content-container-form .col-2 .checkbox-container div {

@@ -7,11 +7,13 @@
   margin-top: 55px;
   min-width: 130px; }
   .pillar .pillar-image {
-    display: inline;
     width: 70px;
     height: 70px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    display: inline; }
   .pillar .hover {
+    width: 70px;
+    height: 70px;
     display: none; }
   .pillar .pillar-title {
     font-size: 24px;

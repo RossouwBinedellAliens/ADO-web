@@ -45,9 +45,6 @@ export default class VacationForm extends Component {
 
       dataset: new FormData(),
 
-      citizen: null,
-      visa: null,
-
       loading: false,
       modal: false,
       mailStatus: null,
@@ -65,13 +62,15 @@ export default class VacationForm extends Component {
   }
 
   isValid() {
-    if (this.state.username.length <= 1) 
+    if (!this.validateName(this.state.username)) 
       return false
-    if (this.state.surname.length <= 1) 
+    if (!this.validateName(this.state.surname)) 
       return false
-    if (this.state.cellnumber.replace(" ","").length < 10) 
+    if (!this.validateNumber(this.state.cellnumber)) 
       return false
     if (!this.validateEmail(this.state.email)) 
+      return false
+    if (this.state.story.length < 1)
       return false
     return true;
   }
@@ -79,6 +78,16 @@ export default class VacationForm extends Component {
   validateEmail(email) {
     var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return pattern.test(email);
+  }
+
+  validateName(name) {
+    var pattern = /^[a-zA-Z\s]+$/;
+    return pattern.test(name);
+  }
+
+  validateNumber(number) {
+    var pattern = /^\d+$/;
+    return pattern.test(number);
   }
 
   handleFormSubmit(){
@@ -133,7 +142,7 @@ export default class VacationForm extends Component {
   }
 
   username_OnChange(username){
-    if(username.length <= 1){
+    if(!this.validateName(username)){
       this.setState({username: username, usernameError: "error", usernameHelp: "Please enter your name. Characters only."});
     }else{
       this.setState({username: username, usernameError: "success", usernameHelp: ""});
@@ -141,7 +150,7 @@ export default class VacationForm extends Component {
   }
 
   surname_OnChange(surname){
-    if(surname.length <= 1){
+    if(!this.validateName(surname)){
       this.setState({surname: surname, surnameError: "error", surnameHelp: "Please enter your surname. Characters only."});
     }else{
       this.setState({surname: surname, surnameError: "success", surnameHelp: ""});
@@ -159,7 +168,7 @@ export default class VacationForm extends Component {
   cellnumber_OnChange(cellnumber){
     if(cellnumber.length < 10){
       this.setState({cellnumber: cellnumber, cellnumberError: "error", cellnumberHelp: "Please enter a valid Cell Number. Digits only."});
-    } else if (cellnumber.length === 10) {
+    } else if (cellnumber.length == 10 && this.validateNumber(cellnumber)) {
       this.setState({cellnumber: cellnumber, cellnumberError: "success", cellnumberHelp: ""});
     }
   }
@@ -258,7 +267,7 @@ export default class VacationForm extends Component {
           </div>
         </div>
         <Footer />
-        {this.state.redirect? <Redirect to="/home" /> : null}
+        {this.state.redirect? <Redirect to="/" /> : null}
       </div>
     );
   }

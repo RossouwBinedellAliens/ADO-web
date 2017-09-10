@@ -1,5 +1,7 @@
 .graduate-info {
   position: relative; }
+  .graduate-info * {
+    color: #2e3135; }
   .graduate-info .top-content {
     max-width: 1440px;
     padding-left: 100px;
@@ -10,7 +12,6 @@
       font-size: 72px;
       font-weight: 900;
       text-align: left;
-      color: #000000;
       font-style: bold;
       margin-top: 0px;
       padding-top: 150px; }
@@ -18,7 +19,6 @@
       font-size: 48px;
       text-align: left;
       font-weight: 400;
-      color: #000000;
       margin-bottom: 50px; }
     .graduate-info .top-content .expectation-container {
       display: flex;
@@ -41,7 +41,6 @@
       font-size: 48px;
       text-align: left;
       font-weight: 400;
-      color: #000000;
       margin-bottom: 20px; }
     .graduate-info .top-content .step-container {
       display: flex; }
@@ -62,7 +61,6 @@
               font-size: 28.8px;
               font-weight: bold;
               text-align: left;
-              color: #000000;
               margin-top: 10px;
               margin-bottom: 0px; }
             .graduate-info .top-content .step-container .step-column .step-item div p {
@@ -79,8 +77,10 @@
         text-align: left;
         color: #000000; }
       .graduate-info .top-content .button-container .image-container {
-        margin-left: 25px; }
+        margin-left: 25px;
+        margin-right: 25px; }
         .graduate-info .top-content .button-container .image-container a img {
+          width: 45px;
           margin-left: 5px;
           margin-right: 5px; }
       .graduate-info .top-content .button-container .program-button {

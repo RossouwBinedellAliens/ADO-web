@@ -1,4 +1,8 @@
 .vacation-info {
+    * {
+        color: #2e3135;
+    }
+
     position: relative;
     .top-content {
         max-width: 1440px;
@@ -148,7 +152,9 @@
             .image-container {
                 margin-left: 25px;
                 margin-right: 25px;
+
                 img {
+                    width: 45px;
                     margin-left: 5px;
                     margin-right: 5px; 
                 }

@@ -27,11 +27,11 @@ toggleEvent() {
       menuOptions += " close";    
     return (
        <div className="top-nav">
-          <a className="dashboard-navigator" href="/home">
+          <a className="dashboard-navigator" href="/">
             <img className="home" src={logoLight} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a href="/home#our-content">
+            <a href="/#our-content">
               <span className="link-text">
                 OUR PROJECTS
               </span>
@@ -51,7 +51,7 @@ toggleEvent() {
                 </a>
               </div>
             </a>
-            <a href="/home#footer">
+            <a href="#footer">
               <span className="link-text">
                 CONTACT US
               </span>
@@ -67,7 +67,7 @@ toggleEvent() {
             <div className="content">
               <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
               <div className="text-content">
-                <a href="/home#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Projects</a>
+                <a href="/#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Projects</a>
                 <a className="text-item-1">Your Careers</a>
                 <div className="line-2"/>
                 <a href="/graduate" className="text-item-2">Graduate Program</a>
@@ -87,19 +87,22 @@ toggleEvent() {
     return (
       <div className="dark">
        <div className="top-nav">
-          <a className="dashboard-navigator" href="/home">
+          <a className="dashboard-navigator" href="/">
             <img className="home" src={logoDark} alt="ADO Logo for navigation"/>
           </a>
           <div className="right-links">
-            <a href="/home#our-content">
+            <a href="/#our-content">
               <span className="link-text">
                 OUR PROJECTS
               </span>
+              <div className="link-text-highlight" />
+
             </a>
             <a className="dropdown">
               <span className="link-text">
                 YOUR CAREERS
               </span>
+              <div className="link-text-highlight" />
               <div className="menu-dropdown">
                 <a href="/graduate">
                   Graduate Programme
@@ -113,6 +116,7 @@ toggleEvent() {
               <span className="link-text">
                 CONTACT US
               </span>
+              <div className="link-text-highlight" />
             </a>
           </div>
           <div className="hamburger" onClick={e => this.toggleEvent()}>
@@ -124,7 +128,7 @@ toggleEvent() {
             <div className="content">
               <img className="close-side-menu" src={close} alt="close" onClick={e => this.toggleEvent()}/>
               <div className="text-content">
-                <a href="/home#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Work</a>
+                <a href="/#our-content" onClick={e => this.toggleEvent()} className="text-item-1">Our Work</a>
                 <a className="text-item-1">Careers</a>
                 <div className="line-2"/>
                 <a href="/graduate" className="text-item-2">Graduate Program</a>

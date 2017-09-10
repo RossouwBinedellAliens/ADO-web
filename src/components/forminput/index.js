@@ -11,7 +11,7 @@ export default class FormInput extends Component {
             }
             <input  
               className="form-field" 
-              value={this.props.username} 
+              value={this.props.value} 
               onChange={(e) => this.props.doChange(e.target.value)} 
               placeholder={this.props.placeHolder}
             />

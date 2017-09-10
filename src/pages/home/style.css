@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #2e3135; }
 
 .home {
   position: relative; }

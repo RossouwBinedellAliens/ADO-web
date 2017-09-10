@@ -78,11 +78,11 @@ export default class GraduateForm extends Component {
   }
 
   isValid() {
-    if (this.state.username.length <= 1) 
+    if (!this.validateName(this.state.username)) 
       return false
-    if (this.state.surname.length <= 1) 
+    if (!this.validateName(this.state.surname)) 
       return false
-    if (this.state.cellnumber.replace(" ","").length < 10) 
+    if (!this.validateNumber(this.state.cellnumber)) 
       return false
     if (!this.validateEmail(this.state.email)) 
       return false
@@ -90,12 +90,24 @@ export default class GraduateForm extends Component {
       if (this.state.visa === null)
         return false;
     }
+    if (this.state.file === null)
+      return false;
     return true;
   }
 
   validateEmail(email) {
     var pattern =/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return pattern.test(email);
+  }
+
+  validateName(name) {
+    var pattern = /^[a-zA-Z\s]+$/;
+    return pattern.test(name);
+  }
+
+  validateNumber(number) {
+    var pattern = /^\d+$/;
+    return pattern.test(number);
   }
 
   handleFormSubmit(){
@@ -177,7 +189,7 @@ export default class GraduateForm extends Component {
   }
 
   username_OnChange(username){
-    if(username.length <= 1){
+    if(!this.validateName(username)){
       this.setState({username: username, usernameError: "error", usernameHelp: "Please enter your name. Characters only."});
     }else{
       this.setState({username: username, usernameError: "success", usernameHelp: ""});
@@ -185,7 +197,7 @@ export default class GraduateForm extends Component {
   }
 
   surname_OnChange(surname){
-    if(surname.length <= 1){
+    if(!this.validateName(surname)){
       this.setState({surname: surname, surnameError: "error", surnameHelp: "Please enter your surname. Characters only."});
     }else{
       this.setState({surname: surname, surnameError: "success", surnameHelp: ""});
@@ -203,7 +215,7 @@ export default class GraduateForm extends Component {
   cellnumber_OnChange(cellnumber){
     if(cellnumber.length < 10){
       this.setState({cellnumber: cellnumber, cellnumberError: "error", cellnumberHelp: "Please enter a valid Cell Number. Digits only."});
-    } else if (cellnumber.length === 10) {
+    } else if (cellnumber.length == 10 && this.validateNumber(cellnumber)) {
       this.setState({cellnumber: cellnumber, cellnumberError: "success", cellnumberHelp: ""});
     }
   }
@@ -317,8 +329,8 @@ export default class GraduateForm extends Component {
                       <div>
                         <span className="checkbox-text">{data.p6}</span>
                         <div>
-                           <div className={this.state.visa ? "ticked" : "unticked"} onClick={() => this.check({visa: true})}></div><span className="span-yes">Yes</span>
-                           <div className={this.state.visa ? "unticked" : "ticked"} onClick={() => this.check({visa: false})}></div><span className="span-no">No</span>
+                           <div className={this.state.visa === true ? "ticked" : "unticked"} onClick={() => this.check({visa: true})}></div><span className="span-yes">Yes</span>
+                           <div className={this.state.visa === false ? "ticked" : "unticked"} onClick={() => this.check({visa: false})}></div><span className="span-no">No</span>
                         </div>
                       </div>
                     ): null
@@ -333,7 +345,7 @@ export default class GraduateForm extends Component {
           </div>
         </div>
         <Footer />
-        {this.state.redirect? <Redirect to="/home" /> : null}
+        {this.state.redirect? <Redirect to="/" /> : null}
       </div>
     );
   }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="77px" height="75px" viewBox="0 0 77 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="73px" height="71px" viewBox="0 0 73 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard 2 Copy 6</title>
+    <title>Page 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Artboard-2-Copy-6" stroke="#5E1D4A" stroke-width="2.52">
-            <g id="Page-1" transform="translate(2.000000, 2.000000)">
-                <path d="M55.5116492,18.6679684 C55.5116492,28.9771263 47.0811814,37.3346842 36.6820881,37.3346842 C26.2817314,37.3346842 17.85,28.9771263 17.85,18.6679684 C17.85,8.35755789 26.2817314,0 36.6820881,0 C47.0811814,0 55.5116492,8.35755789 55.5116492,18.6679684 Z" id="Stroke-1"></path>
-                <path d="M72.356461,67.0201368 C61.5871449,69.5554632 49.266178,70.9834632 36.1706492,70.9834632 C23.0763839,70.9834632 10.7718432,69.5554632 0,67.0201368 C3.45709831,50.3513684 18.3342458,37.8 36.1706492,37.8 C54.0234788,37.8 68.9006263,50.3513684 72.356461,67.0201368 Z" id="Stroke-3"></path>
+        <g id="Desktop-HD-Copy-12" transform="translate(-1220.000000, -1373.000000)" stroke="#743863" stroke-width="2.4">
+            <g id="Page-1" transform="translate(1222.000000, 1375.000000)">
+                <path d="M52.8682373,17.7790175 C52.8682373,27.5972632 44.8392203,35.5568421 34.935322,35.5568421 C25.0302203,35.5568421 17,27.5972632 17,17.7790175 C17,7.95957895 25.0302203,0 34.935322,0 C44.8392203,0 52.8682373,7.95957895 52.8682373,17.7790175 Z" id="Stroke-1"></path>
+                <path d="M68.9109153,63.8287018 C58.6544237,66.2432982 46.9201695,67.6032982 34.4482373,67.6032982 C21.9775085,67.6032982 10.2588983,66.2432982 0,63.8287018 C3.29247458,47.9536842 17.4611864,36 34.4482373,36 C51.4509322,36 65.6196441,47.9536842 68.9109153,63.8287018 Z" id="Stroke-3"></path>
             </g>
         </g>
     </g>

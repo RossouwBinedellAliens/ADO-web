@@ -45,9 +45,9 @@ constructor(props){
     return (
       <div className="content-segment-2" id="content-segment-2">
         <div className="row-1">
+          <h1>{data.t1}</h1>
           <div className="col-1">
             <div>
-              <h1>{data.t1}</h1>
               <p>{data.p1Content}</p>
               <p className="text-chunk">{data.p2Content}</p>
             </div>

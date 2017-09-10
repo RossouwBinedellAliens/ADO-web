@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="83px" height="81px" viewBox="0 0 83 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="72px" height="76px" viewBox="0 0 72 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-    <title>Artboard 2 Copy</title>
+    <title>Page 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Artboard-2-Copy" stroke-width="2.52" stroke="#5E1D4A">
-            <g id="Page-1" transform="translate(6.000000, 2.000000)">
-                <polygon id="Stroke-1" points="36.2270618 37.8915415 36.2270618 75.3406309 36.0777709 75.4232884 0 56.5157164 0 18.9 36.0933491 37.8246283"></polygon>
-                <polygon id="Stroke-3" points="71.1338727 19.3077392 36.2270618 37.5973481 36.0946473 37.6813176 0 18.7566893 0 17.9720992 34.2953673 0"></polygon>
-                <polygon id="Stroke-5" points="71.8865891 20.0667701 71.8865891 57.43189 36.75 75.839581 36.75 38.2409209 71.6555127 19.95"></polygon>
+        <g id="Desktop-HD-Copy-12" transform="translate(-326.000000, -1371.000000)" stroke-width="2.4" stroke="#743863">
+            <g id="Page-1" transform="translate(328.000000, 1373.000000)">
+                <polygon id="Stroke-1" points="34.5019636 36.0871824 34.5019636 71.7529819 34.3597818 71.8317033 0 53.8244918 0 18 34.3746182 36.0234555"></polygon>
+                <polygon id="Stroke-3" points="67.7465455 18.388323 34.5019636 35.8069982 34.3758545 35.8869691 0 17.8635136 0 17.1162849 32.6622545 0"></polygon>
+                <polygon id="Stroke-5" points="68.4634182 19.1112096 68.4634182 54.6970381 35 72.2281724 35 36.4199247 68.2433455 19"></polygon>
             </g>
         </g>
     </g>

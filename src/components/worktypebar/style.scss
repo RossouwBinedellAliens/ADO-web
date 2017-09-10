@@ -1,7 +1,7 @@
 .top-bar-container {
     width: 100%;
-    background-color: #2e3135;
-
+    background-color: #F5F6F7;
+    
     .bottom-content {
         max-width: 1440px;
         padding-left: 100px;
@@ -15,14 +15,12 @@
             font-size: 48px;
             font-weight: 900;
             text-align: left;
-            color: #ffffff;
         }
     
         .bottom-text {
             font-size: 24px;
             line-height: 1.5;
             text-align: left;
-            color: #ffffff;
             max-width: 660px;
             margin-bottom: 0px;
         }
@@ -34,16 +32,17 @@
 
 .bottom-bar-container {
     width: 100%;
-    background-color: #2e3135;
+    background-color: #F5F6F7;
     padding-top: 40px;
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 40px;
     .inner-container {
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
         border-radius: 5px;
-        background-color: #fff;
+        background-color: #F5F6F7;
         padding: 40px 20px 30px 20px;
         display: flex;
         flex-wrap: wrap;

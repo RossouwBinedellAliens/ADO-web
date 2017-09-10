@@ -18,12 +18,12 @@ class App extends Component {
       <Router>
         <div>
           <Switch>
-            <Route path="/home" component={Home}/>
+            <Route exact path="/" component={Home}/>
             <Route exact path="/graduate" component={GraduateInfo}/>
             <Route exact path="/graduate/form" component={GraduateForm}/>
             <Route exact path="/vacation" component={VacationInfo}/>
             <Route exact path="/vacation/form" component={VacationForm}/>
-            <Redirect from="/" to="/home"/> {/* Will need 404 page */}              
+            <Redirect from="*" to="/"/>              
           </Switch>
         </div>
       </Router>

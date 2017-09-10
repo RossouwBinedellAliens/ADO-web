@@ -8,13 +8,15 @@
     min-width: 130px;
 
     .pillar-image {
-        display: inline;
         width: 70px;
         height: 70px;
         margin-bottom: 10px;    
+        display: inline;
     }
 
     .hover {
+        width: 70px;
+        height: 70px;
         display: none;
     }
 

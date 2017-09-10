@@ -1,3 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="73" height="69" viewBox="0 0 73 69">
-    <path fill="none" fill-rule="evenodd" stroke="#666" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M36.798 1.384L47.55 22.983l24.045 3.463-17.4 16.815L58.305 67 36.798 55.791 15.29 67 19.4 43.26 2 26.447l24.045-3.463z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="69px" viewBox="0 0 73 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop-HD-Copy-12" transform="translate(-1040.000000, -1374.000000)" stroke-width="2.4" stroke="#666666">
+            <polygon id="Page-1" points="1076.79792 1376 1087.55055 1397.59916 1111.59583 1401.06218 1094.19687 1417.87675 1098.30439 1441.61617 1076.79792 1430.40725 1055.29144 1441.61617 1059.39896 1417.87675 1042 1401.06218 1066.04528 1397.59916"></polygon>
+        </g>
+    </g>
 </svg>

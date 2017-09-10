@@ -27,7 +27,7 @@ export default class Footer extends Component {
       <div className="footer" id="footer">
         <div className="footer-top">
           <div className="footer-left">
-            <span>{data.title}</span>
+            <a href={"mailto:" + data.email}>{data.title}</a>
           </div>
           <div className="footer-right">
             <span>{data.p1}</span>

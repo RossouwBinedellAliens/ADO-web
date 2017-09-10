@@ -6,16 +6,16 @@
     margin-right: auto;
     // margin-top: 100px;
 
+    h1 {
+        font-size: 72px;
+        color: #2e3135;
+        font-weight: 900;
+        margin-bottom: 20px;
+    }
     .col-1 {
         display: flex ;
 
         
-        h1 {
-            font-size: 72px;
-            color: #2e3135;
-            font-weight: 900;
-            margin-bottom: 20px;
-        }
         p {
             font-size: 20px;
             line-height: 1.8;
@@ -43,6 +43,7 @@
             font-size: 32px !important;
             font-weight: 600;
             line-height: 1.15;
+            color: #2e3135;            
         }
         p {
             margin-top: 10px;

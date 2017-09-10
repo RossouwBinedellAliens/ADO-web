@@ -16,6 +16,7 @@ import mainImage from '../../assets/images/graduate-image.png';
 
 import linkedin from '../../assets/images/facebook.svg';
 import facebook from '../../assets/images/linkedin.svg';
+import email from '../../assets/images/email.svg';
 
 const images = [expectation1, expectation2, expectation3, expectation4, expectation5];
 
@@ -77,6 +78,9 @@ export default class GraduateInfo extends Component {
               </a>
               <a href={"https://www.linkedin.com/shareArticle?mini=true&url=" + window.location.href + "&title=ADO%20Graduate&summary=ADO%20has%20many%20open%20spaces%20for%20graduates%20looking%20to%20shape%20the%20future!&source=Africa%20Design%20Office"} target="_blank">
                 <img className="share-facebook" src={facebook} alt="facebook share button"/>
+              </a>
+              <a href={"mailto:" + data.email} target="_top">
+                <img className="share-email" src={email} alt="email share button"/>
               </a>
             </div>
             <a href="/graduate/form" className="program-button">JOIN THE TEAM</a>       

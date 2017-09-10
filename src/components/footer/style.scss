@@ -15,7 +15,7 @@
         
                 max-width: 230px;
         
-                span {
+                a {
                     font-size: 92px;
                     font-weight: 900;
                     text-align: left;
@@ -44,8 +44,14 @@
                     text-align: right;
                     color: #ffffff;
                     font-weight: 100;                    
-                    text-decoration: underline;
+                    text-decoration: none;
                     line-height: 2;
+                }
+
+                a:hover {
+                    text-decoration: underline;
+                    text-decoration-color: #F9C13D;
+                    
                 }
             }
         }
